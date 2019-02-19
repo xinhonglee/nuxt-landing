@@ -1,7 +1,22 @@
-# magnet.co r3
+# magnet-co
 
-- Nuxt with static content
-- Anime JS for animation
-- Netlify for hosting
+> Nuxt.js Magnet site
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/994c8583-5a24-4817-ba08-b8dfdcbcaf9d/deploy-status)](https://app.netlify.com/sites/magnet-co/deploys)
+## Build Setup
+
+``` bash
+# install dependencies
+$ npm install
+
+# serve with hot reload at localhost:3000
+$ npm run dev
+
+# build for production and launch server
+$ npm run build
+$ npm start
+
+# generate static project
+$ npm run generate
+```
+
+For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
