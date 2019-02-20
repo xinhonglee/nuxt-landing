@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-graph-light</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="15.2144849%" y1="3.15886922%" x2="85.9823324%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#F9F9F9" offset="0%"></stop>
+            <stop stop-color="#F1F1F1" offset="100%"></stop>
+        </linearGradient>
+        <path d="M50,0 C77.614,0 100,22.386 100,50 C100,77.614 77.614,100 50,100 C22.386,100 0,77.614 0,50 C0,22.386 22.386,0 50,0 Z" id="path-2"></path>
+        <filter x="-2.5%" y="-2.5%" width="105.0%" height="105.0%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="2" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0367130888 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#70DACD" offset="0%"></stop>
+            <stop stop-color="#3DB39E" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="icon-graph-light" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <g id="Path" fill-rule="nonzero">
+                <use fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+            </g>
+            <path d="M78,40 L51,62 L21,49 L1.039,60.178 C5.741,82.911 25.874,100 50,100 C77.614,100 100,77.614 100,50 C100,44.646 99.149,39.493 97.592,34.657 L78,40 Z" id="Path" fill="url(#linearGradient-4)"></path>
+            <g id="Group" transform="translate(20.000000, 0.000000)" fill="#3A9390" fill-opacity="0.392493207" fill-rule="nonzero">
+                <path d="M0,90.001 C0.655,90.492 1.321,90.97 2,91.43 L2,8.571 C1.321,9.031 0.655,9.508 0,10 L0,90.001 Z M58,91.43 C58.679,90.97 59.346,90.492 60,90.001 L60,10 C59.346,9.508 58.679,9.031 58,8.571 L58,91.43 Z M31,0.025 L30,0 L29,0.025 L29,99.974 L30,99.999 L31,99.974 L31,0.025 Z" id="Shape"></path>
+            </g>
+            <path d="M78,40 L78,91.43 L78.159,91.317 C78.78,90.892 79.394,90.456 79.995,90.005 L80,90.001 L80,39.455 L78,40 Z M49,99.975 L50,100 L51,99.975 L51,62 L49,61.134 L49,99.975 Z M20,49.56 L20,89.999 L20.219,90.157 C20.745,90.548 21.277,90.929 21.819,91.3 L22,91.42 L22,49.434 L21,49 L20,49.56 Z" id="Shape" fill="#DAF5F4" fill-rule="nonzero"></path>
+            <g id="Group" transform="translate(0.000000, 32.000000)" fill="#F2F1EF" fill-rule="nonzero">
+                <path d="M52.043,31.637 L78.457,10.487 L75.957,7.365 L50.257,27.943 L21.764,16.153 L21.234,17.434 L20.047,15.242 L0.604,25.773 C0.821,27.161 1.102,28.527 1.43,29.874 L20.32,19.643 L20.235,19.848 L49.235,31.848 L50.25,29.397 L52.043,31.637 Z M96.896,0.632 L77.46,6.074 L78.538,9.926 L98.123,4.443 C97.762,3.151 97.358,1.878 96.896,0.632 Z" id="Shape"></path>
+            </g>
+            <path d="M21,42 C17.134,42 14,45.134 14,49 C14,52.866 17.134,56 21,56 C24.866,56 28,52.866 28,49 C28,45.134 24.866,42 21,42 Z M50,55 C46.134,55 43,58.134 43,62 C43,65.866 46.134,69 50,69 C53.866,69 57,65.866 57,62 C57,58.134 53.866,55 50,55 Z M79,33 C75.134,33 72,36.134 72,40 C72,43.866 75.134,47 79,47 C82.866,47 86,43.866 86,40 C86,36.134 82.866,33 79,33 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+            <path d="M21,46 C19.343,46 18,47.343 18,49 C18,50.657 19.343,52 21,52 C22.657,52 24,50.657 24,49 C24,47.343 22.657,46 21,46 Z M50,59 C48.343,59 47,60.343 47,62 C47,63.657 48.343,65 50,65 C51.656,65 53,63.657 53,62 C53,60.343 51.656,59 50,59 Z M79,37 C77.344,37 76,38.343 76,40 C76,41.657 77.344,43 79,43 C80.656,43 82,41.657 82,40 C82,38.343 80.656,37 79,37 Z" id="Shape" fill="#3DB39E" fill-rule="nonzero"></path>
+            <g id="Group" transform="translate(12.000000, 42.000000)" fill="#D9D8D7" fill-rule="nonzero">
+                <path d="M0.029,9.584 C0.146,10.994 0.68,12.283 1.508,13.332 L4.054,11.953 C3.108,11.009 2.432,9.795 2.149,8.436 L0.029,9.584 Z M29.798,18.771 L31.052,19.29 C31.17,18.142 31.549,17.071 32.154,16.155 C31.162,16.809 30.352,17.712 29.798,18.771 Z M60.371,0.235 L58.272,1.916 C58.652,3.252 59.416,4.423 60.44,5.304 L62.686,3.506 C61.625,2.672 60.812,1.542 60.371,0.235 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
