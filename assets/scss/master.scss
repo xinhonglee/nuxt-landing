@@ -1,3 +1,10 @@
-body {
-  background-color: yellow;
-}
+@import '~bulma/sass/utilities/initial-variables';
+@import '~bulma/sass/utilities/functions';
+@import '~bulma';
+
+/**** Custom Styles ******/
+@import "helpers/all";
+@import "components/all";
+@import "layouts/all";
+@import "partials/all";
+@import "pages/all";
