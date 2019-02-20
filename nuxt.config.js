@@ -28,7 +28,8 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '@/assets/scss/master.scss'
+    { src: '~/assets/scss/master.scss', lang: 'scss' },
+    { src: 'font-awesome/scss/font-awesome.scss', lang: 'scss' }
   ],
 
   /*

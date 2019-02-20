@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-typewriter-light</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="15.2144849%" y1="3.15886922%" x2="85.9823324%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#F9F9F9" offset="0%"></stop>
+            <stop stop-color="#F1F1F1" offset="100%"></stop>
+        </linearGradient>
+        <path d="M50,0 C77.614,0 100,22.386 100,50 C100,77.614 77.614,100 50,100 C22.386,100 0,77.614 0,50 C0,22.386 22.386,0 50,0 Z" id="path-2"></path>
+        <filter x="-2.5%" y="-2.5%" width="105.0%" height="105.0%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="2" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0367130888 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="icon-typewriter-light" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <g id="Path" fill-rule="nonzero">
+                <use fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+            </g>
+            <path d="M22,39 L78,39 C80.209,39 81.625,40.75 82,43 L85.989,62.701 L14.011,62.701 L18,43 C18.642,40.829 19.791,39 22,39 Z" id="Path" fill="#26A6D1"></path>
+            <path d="M11,92.375 L89,92.375 L89,96 C89,98.209 87.209,100 85,100 L15,100 C12.791,100 11,98.209 11,96 L11,92.375 Z" id="Path" fill="#2095BC"></path>
+            <path d="M14,78 L86,78 L89,92 C89,94.209 87.209,96 85,96 L15,96 C12.791,96 11,94.209 11,92 L14,78 Z" id="Path" fill="#37B8E3"></path>
+            <path d="M18,59 L82,59 C84.209,59 86,60.791 86,63 L86,78 L14,78 L14,63 C14,60.791 15.791,59 18,59 Z" id="Path" fill="#2295BC"></path>
+            <path d="M78,40 C77.812,38.875 77.104,38 76,38 L24,38 C22.896,38 22.219,38.875 22,40 L21,46 C21,47.104 21.896,48 23,48 L45.492,48 C44.146,49.061 42.637,50.312 40.999,51.601 C37.629,54.252 38.524,55 41.639,55 L59.74,55 C62.854,55 62.898,53.904 59.969,51.601 C58.548,50.483 57.129,49.165 55.782,48 L77,48 C78.104,48 79,47.104 79,46 L78,40 Z M80,78 L80,67 C80,65.344 78.657,64 77,64 L23,64 C21.343,64 20,65.344 20,67 L20,78 L18,89 C18,90.657 19.343,92 21,92 L79,92 C80.657,92 82,90.657 82,89 L80,78 Z" id="Shape" fill="#324D5B" fill-rule="nonzero"></path>
+            <path d="M82,89 L80,78 L20,78 L18,89 C18,90.657 19.343,92 21,92 L79,92 C80.657,92 82,90.657 82,89 Z" id="Path" fill="#405A67"></path>
+            <path d="M44,68 L54,68 C54.553,68 55,68.447 55,69 L55,70 C55,70.553 54.553,71 54,71 L44,71 C43.447,71 43,70.553 43,70 L43,69 C43,68.447 43.447,68 44,68 Z" id="Path" fill="#7F8F98"></path>
+            <path d="M38,90 L62,90 L62,85 L38,85 L38,90 Z M75,75 L25,75 L24,83 L76,83 L75,75 Z" id="Shape" fill="#E4E7E7" fill-rule="nonzero"></path>
+            <path d="M71,17 L78,17 C80.209,17 82,18.791 82,21 L82,25 C82,27.209 80.209,29 78,29 L71,29 C68.791,29 67,27.209 67,25 L67,21 C67,18.791 68.791,17 71,17 Z" id="Path" fill="#DFDFDF"></path>
+            <path d="M79,17 L29,17 C26.939,17 25,18.955 25,21 L25,44 L75,44 L75,21 C75,18.791 76.791,17 79,17 Z" id="Path" fill="#F3F3F3"></path>
+            <polygon id="Path" fill="#DADADA" points="25 42 75 42 75 44 25 44"></polygon>
+            <path d="M68.5,34 L31.5,34 C30.672,34 30,34.672 30,35.5 C30,36.328 30.672,37 31.5,37 L68.5,37 C69.328,37 70,36.328 70,35.5 C70,34.672 69.328,34 68.5,34 Z M31.5,30 L43.5,30 C44.328,30 45,29.328 45,28.5 C45,27.672 44.328,27 43.5,27 L31.5,27 C30.672,27 30,27.672 30,28.5 C30,29.328 30.672,30 31.5,30 Z" id="Shape" fill="#CCD0D2" fill-rule="nonzero"></path>
+            <path d="M59.74,53 L41.639,53 C40.788,53 40.111,52.941 39.633,52.806 C38.013,54.484 39.062,55 41.639,55 L59.74,55 C62.234,55 62.754,54.295 61.359,52.832 C60.969,52.942 60.436,53 59.74,53 Z" id="Path" fill="#283E49"></path>
+            <g id="Group" transform="translate(24.000000, 81.000000)" fill="#CDCFD0" fill-rule="nonzero">
+                <path d="M14,7 L38,7 L38,9 L14,9 L14,7 Z M0.25,0 L0,2 L52,2 L51.75,0 L0.25,0 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
