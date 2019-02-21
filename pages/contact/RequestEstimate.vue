@@ -117,7 +117,7 @@
       </div>
       <div class="column">
         <div class="field">
-          <label class="checkbox"><input type="checkbox" v-model="designServices">Deployment Services</label>
+          <label class="checkbox"><input type="checkbox" v-model="deploymentServices">Deployment Services</label>
         </div>
       </div>
     </div>
