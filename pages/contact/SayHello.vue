@@ -15,11 +15,8 @@
     <div class="field">
       <label class="label">Company Name</label>
       <div class="control">
-        <input class="input" type="text" v-model.trim="$v.companyName.$model" placeholder="">
+        <input class="input" type="text" v-model.trim="companyName" placeholder="">
       </div>
-    </div>
-    <div class="error-field" v-show="$v.companyName.$dirty">
-      <p class="has-text-danger" v-show="!$v.companyName.required">Company Name is required</p>
     </div>
     <div class="field">
       <label class="label">Email Address</label>
@@ -70,9 +67,6 @@
       contactName: {
         required,
         minLength: minLength(2)
-      },
-      companyName: {
-        required
       },
       emailAddress: {
         required,
