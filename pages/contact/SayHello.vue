@@ -3,38 +3,99 @@
     <div class="field">
       <label class="label">Contact Name</label>
       <div class="control">
-        <input class="input" type="text" placeholder="">
+        <input class="input" type="text" v-model.trim="$v.contactName.$model" placeholder="">
       </div>
+    </div>
+    <div class="error-field" v-show="$v.contactName.$dirty">
+      <p class="has-text-danger" v-show="!$v.contactName.required">Contact Name is required</p>
+      <p class="has-text-danger" v-show="!$v.contactName.minLength">
+        Please enter more than {{$v.contactName.$params.minLength.min}} characters
+      </p>
     </div>
     <div class="field">
       <label class="label">Company Name</label>
       <div class="control">
-        <input class="input" type="text" placeholder="">
+        <input class="input" type="text" v-model.trim="$v.companyName.$model" placeholder="">
       </div>
+    </div>
+    <div class="error-field" v-show="$v.companyName.$dirty">
+      <p class="has-text-danger" v-show="!$v.companyName.required">Company Name is required</p>
     </div>
     <div class="field">
       <label class="label">Email Address</label>
       <div class="control">
-        <input class="input" type="email" placeholder="">
+        <input class="input" type="email" v-model.trim="$v.emailAddress.$model" placeholder="">
       </div>
+    </div>
+    <div class="error-field" v-show="$v.emailAddress.$dirty">
+      <p class="has-text-danger" v-show="!$v.emailAddress.required">Email Address is required</p>
+      <p class="has-text-danger" v-show="!$v.emailAddress.email">Please check the email address was entered correctly.</p>
     </div>
     <div class="field">
       <label class="label">Message</label>
       <div class="control">
-        <textarea class="textarea" placeholder="Textarea"></textarea>
+        <textarea class="textarea" v-model.trim="$v.message.$model" placeholder=""></textarea>
       </div>
+    </div>
+    <div class="error-field" v-show="$v.message.$dirty">
+      <p class="has-text-danger" v-show="!$v.message.minLength">
+        Please enter more than {{$v.message.$params.minLength.min}} characters.
+      </p>
+      <p class="has-text-danger" v-show="!$v.message.maxLength">
+        Please enter less than {{$v.message.$params.maxLength.max}} characters.
+      </p>
     </div>
     <div class="field">
       <div class="control">
-        <button class="button is-link">Submit</button>
+        <button class="button is-link" @click="submit">Submit</button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+  import { required, minLength, maxLength, email } from 'vuelidate/lib/validators';
+
   export default {
-    name: "say-hello"
+    name: "say-hello",
+    data() {
+      return {
+        contactName: '',
+        companyName: '',
+        emailAddress: '',
+        message: '',
+      }
+    },
+    validations: {
+      contactName: {
+        required,
+        minLength: minLength(2)
+      },
+      companyName: {
+        required
+      },
+      emailAddress: {
+        required,
+        email
+      },
+      message: {
+        minLength: minLength(3),
+        maxLength: maxLength(3000)
+      }
+    },
+    methods: {
+      submit() {
+        console.log('submit!');
+        this.$v.$touch()
+        if (!this.$v.$invalid) {
+          console.log('form validation error-field');
+          return false;
+        }
+        /**
+         * To Do SendGrid Email
+         */
+      }
+    }
   }
 </script>
 
