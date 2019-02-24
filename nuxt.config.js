@@ -1,9 +1,7 @@
 const pkg = require('./package')
 
-
 module.exports = {
   mode: 'universal',
-
   /*
   ** Headers of the page
   */
@@ -38,23 +36,29 @@ module.exports = {
   plugins: [
     "~plugins/global.js",
     "~plugins/Vuelidate.js",
+    '~/plugins/axios'
   ],
 
   /*
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/axios',
   ],
+
+  axios: {
+    // proxyHeaders: false
+  },
 
   /*
   ** Build configuration
   */
   build: {
-    /*
-    ** You can extend webpack config here
-    */
-    extend(config, ctx) {
-
+   /*
+   ** Run ESLINT on save
+   */
+    extend (config, ctx) {
     }
-  }
+  },
+  serverMiddleware: ['~/api/index.js'],
 }
