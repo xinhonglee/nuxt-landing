@@ -80,7 +80,7 @@
     methods: {
       async submit() {
         console.log('submit!');
-        this.$v.$touch()
+        this.$v.$touch();
         if (this.$v.$invalid) {
           console.log('form validation error-field');
           return false;
@@ -92,6 +92,7 @@
           message: this.message,
         };
         const result = await this.$axios.$post('/api/contact/say-hello', data);
+        this.$root.$emit("submit:form");
         console.log(result);
       }
     }

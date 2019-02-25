@@ -223,6 +223,7 @@
           projectSize: this.projectSize,
         };
         const result = await this.$axios.$post('/api/contact/request-estimate', data);
+        this.$root.$emit("submit:form");
         console.log(result);
       }
     }
