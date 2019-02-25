@@ -66,23 +66,17 @@
     <div class="field">
       <label class="label">Project URL</label>
       <div class="control">
-        <input class="input" type="text" v-model.trim="$v.projectUrl.$model" placeholder="">
+        <input class="input" type="text" v-model.trim="projectUrl" placeholder="">
       </div>
-    </div>
-    <div class="error-field" v-show="$v.projectUrl.$dirty">
-      <p class="has-text-danger" v-show="!$v.projectUrl.required">Project Url is required</p>
     </div>
     <div class="columns">
       <div class="column">
         <div class="field">
           <label class="label">Project Type</label>
-          <div class="select">
-            <select v-model="projectType">
-              <option v-for="(option, index) of projectTypeOptions" :value="option.value" :key="index">
-                {{option.text}}
-              </option>
-            </select>
-          </div>
+          <label class="radio" v-for="(option, index) of projectTypeOptions" :key="index">
+            <input type="radio" :value="option" v-model="projectType">
+            {{option}}
+          </label>
         </div>
         <div class="error-field" v-show="$v.projectType.$dirty">
           <p class="has-text-danger" v-show="!$v.projectType.required">Project Type is required</p>
@@ -91,13 +85,10 @@
       <div class="column">
         <div class="field">
           <label class="label">Project Size</label>
-          <div class="select">
-            <select v-model="projectSize">
-              <option v-for="(option, index) of projectSizeOptions" :value="option.value" :key="index">
-                {{option.text}}
-              </option>
-            </select>
-          </div>
+          <label class="radio" v-for="(option, index) of projectSizeOptions" :key="index">
+            <input type="radio" :value="option" v-model="projectSize">
+            {{option}}
+          </label>
         </div>
         <div class="error-field" v-show="$v.projectSize.$dirty">
           <p class="has-text-danger" v-show="!$v.projectSize.required">Project Size is required</p>
@@ -134,19 +125,16 @@
   import {isPhone} from "../utils";
 
   const _projectTypeOptions = [
-    {value: '', text: '-- SELECT --'},
-    {value: '1', text: 'Type 1'},
-    {value: '2', text: 'Type 2'},
-    {value: '3', text: 'Type 3'},
-    {value: '4', text: 'Type 4'}
+    'Static website',
+    'Website with CMS',
+    'Website + Mobile application',
+    ' Mobile application',
   ];
 
   const _projectSizeOptions = [
-    {value: '', text: '-- SELECT --'},
-    {value: '1', text: 'Size 1'},
-    {value: '2', text: 'Size 2'},
-    {value: '3', text: 'Size 3'},
-    {value: '4', text: 'Size 4'}
+    '1-2 unique page layouts',
+    '3-10 unique page layouts',
+    '10+ unique page layouts',
   ];
 
   export default {
@@ -188,9 +176,6 @@
         maxLength: maxLength(3000)
       },
       projectName: {
-        required
-      },
-      projectUrl: {
         required
       },
       projectType: {
