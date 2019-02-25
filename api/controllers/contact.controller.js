@@ -40,7 +40,9 @@ exports.sendRequestEstimateEmail = async (req, res, next) => {
       deploymentServices: req.body.deploymentServices,
     };
 
+    console.log('email data: ', data);
     const result = await requestEstimate(data);
+    console.log('email result: ', result);
 
     res.json(result);
   } catch (error) {
