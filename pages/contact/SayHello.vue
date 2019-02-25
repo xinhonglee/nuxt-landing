@@ -78,16 +78,22 @@
       }
     },
     methods: {
-      submit() {
+      async submit() {
         console.log('submit!');
-        this.$v.$touch()
-        if (!this.$v.$invalid) {
+        this.$v.$touch();
+        if (this.$v.$invalid) {
           console.log('form validation error-field');
           return false;
         }
-        /**
-         * To Do SendGrid Email
-         */
+        const data = {
+          contactName: this.contactName,
+          companyName: this.companyName,
+          emailAddress: this.emailAddress,
+          message: this.message,
+        };
+        const result = await this.$axios.$post('/api/contact/say-hello', data);
+        this.$root.$emit("submit:form");
+        console.log(result);
       }
     }
   }

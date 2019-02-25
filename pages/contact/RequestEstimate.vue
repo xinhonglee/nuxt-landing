@@ -201,16 +201,30 @@
       },
     },
     methods: {
-      submit() {
+      async submit() {
         console.log('submit!');
         this.$v.$touch();
-        if (!this.$v.$invalid) {
+        if (this.$v.$invalid) {
           console.log('form validation error-field');
           return false;
         }
-        /**
-         * To Do SendGrid Email
-         */
+        const data = {
+          contactName: this.contactName,
+          companyName: this.companyName,
+          emailAddress: this.emailAddress,
+          phoneNumber: this.phoneNumber,
+          message: this.message,
+          projectName: this.projectName,
+          projectUrl: this.projectUrl,
+          projectType: this.projectType,
+          designServices: this.designServices,
+          contentServices: this.contentServices,
+          deploymentServices: this.deploymentServices,
+          projectSize: this.projectSize,
+        };
+        const result = await this.$axios.$post('/api/contact/request-estimate', data);
+        this.$root.$emit("submit:form");
+        console.log(result);
       }
     }
   }
