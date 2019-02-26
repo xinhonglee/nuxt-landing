@@ -1,4 +1,5 @@
-const pkg = require('./package')
+const pkg = require('./package');
+const bodyParser = require('body-parser');
 
 module.exports = {
   mode: 'universal',
@@ -52,19 +53,19 @@ module.exports = {
 
   axios: {
     debug: true,
-    proxy: true,
+    // proxy: true,
   },
 
-  proxyTable: {
-    '/api': {
-      logLevel: 'info', // or 'debug'
-      target: 'https://magnet-co.netlify.com',
-      changeOrigin: true,
-      pathRewrite: {
-        '^/api': ''
-      }
-    }
-  },
+  // proxyTable: {
+  //   '/api': {
+  //     logLevel: 'info', // or 'debug'
+  //     target: 'https://magnet-co.netlify.com',
+  //     changeOrigin: true,
+  //     pathRewrite: {
+  //       '^/api': ''
+  //     }
+  //   }
+  // },
 
   /*
   ** Build configuration
@@ -76,5 +77,10 @@ module.exports = {
     extend (config, ctx) {
     }
   },
-  serverMiddleware: ['~/api/index.js'],
+  serverMiddleware: [
+    // body-parser middleware
+    bodyParser.json(),
+    // Api middleware
+    '~/api'
+  ],
 }
