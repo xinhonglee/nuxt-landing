@@ -55,9 +55,15 @@ module.exports = {
     proxy: true,
   },
 
-  proxy: {
-    '/api': 'https://magnet-co.netlify.com/api',
-    '/api/contact/say-hello': 'https://magnet-co.netlify.com/api/contact/say-hello',
+  proxyTable: {
+    '/api': {
+      logLevel: 'info', // or 'debug'
+      target: 'https://magnet-co.netlify.com',
+      changeOrigin: true,
+      pathRewrite: {
+        '^/api': ''
+      }
+    }
   },
 
   /*
