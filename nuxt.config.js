@@ -47,7 +47,12 @@ module.exports = {
   ],
 
   axios: {
-    proxyHeaders: true
+    proxyHeaders: true,
+    proxy: true,
+  },
+
+  proxy: {
+    '/api/': 'https://magnet-co.netlify.com/api',
   },
 
   /*
