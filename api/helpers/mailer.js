@@ -16,21 +16,21 @@ const transporter = nodemailer.createTransport(sgTransport(options));
 const sayHello = transporter.templateSender(
   new EmailTemplate('api/templates/sayHello'),
   {
-    from: process.env.MAIL_FROM_ADDRESS
+    to: process.env.MAIL_FROM_ADDRESS
   }
 );
 
 const requestEstimate = transporter.templateSender(
   new EmailTemplate('api/templates/requestEstimate'),
   {
-    from: process.env.MAIL_FROM_ADDRESS
+    to: process.env.MAIL_FROM_ADDRESS
   }
 );
 
 exports.sendSayHello = (data) => {
   return sayHello(
     {
-      to: data.emailAddress,
+      from: data.emailAddress,
       subject: 'Say Hello'
     },
     {
@@ -44,7 +44,7 @@ exports.sendSayHello = (data) => {
 exports.requestEstimate = (data) => {
   return requestEstimate(
     {
-      to: data.emailAddress,
+      from: data.emailAddress,
       subject: 'Request Estimate'
     },
     {
