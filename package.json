@@ -28,6 +28,7 @@
     "email-templates": "^2.6.0",
     "express": "^4.16.4",
     "font-awesome": "^4.7.0",
+    "helmet": "^3.5.0",
     "imagesloaded": "^4.1.4",
     "nodemailer": "^2.7.2",
     "nodemailer-sendgrid-transport": "^0.2.0",

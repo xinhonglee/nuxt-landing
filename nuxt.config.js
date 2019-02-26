@@ -51,7 +51,7 @@ module.exports = {
   ],
 
   axios: {
-    proxyHeaders: true,
+    debug: true,
     proxy: true,
   },
 
