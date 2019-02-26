@@ -57,6 +57,7 @@ module.exports = {
 
   proxy: {
     '/api': 'https://magnet-co.netlify.com/api',
+    '/api/contact/say-hello': 'https://magnet-co.netlify.com/api/contact/say-hello',
   },
 
   /*
