@@ -118,7 +118,7 @@
     </div>
     <div class="field mt-2">
       <div class="control">
-        <button class="button is-link" @click="submit">Submit</button>
+        <button class="button is-link" @click="onSubmit">Submit</button>
       </div>
     </div>
   </div>
@@ -200,7 +200,7 @@
         this.recaptchaErrorMessage = '';
         this.recaptchaVerified = true;
       },
-      async submit() {
+      async onSubmit() {
         console.log('submit!');
         this.$v.$touch();
         if (this.$v.$invalid) {
