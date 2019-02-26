@@ -47,7 +47,7 @@ module.exports = {
   ],
 
   axios: {
-    // proxyHeaders: false
+    proxyHeaders: true
   },
 
   /*
