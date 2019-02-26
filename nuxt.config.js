@@ -47,6 +47,7 @@ module.exports = {
   */
   modules: [
     '@nuxtjs/axios',
+    '@nuxtjs/proxy'
   ],
 
   axios: {
@@ -55,7 +56,7 @@ module.exports = {
   },
 
   proxy: {
-    '/api/': 'https://magnet-co.netlify.com/api',
+    '/api': 'https://magnet-co.netlify.com/api',
   },
 
   /*
