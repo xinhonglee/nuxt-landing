@@ -112,7 +112,11 @@
         </div>
       </div>
     </div>
-    <div class="field">
+    <vue-recaptcha @verify="verifyRecaptcha" :sitekey="siteKey"></vue-recaptcha>
+    <div class="error-field" v-show="recaptchaErrorMessage">
+      <p class="has-text-danger">{{recaptchaErrorMessage}}</p>
+    </div>
+    <div class="field mt-2">
       <div class="control">
         <button class="button is-link" @click="submit">Submit</button>
       </div>
@@ -121,8 +125,10 @@
 </template>
 
 <script>
+  import VueRecaptcha from 'vue-recaptcha';
   import {required, minLength, maxLength, email} from 'vuelidate/lib/validators';
   import {isPhone} from "../utils";
+  import {gSiteKey} from "../constants";
 
   const _projectTypeOptions = [
     'Static website',
@@ -139,6 +145,7 @@
 
   export default {
     name: "request-estimate",
+    components: {VueRecaptcha},
     data() {
       return {
         contactName: '',
@@ -155,6 +162,9 @@
         deploymentServices: false,
         projectSize: '',
         projectSizeOptions: _projectSizeOptions,
+        siteKey: gSiteKey,
+        recaptchaVerified: false,
+        recaptchaErrorMessage: ''
       }
     },
     validations: {
@@ -186,11 +196,19 @@
       },
     },
     methods: {
+      verifyRecaptcha(response) {
+        this.recaptchaErrorMessage = '';
+        this.recaptchaVerified = true;
+      },
       async submit() {
         console.log('submit!');
         this.$v.$touch();
         if (this.$v.$invalid) {
           console.log('form validation error-field');
+          return false;
+        }
+        if (!this.recaptchaVerified) {
+          this.recaptchaErrorMessage = 'Please tick recaptcha.'
           return false;
         }
         const data = {

@@ -26,7 +26,8 @@
     </div>
     <div class="error-field" v-show="$v.emailAddress.$dirty">
       <p class="has-text-danger" v-show="!$v.emailAddress.required">Email Address is required</p>
-      <p class="has-text-danger" v-show="!$v.emailAddress.email">Please check the email address was entered correctly.</p>
+      <p class="has-text-danger" v-show="!$v.emailAddress.email">Please check the email address was entered
+        correctly.</p>
     </div>
     <div class="field">
       <label class="label">Message</label>
@@ -42,25 +43,35 @@
         Please enter less than {{$v.message.$params.maxLength.max}} characters.
       </p>
     </div>
-    <div class="field">
+    <vue-recaptcha @verify="verifyRecaptcha" :sitekey="siteKey"></vue-recaptcha>
+    <div class="error-field" v-show="recaptchaErrorMessage">
+      <p class="has-text-danger">{{recaptchaErrorMessage}}</p>
+    </div>
+    <div class="field mt-2">
       <div class="control">
-        <button class="button is-link" @click="submit">Submit</button>
+        <button class="button is-link" @click="onSubmit">Submit</button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  import { required, minLength, maxLength, email } from 'vuelidate/lib/validators';
+  import VueRecaptcha from 'vue-recaptcha';
+  import {required, minLength, maxLength, email} from 'vuelidate/lib/validators';
+  import {gSiteKey} from '../constants';
 
   export default {
     name: "say-hello",
+    components: {VueRecaptcha},
     data() {
       return {
         contactName: '',
         companyName: '',
         emailAddress: '',
         message: '',
+        siteKey: gSiteKey,
+        recaptchaVerified: false,
+        recaptchaErrorMessage: ''
       }
     },
     validations: {
@@ -78,11 +89,18 @@
       }
     },
     methods: {
-      async submit() {
-        console.log('submit!');
+      verifyRecaptcha(response) {
+        this.recaptchaErrorMessage = '';
+        this.recaptchaVerified = true;
+      },
+      async onSubmit() {
         this.$v.$touch();
         if (this.$v.$invalid) {
           console.log('form validation error-field');
+          return false;
+        }
+        if (!this.recaptchaVerified) {
+          this.recaptchaErrorMessage = 'Please tick recaptcha.'
           return false;
         }
         const data = {
@@ -100,5 +118,4 @@
 </script>
 
 <style scoped>
-
 </style>
