@@ -1,23 +1,21 @@
 <template>
   <div>
-    <headerHome/>
+    <headerPart/>
     <nuxt/>
-    <footerCommon/>
+    <footerPart/>
   </div>
 </template>
 
 <script>
-import headerHome from '~/components/header_home.vue'
-import footerCommon from '~/components/footer.vue'
+import headerPart from '~/components/header_home.vue'
+import footerPart from '~/components/footer.vue'
 export default {
   components: {
-    headerHome,
-    footerCommon
+    headerPart,
+    footerPart
   }
 }
 </script>
 
-<style lang="scss">
-  // @import '~assets/scss/master.scss';
-  // @import '~assets/scss/scheme_dark.scss';
+<style lang="scss" scoped>
 </style>

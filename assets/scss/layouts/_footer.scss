@@ -1,4 +1,5 @@
 footer {
+  background-color: $color-base-2;
   .wrap {
     display: grid;
     @include max-width;
@@ -9,15 +10,15 @@ footer {
     margin: 0 0 1rem;
   }
   .footer_upper {
-    border-top: 2px solid $color-grey-2;
-    border-color: $color-base-2;
+    border-top: 2px solid $color-base-3;
+    border-color: rgba($color-base-3,0.5);
     .wrap {
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
   }
   .footer_lower {
-    border-top: 2px solid $color-grey-2;
-    border-color: $color-base-2;
+    border-top: 2px solid $color-base-3;
+    border-color: rgba($color-base-3,0.5);
     .wrap {
       grid-template-columns: 1fr 1fr;
     }

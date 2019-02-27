@@ -4,8 +4,8 @@
       <div class="wrap">
         <article>
           <div class="title">
-            <h1>A single source of truth</h1>
-            <p>Clarity is a productivity app that allows users to organize information, and design workflows in a way that makes sense for day-to-day business across industries.</p>
+            <h1>Education software</h1>
+            <p>Magnet is a .</p>
           </div>
           <div class="content">
             <section class="content_section content_image">

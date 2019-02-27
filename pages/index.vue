@@ -1,42 +1,10 @@
 <template>
   <main id="main">
-    <section class="">
+    <section class="puff-grad-invert-2">
   		<div class="callout duo squish">
   			<div class="wrap">
-  				<div class="block">
-  					<h4>UI/UX and visual design</h4>
-  					<h2>Design</h2>
-            <p>Seductive design intoxicates. It blurs the world around us and demands attention.</p>
-            <ul class="tick_list">
-              <li>Content strategy and writing</li>
-              <li>UI/UX design</li>
-              <li>HTML and CSS templating</li>
-              <li>Javascript behavioural design</li>
-            </ul>
-  					<!-- <a href="/services/design" class="anim-button small">
-  					  <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
-  					    <rect class="shape" height="60" width="320" />
-  					  </svg>
-  					   <div class="text">Learn more</div>
-  					</a> -->
-  				</div><!-- Block -->
-  				<div class="block">
-  					<h4>Software engineering</h4>
-  					<h2>Code</h2>
-            <p>Meticulous engineering is at the center of a harmonious and seamless web experience.</p>
-            <ul class="tick_list">
-              <li>Specifications and research</li>
-              <li>Data architecture</li>
-              <li>Functional programming</li>
-              <li>DevOps and support</li>
-            </ul>
-  					<!-- <a href="/services/engineering" class="anim-button small">
-  					  <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
-  					    <rect class="shape" height="60" width="320" />
-  					  </svg>
-  					   <div class="text">Learn more</div>
-  					</a> -->
-  				</div><!-- Block -->
+  				<designBlock/>
+  				<engineeringBlock/>
   			</div>
   		</div>
   	</section>
@@ -210,20 +178,22 @@
       </div>
     </section>
     <section class="puff-grad-invert">
-  		<div class="callout">
-  			<div class="anim-button">
-  			  <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
-  			    <rect class="shape" height="60" width="320" />
-  			  </svg>
-  			   <div class="text">Schedule a call</div>
-  			</div>
-  		</div>
+      <callout/>
   	</section>
   </main>
 </template>
 
 <script>
+
+  import callout from '~/components/callout.vue'
+  import designBlock from '~/components/services/design.vue'
+  import engineeringBlock from '~/components/services/engineering.vue'
   export default {
+    components: {
+      callout,
+      designBlock,
+      engineeringBlock
+    },
     layout: 'home',
     head: {
       title: 'Magnet Co - Better web by design',

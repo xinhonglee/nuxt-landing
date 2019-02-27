@@ -1,23 +1,23 @@
 <template>
   <div>
-    <headerCommon/>
+    <headerPart/>
+    <h1>Im the theme</h1>
     <nuxt/>
-    <footerCommon/>
+    <footerPart/>
   </div>
 </template>
 
 <script>
-import headerCommon from '~/components/header_theme.vue'
-import footerCommon from '~/components/footer.vue'
+import headerPart from '~/components/header_theme.vue'
+import footerPart from '~/components/footer.vue'
 export default {
   components: {
-    headerCommon,
-    footerCommon
+    headerPart,
+    footerPart
   }
 }
 </script>
 
-<style lang="scss">
-  // @import '~assets/scss/master.scss';
-  // @import '~assets/scss/scheme_light.scss';
+<style lang="scss" scoped>
+  @import '~assets/scss/scheme_light.scss';
 </style>

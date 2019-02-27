@@ -130,3 +130,20 @@ body {
   }
 
 }
+
+
+main {
+  article,
+  section {
+    .title {
+      margin-left: 150px;
+    }
+  }
+}
+
+
+
+menu {
+  &.client_list {}
+  &.product_list {}
+}

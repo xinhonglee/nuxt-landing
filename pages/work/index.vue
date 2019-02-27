@@ -3,7 +3,9 @@
     <main id="main">
       <section>
         <div class="wrap">
-          <h1>Customers</h1>
+          <div class="title">
+            <h1>Recent work</h1>
+          </div>
           <clientList/>
         </div>
       </section>

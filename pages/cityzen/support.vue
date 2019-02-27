@@ -27,6 +27,5 @@
   }
 </script>
 
-<style lang="scss">
-  // @import '~assets/scss/master.scss';
+<style lang="scss" scoped>
 </style>
