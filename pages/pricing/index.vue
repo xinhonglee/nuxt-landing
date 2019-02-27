@@ -197,6 +197,8 @@
   }
 </script>
 
-<style scoped>
 
+<style lang="scss" scoped>
+  @import '~bulma/sass/utilities/all';
+  @import '~bulma/bulma';
 </style>

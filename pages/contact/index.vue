@@ -74,7 +74,7 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   .backward {
     margin-top: 20px;
   }
