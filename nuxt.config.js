@@ -47,7 +47,7 @@ module.exports = {
   */
   modules: [
     ['@nuxtjs/axios', {
-      baseURL: process.env.NODE_ENV ==='development' ? 'http://localhost:3001' : 'http://165.227.54.53'
+      baseURL: process.env.NODE_ENV ==='development' ? 'http://localhost:3001' : 'https://api.magnet.co/'
     }]
   ],
 
