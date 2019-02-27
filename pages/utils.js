@@ -6,3 +6,9 @@ export const isPhone = (phone) => {
     return false;
   }
 };
+
+export const getOptionByValue = (options, value) => {
+  return options.find((option) => {
+    return option.value === value;
+  });
+};
