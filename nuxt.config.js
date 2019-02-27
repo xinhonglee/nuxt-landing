@@ -1,9 +1,5 @@
 const pkg = require('./package');
 
-console.log('========NODE ENVIRONMENT ===========');
-console.log(process.env.NODE_ENV);
-console.log('====================================');
-
 module.exports = {
   mode: 'universal',
   /*
