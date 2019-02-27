@@ -1,0 +1,49 @@
+menu {
+  display: flex;
+  align-items: center;
+  width: auto;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    margin: 0 1.5rem 0 0;
+    a {
+      text-decoration: none;
+      @include font-regular-upper;
+      font-size: 0.85rem;
+      letter-spacing: 0.02rem;
+      &:before {
+        display: block;
+        width: 100%;
+        height: 0.2rem;
+        background: transparent;
+        border-radius: 0.2rem;
+        position: relative;
+        top: -0.5rem;
+        content: ' ';
+      }
+      &.is-active {
+        @include font-demibold-upper;
+        font-weight: 600;
+        &:before {
+          background-color: #fff;
+        }
+      }
+    }
+    &:last-child {
+      margin: 0;
+      a {}
+    }
+    &.with-icon {
+      &.icon-buy {}
+    }
+    &.navbar-services {}
+    &.navbar-products {}
+    &.navbar-work {}
+    &.navbar-about {}
+    &.navbar-gettingstarted {}
+    &.navbar-features {}
+    &.navbar-support {}
+    &.navbar-buy {}
+  }
+}

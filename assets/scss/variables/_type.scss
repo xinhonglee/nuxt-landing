@@ -1,0 +1,126 @@
+
+/**
+ * @license
+ * MyFonts Webfont Build ID 3614551, 2018-07-24T13:57:19-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: MaratSans-Bold by Ludwig Type
+ * URL: https://www.myfonts.com/fonts/ludwiguebele/marat-sans/sans-bold/
+ *
+ * Webfont: MaratSans-Demibold by Ludwig Type
+ * URL: https://www.myfonts.com/fonts/ludwiguebele/marat-sans/sans-demibold/
+ *
+ * Webfont: MaratSans-Extralight by Ludwig Type
+ * URL: https://www.myfonts.com/fonts/ludwiguebele/marat-sans/sans-extralight/
+ *
+ * Webfont: MaratSans-Light by Ludwig Type
+ * URL: https://www.myfonts.com/fonts/ludwiguebele/marat-sans/sans-light/
+ *
+ * Webfont: MaratSans-Medium by Ludwig Type
+ * URL: https://www.myfonts.com/fonts/ludwiguebele/marat-sans/sans-medium/
+ *
+ * Webfont: MaratSans-RegularItalic by Ludwig Type
+ * URL: https://www.myfonts.com/fonts/ludwiguebele/marat-sans/sans-italic/
+ *
+ * Webfont: MaratSans-Regular by Ludwig Type
+ * URL: https://www.myfonts.com/fonts/ludwiguebele/marat-sans/sans-regular/
+ *
+ * Webfont: MaratSans-Thin by Ludwig Type
+ * URL: https://www.myfonts.com/fonts/ludwiguebele/marat-sans/sans-thin/
+ *
+ *
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3614551
+ * Licensed pageviews: 10,000
+ * Webfonts copyright: Copyright (c) 2012 by Ludwig Uebele. All rights reserved.
+ *
+ * © 2018 MyFonts Inc
+*/
+
+
+@import url("//hello.myfonts.net/count/372757");
+
+
+
+@font-face {font-family: 'MaratSans-Light';src: url('~assets/fonts/marat-sans/372757_3_0.eot');src: url('~assets/fonts/marat-sans/372757_3_0.eot?#iefix') format('embedded-opentype'),url('~assets/fonts/marat-sans/372757_3_0.woff2') format('woff2'),url('~assets/fonts/marat-sans/372757_3_0.woff') format('woff'),url('~assets/fonts/marat-sans/372757_3_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'MaratSans-Regular';src: url('~assets/fonts/marat-sans/372757_6_0.eot');src: url('~assets/fonts/marat-sans/372757_6_0.eot?#iefix') format('embedded-opentype'),url('~assets/fonts/marat-sans/372757_6_0.woff2') format('woff2'),url('~assets/fonts/marat-sans/372757_6_0.woff') format('woff'),url('~assets/fonts/marat-sans/372757_6_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'MaratSans-Medium';src: url('~assets/fonts/marat-sans/372757_4_0.eot');src: url('~assets/fonts/marat-sans/372757_4_0.eot?#iefix') format('embedded-opentype'),url('~assets/fonts/marat-sans/372757_4_0.woff2') format('woff2'),url('~assets/fonts/marat-sans/372757_4_0.woff') format('woff'),url('~assets/fonts/marat-sans/372757_4_0.ttf') format('truetype');}
+
+
+@mixin font-light {
+	font-family: MaratSans-Light, -apple-system-body, BlinkMacSystemFont, Helvetica Neue, Helvetica, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+
+@mixin font-regular {
+	font-family: MaratSans-Regular, -apple-system-body, BlinkMacSystemFont, Helvetica Neue, Helvetica, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+
+@mixin font-medium {
+	font-family: MaratSans-Medium, -apple-system-body, BlinkMacSystemFont, Helvetica Neue, Helvetica, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+
+
+
+// @mixin font-light-upper {
+// 	font-family: "jaf-domus-titling-web", MaratSans-Regular, -apple-system-body, BlinkMacSystemFont, Helvetica Neue, Helvetica, sans-serif;
+// 	font-weight: 300;
+// 	font-style: normal;
+// }
+@mixin font-regular-upper {
+	font-family: "jaf-domus-titling-web", MaratSans-Regular, -apple-system-body, BlinkMacSystemFont, Helvetica Neue, Helvetica, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+@mixin font-medium-upper {
+	font-family: "jaf-domus-titling-web", MaratSans-Regular, -apple-system-body, BlinkMacSystemFont, Helvetica Neue, Helvetica, sans-serif;
+	font-weight: 500;
+	font-style: normal;
+}
+@mixin font-demibold-upper {
+	font-family: "jaf-domus-titling-web", MaratSans-Regular, -apple-system-body, BlinkMacSystemFont, Helvetica Neue, Helvetica, sans-serif;
+	font-weight: 600;
+	font-style: normal;
+}
+
+
+@mixin font-serif-black-headline {
+	// Utopia Std Black Headline
+	font-family: utopia-std-headline, serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 1400px) {
+
+}
+@media only screen and (max-width: 1000px) {
+
+}
+@media only screen and (max-width: 700px) {
+
+}
+@media only screen and (max-width: 400px) {
+
+}

@@ -1,0 +1,125 @@
+main {
+  .wrap {
+    display: grid;
+    @include max-width;
+    padding: 2rem;
+    article {
+      .title {
+        max-width: 60ch;
+        h1 {}
+        p {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}
+
+.content_section {
+  padding: 2rem 0;
+  .text {
+    grid-area: text;
+    p {
+      &:last-child {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+  &.half_first {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "text .";
+    .text {
+      border-right: 3px solid $color-base-3;
+      padding-right: 4rem;
+    }
+  }
+  &.half_last {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: ". text";
+    .text {
+      border-left: 3px solid $color-base-3;
+      padding-left: 4rem;
+    }
+  }
+  &.content_image {
+    img {
+      display: block;
+      margin-bottom: 2rem;
+      &:last-child {
+        margin-bottom: 0rem;
+      }
+    }
+  }
+  &.content_icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem 0rem 2rem;
+    padding: 4rem 0;
+    background-color: $color-base-2;
+    div {
+      margin: 0 0.1rem;
+      width: 7rem;
+      height: auto;
+      text-align: center;
+      padding: 1rem;
+      background-color: $color-base;
+      img {
+        margin: 0 0 0.5rem;
+        width: 4rem;
+      }
+      span {
+        display: block;
+        margin: 0;
+        color: $color-base-5;
+      }
+    }
+  }
+  &.content_quote {
+    margin: 0rem 0rem 2rem;
+    padding: 4rem 0;
+    background-color: $color-base-2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    blockquote {
+      width: 30rem;
+      padding: 3rem;
+      background-color: $color-green-2;
+      color: #fff;
+      p {
+        margin: 0 0 1rem;
+        @include font-light;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 1.4rem;
+      }
+      cite {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-style: normal;
+        img {
+          margin: 0 1rem 0 0;
+          border-radius: 50%;
+          width: 2.5rem;
+          height: 2.5rem;
+          border: 2px solid $color-green;
+        }
+        span {
+          strong {
+
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+@include media('>=tablet', '<desktop') {}
+@include media('>=phone', '<tablet') {}
+@include media('>=phone', '<desktop') {}

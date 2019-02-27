@@ -1,0 +1,26 @@
+
+// Pre-animation states
+header .content h1,
+header .content p,
+header .content .images,
+header .mouse,
+main,
+footer {
+  opacity: 0;
+  position: relative;
+  top: 40px;
+}
+header .navigation {
+  opacity: 0;
+  position: relative;
+  top: -40px;
+}
+header .logotype,
+header .meta {
+  opacity: 0;
+  position: relative;
+  left: -40px;
+}
+.menu-toggle a {
+  opacity: 0;
+}

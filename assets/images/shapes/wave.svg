@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="54px" height="14px" viewBox="0 0 54 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Line</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Layouts" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="Artboard-Index" transform="translate(-259.000000, -357.000000)" stroke="#09CBC4" stroke-width="3">
+            <g id="header" transform="translate(261.000000, 359.000000)">
+                <path d="M0,0 C4.14315303,9.48400579e-15 3.88691401,10.0106637 8.30397753,10.0106637 C12.7210411,10.0106637 12.7210411,0 16.6449643,0 C20.5688876,0 20.6021666,10.0106637 24.9606235,10.0106637 C29.1659424,10.0106637 29.1659424,0 33.2020345,0 C37.4879335,0 37.4262561,10.0106637 41.6662832,10.0106637 C45.9063102,10.0106637 45.9063102,-9.49037322e-15 50,0" id="Line" transform="translate(25.000000, 5.005332) scale(1, -1) translate(-25.000000, -5.005332) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
