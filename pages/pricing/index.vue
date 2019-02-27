@@ -87,18 +87,22 @@
           </div>
         </fieldset>
         <hr>
-        <div class="field">
-          <label class="label">Email Address</label>
-          <div class="control">
-            <input class="input" type="email" v-model.trim="$v.emailAddress.$model" placeholder="">
+        <fieldset>
+          <div class="field">
+            <label class="label">Email Address</label>
+            <div class="control">
+              <input class="input" type="email" v-model.trim="$v.emailAddress.$model" placeholder="">
+            </div>
           </div>
-        </div>
-        <div class="error-field" v-show="$v.emailAddress.$dirty">
-          <p class="has-text-danger" v-show="!$v.emailAddress.required">Email Address is required</p>
-          <p class="has-text-danger" v-show="!$v.emailAddress.email">Please check the email address was entered
-            correctly.</p>
-        </div>
-        <div class="field">
+          <div class="error-field" v-show="$v.emailAddress.$dirty">
+            <p class="has-text-danger" v-show="!$v.emailAddress.required">Email Address is required</p>
+            <p class="has-text-danger" v-show="!$v.emailAddress.email">Please check the email address was entered
+              correctly.</p>
+          </div>
+          <a class="button is-text">+ Another Email</a>
+        </fieldset>
+
+        <div class="field mt-5">
           <label class="checkbox"><input type="checkbox" v-model="requestFollowUp">Request Follow Up</label>
         </div>
         <div class="field">
@@ -183,7 +187,7 @@
           return false;
         }
         if (!this.recaptchaVerified) {
-          this.recaptchaErrorMessage = 'Please tick recaptcha.'
+          this.recaptchaErrorMessage = 'Please tick recaptcha.';
           return false;
         }
         // const result = await this.$axios.$post('/api/contact/request-estimate', data);

@@ -1,5 +1,8 @@
 const pkg = require('./package');
-const bodyParser = require('body-parser');
+
+console.log('========NODE ENVIRONMENT ===========');
+console.log(process.env.NODE_ENV);
+console.log('====================================');
 
 module.exports = {
   mode: 'universal',
@@ -47,25 +50,14 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
-    '@nuxtjs/axios',
-    '@nuxtjs/proxy'
+    ['@nuxtjs/axios', {
+      baseURL: process.env.NODE_ENV ==='development' ? 'http://localhost:3001' : 'http://165.227.54.53'
+    }]
   ],
 
   axios: {
     debug: true,
-    // proxy: true,
   },
-
-  // proxyTable: {
-  //   '/api': {
-  //     logLevel: 'info', // or 'debug'
-  //     target: 'https://magnet-co.netlify.com',
-  //     changeOrigin: true,
-  //     pathRewrite: {
-  //       '^/api': ''
-  //     }
-  //   }
-  // },
 
   /*
   ** Build configuration
@@ -77,10 +69,4 @@ module.exports = {
     extend (config, ctx) {
     }
   },
-  serverMiddleware: [
-    // body-parser middleware
-    bodyParser.json(),
-    // Api middleware
-    '~/api'
-  ],
 }
