@@ -1,6 +1,6 @@
 <template>
   <div class="request-estimate-form">
-    <form>
+    <form @submit.prevent="onSubmit">
       <div class="field">
         <label class="label">Contact Name</label>
         <div class="control">
@@ -119,7 +119,7 @@
       </div>
       <div class="field mt-2">
         <div class="control">
-          <button class="button is-link" @click="onSubmit">Submit</button>
+          <button type="submit" class="button is-link">Submit</button>
         </div>
       </div>
     </form>
