@@ -111,26 +111,33 @@
         <div class="field mt-5">
           <label class="checkbox"><input type="checkbox" v-model="requestFollowUp">Request Follow Up</label>
         </div>
-        <div class="field">
-          <label class="label">Notes</label>
-          <div class="control">
-            <textarea class="textarea" v-model.trim="$v.notes.$model" placeholder=""></textarea>
+        <template v-if="!sentEmail">
+          <div class="field">
+            <label class="label">Notes</label>
+            <div class="control">
+              <textarea class="textarea" v-model.trim="$v.notes.$model" placeholder=""></textarea>
+            </div>
           </div>
-        </div>
-        <div class="error-field" v-show="$v.notes.$dirty">
-          <p class="has-text-danger" v-show="!$v.notes.maxLength">
-            Please enter less than {{$v.notes.$params.maxLength.max}} characters.
-          </p>
-        </div>
-        <vue-recaptcha @verify="verifyRecaptcha" :sitekey="siteKey"></vue-recaptcha>
-        <div class="error-field" v-show="recaptchaErrorMessage">
-          <p class="has-text-danger">{{recaptchaErrorMessage}}</p>
-        </div>
-        <div class="field mt-2">
-          <div class="control">
-            <button type="submit" class="button is-link">Submit</button>
+          <div class="error-field" v-show="$v.notes.$dirty">
+            <p class="has-text-danger" v-show="!$v.notes.maxLength">
+              Please enter less than {{$v.notes.$params.maxLength.max}} characters.
+            </p>
           </div>
-        </div>
+          <vue-recaptcha @verify="verifyRecaptcha" :sitekey="siteKey"></vue-recaptcha>
+          <div class="error-field" v-show="recaptchaErrorMessage">
+            <p class="has-text-danger">{{recaptchaErrorMessage}}</p>
+          </div>
+          <div class="field mt-2">
+            <div class="control">
+              <button type="submit" class="button is-link">Submit</button>
+            </div>
+          </div>
+        </template>
+        <template v-else>
+          <h6 class="subtitle is-5 mt-5 md-5">
+            Your estimate has been sent to the address(s) listed above.
+            If you have any questions please don't hesitate to <a href="https://magnet.co/contact/">reach out.</a></h6>
+        </template>
       </form>
     </div>
   </div>
@@ -173,6 +180,7 @@
         recaptchaVerified: false,
         recaptchaErrorMessage: '',
         totalCost: 0,
+        sentEmail: false,
       }
     },
     validations: {
@@ -202,8 +210,21 @@
           this.recaptchaErrorMessage = 'Please tick recaptcha.';
           return false;
         }
-        // const result = await this.$axios.$post('/api/contact/pricing', data);
-        // console.log(result);
+
+        const data = {
+          creativeDirection: this.costData.creativeDirection,
+          contentManagementSystem: this.costData.contentManagementSystem,
+          discoverability: this.costData.discoverability,
+          illustrate: this.costData.illustrate,
+          customerSupport: this.costData.customerSupport,
+          requestFollowUp: this.requestFollowUp,
+          notes: this.notes,
+          totalCost: this.totalCost,
+          emailAddresses: this.emailAddresses
+        };
+        const result = await this.$axios.$post('/api/contact/pricing', data);
+        console.log(result);
+        this.sentEmail = true;
       },
       addEmailAddress() {
         this.emailAddresses.push('');
