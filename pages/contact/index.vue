@@ -70,7 +70,8 @@
         console.log("submit emit action");
         this.sentEmail = true;
       })
-    }
+    },
+  }
 </script>
 
 <style lang="scss" scoped>
