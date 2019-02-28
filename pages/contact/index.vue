@@ -62,9 +62,6 @@
         this.sentEmail = true;
       })
     },
-    beforeDestroy() {
-      this.$root.off("submit:form");
-    },
   }
 </script>
 
