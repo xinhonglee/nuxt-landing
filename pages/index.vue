@@ -14,20 +14,28 @@
   			</div>
   		</div>
   	</section>
+    <section class="bg-03 case_studies">
+      <div class="titleblock center-flex">
+        <h5>Case studies</h5>
+        <h2>Some of our recent activity</h2>
+      </div>
+      <caseStudyList/>
+  	</section>
     <section class="">
+      <div class="titleblock center-flex">
+        <h5>Our approach</h5>
+        <h2>Things we care most about</h2>
+      </div>
       <serviceFeatures/>
     </section>
-    <section class="puff-grad-invert">
+    <section class="puff-grad-invert-2">
       <callout/>
-  	</section>
-    <section class="case_studies">
-      <caseUCLA/>
   	</section>
   </main>
 </template>
 
 <script>
-  import caseUCLA from '~/components/services/work/case_study_ucla.vue'
+  import caseStudyList from '~/components/services/work/case_study_list.vue'
   import serviceFeatures from '~/components/services/features.vue'
   import callout from '~/components/callout.vue'
   import designBlock from '~/components/services/design.vue'
@@ -38,7 +46,7 @@
       designBlock,
       engineeringBlock,
       serviceFeatures,
-      caseUCLA
+      caseStudyList
     },
     layout: 'home',
     head: {

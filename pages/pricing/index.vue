@@ -101,89 +101,94 @@
           </fieldset>
         </div>
       </section>
-      <section class="">
+      <section class="total-estimate">
         <div class="wrap">
-
-        </div>
-      </section>
-      <section class="">
-        <div class="wrap">
-
-        </div>
-      </section>
-      <section class="">
-        <div class="wrap">
-
-        </div>
-      </section>
-      <section class="">
-        <div class="wrap">
-
-        </div>
-      </section>
-      <!-- <section class="">
-        <div class="wrap">
-
-        </div>
-      </section> -->
-      <!-- <section class="">
-        <div class="wrap">
-
-        </div>
-      </section> -->
-
-        <hr>
-        <div class="total-estimate mt-5">
           <h6 class="title has-text-primary">Total Estimate Value: ${{totalCost}}</h6>
         </div>
-        <fieldset class="email-group mt-5">
-          <label class="label">Email Address</label>
-          <template v-for="(emailAddress, index) of emailAddresses">
-            <div class="field">
-              <div class="control">
-                <input class="input" type="email" v-model.trim="emailAddresses[index]" placeholder="">
-                <a class="button is-text" @click="removeEmail(index)"> Remove</a>
+      </section>
+
+      <template v-if="!sentEmail">
+
+        <section class="email-estimate">
+          <div class="wrap">
+
+            <div class="title">
+              <h2>Save your estimate</h2>
+            </div>
+
+            <fieldset class="email-group mt-5">
+              <label class="label">Email Address</label>
+              <template v-for="(emailAddress, index) of emailAddresses">
+                <div class="field">
+                  <div class="control">
+                    <input class="input" type="email" v-model.trim="emailAddresses[index]" placeholder="">
+                    <a class="button is-text" @click="removeEmail(index)"> Remove</a>
+                  </div>
+                </div>
+                <div class="error-field" v-show="$v.emailAddresses.$each[index].$dirty">
+                  <p class="has-text-danger" v-show="!$v.emailAddresses.$each[index].required">Email Address is required</p>
+                  <p class="has-text-danger" v-show="!$v.emailAddresses.$each[index].email">Please check the email address
+                    was entered correctly.</p>
+                </div>
+              </template>
+            </fieldset>
+
+            <div>
+              <a class="button is-text" @click="addEmailAddress">+ Another Email</a>
+            </div>
+
+            <div class="callout">
+              <div class="text">
+                <h3>Can we call you?</h3>
+                <p>We would love to hear from you and discuss more about the details of your project.</p>
+              </div>
+              <div class="field">
+                <label class="checkbox"><input type="checkbox" v-model="requestFollowUp">Request a follow-up with us</label>
               </div>
             </div>
-            <div class="error-field" v-show="$v.emailAddresses.$each[index].$dirty">
-              <p class="has-text-danger" v-show="!$v.emailAddresses.$each[index].required">Email Address is required</p>
-              <p class="has-text-danger" v-show="!$v.emailAddresses.$each[index].email">Please check the email address
-                was
-                entered correctly.</p>
+
+            <div class="field">
+              <label class="label">Notes</label>
+              <div class="control">
+                <textarea class="textarea" v-model.trim="$v.notes.$model" placeholder=""></textarea>
+              </div>
             </div>
-          </template>
-        </fieldset>
-        <a class="button is-text" @click="addEmailAddress">+ Another Email</a>
-        <div class="field mt-5">
-          <label class="checkbox"><input type="checkbox" v-model="requestFollowUp">Request Follow Up</label>
+            <div class="error-field" v-show="$v.notes.$dirty">
+              <p class="has-text-danger" v-show="!$v.notes.maxLength">
+                Please enter less than {{$v.notes.$params.maxLength.max}} characters.
+              </p>
+            </div>
+            <vue-recaptcha @verify="verifyRecaptcha" :sitekey="siteKey"></vue-recaptcha>
+            <div class="error-field" v-show="recaptchaErrorMessage">
+              <p class="has-text-danger">{{recaptchaErrorMessage}}</p>
+            </div>
+            <div class="field">
+              <div class="control">
+                <button type="submit" class="button is-link">Submit</button>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      </template>
+
+      <template v-else>
+        <section class="email-notification">
+          <div class="wrap">
+            <h3 class="">On its way!</h3>
+            <p>Your estimate has been sent to the address(s) listed above.</p>
+            <p>If you have any questions please don't hesitate to <a href="/contact/">reach out.</a></p>
+          </div>
+        </section>
+      </template>
+
+      <!-- <section class="">
+        <div class="wrap">
+
         </div>
-        <template v-if="!sentEmail">
-          <div class="field">
-            <label class="label">Notes</label>
-            <div class="control">
-              <textarea class="textarea" v-model.trim="$v.notes.$model" placeholder=""></textarea>
-            </div>
-          </div>
-          <div class="error-field" v-show="$v.notes.$dirty">
-            <p class="has-text-danger" v-show="!$v.notes.maxLength">
-              Please enter less than {{$v.notes.$params.maxLength.max}} characters.
-            </p>
-          </div>
-          <vue-recaptcha @verify="verifyRecaptcha" :sitekey="siteKey"></vue-recaptcha>
-          <div class="error-field" v-show="recaptchaErrorMessage">
-            <p class="has-text-danger">{{recaptchaErrorMessage}}</p>
-          </div>
-          <div class="field">
-            <div class="control">
-              <button type="submit" class="button is-link">Submit</button>
-            </div>
-          </div>
-        </template>
-        <template v-else>
-          <h6 class="subtitle">
-            Your estimate has been sent to the address(s) listed above.
-            If you have any questions please don't hesitate to <a href="https://magnet.co/contact/">reach out.</a></h6>
-        </template>
+      </section> -->
+
       </form>
     </div>
   </section>
