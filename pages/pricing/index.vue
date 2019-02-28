@@ -1,6 +1,7 @@
 <template>
-  <div class="page-pricing">
-    <div class="container">
+  <main>
+    <section class="page-pricing">
+    <div class="wrap container">
       <form @submit.prevent="onSubmit">
         <fieldset class="mt-5">
           <h4 class="title is-4">Creative Direction</h4>
@@ -10,9 +11,9 @@
               <label class="radio">
                 <input type="radio" :value="option.value" v-model="costData.creativeDirection">
                 <div class="radio-right-pane">
-                  <p>{{option.value}}</p>
-                  <p>{{option.description}}</p>
-                  <p class="has-text-link">${{option.cost}}</p>
+                  <h3>{{option.value}}</h3>
+                  <div class="description"><p>{{option.description}}</p></div>
+                  <div class="cost"><p class="has-text-link">${{option.cost}}</p></div>
                 </div>
               </label>
             </div>
@@ -140,7 +141,8 @@
         </template>
       </form>
     </div>
-  </div>
+  </section>
+  </main>
 </template>
 
 <script>
@@ -257,8 +259,8 @@
 </script>
 
 <style scoped lang="scss">
-  @import '~bulma/sass/utilities/all';
-  @import '~bulma/bulma';
+  // @import '~bulma/sass/utilities/all';
+  // @import '~bulma/bulma';
   .email-group {
     input {
       max-width: 400px;

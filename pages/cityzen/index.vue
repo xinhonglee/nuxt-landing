@@ -1,62 +1,60 @@
 <template>
-  <div class="">
-    <main id="main">
-      <section>
-        <div class="wrap">
-          <h1>Cityzen</h1>
-          <p>An incredible municipal website experience for your community</p>
+  <main id="main">
+    <section>
+      <div class="wrap">
+        <h1>Cityzen</h1>
+        <p>An incredible municipal website experience for your community</p>
+      </div>
+    </section>
+    <section>
+      <div class="wrap">
+        <h2>What's inside</h2>
+        <ul>
+          <li>1 WordPress theme, 1 child theme and 5 core plugins</li>
+          <li>The <a href="https://wpemerge.com" target="_blank">WP Emerge</a> development framework</li>
+          <li>Comprehensive documentation</li>
+          <li>45 templates</li>
+          <li>12 possible layout options</li>
+          <li>And so much more! See below &darr;</li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <div class="wrap">
+        <h2>Under the hood</h2>
+        <p>So much more than just a theme, this is a powerful, modern website platform for cities with every feature your citizens might need, presented in a beautiful responsive interface that works securely, quickly and flawlessly on all devices.</p>
+      </div>
+    </section>
+    <section>
+      <div class="wrap">
+        <h2>Features</h2>
+        <div class="grid-features">
+          <cityzen_feature_analytics/>
+          <cityzen_feature_archives/>
+          <cityzen_feature_content_list/>
+          <cityzen_feature_directory/>
+          <cityzen_feature_events/>
+          <cityzen_feature_feeds/>
+          <cityzen_feature_filesystem/>
+          <cityzen_feature_forms/>
+          <cityzen_feature_gutenberg/>
+          <cityzen_feature_jobs/>
+          <cityzen_feature_listings/>
+          <cityzen_feature_newsletters/>
+          <cityzen_feature_notifications/>
+          <cityzen_feature_optimization/>
+          <cityzen_feature_platform/>
+          <cityzen_feature_record_requests/>
+          <cityzen_feature_representation/>
+          <cityzen_feature_responsive_design/>
+          <cityzen_feature_search/>
+          <cityzen_feature_security/>
+          <cityzen_feature_translations/>
+          <cityzen_feature_user_accounts/>
         </div>
-      </section>
-      <section>
-        <div class="wrap">
-          <h2>What's inside</h2>
-          <ul>
-            <li>1 WordPress theme, 1 child theme and 5 core plugins</li>
-            <li>The <a href="https://wpemerge.com" target="_blank">WP Emerge</a> development framework</li>
-            <li>Comprehensive documentation</li>
-            <li>45 templates</li>
-            <li>12 possible layout options</li>
-            <li>And so much more! See below &darr;</li>
-          </ul>
-        </div>
-      </section>
-      <section>
-        <div class="wrap">
-          <h2>Under the hood</h2>
-          <p>So much more than just a theme, this is a powerful, modern website platform for cities with every feature your citizens might need, presented in a beautiful responsive interface that works securely, quickly and flawlessly on all devices.</p>
-        </div>
-      </section>
-      <section>
-        <div class="wrap">
-          <h2>Features</h2>
-          <div class="grid-features">
-            <cityzen_feature_analytics/>
-            <cityzen_feature_archives/>
-            <cityzen_feature_content_list/>
-            <cityzen_feature_directory/>
-            <cityzen_feature_events/>
-            <cityzen_feature_feeds/>
-            <cityzen_feature_filesystem/>
-            <cityzen_feature_forms/>
-            <cityzen_feature_gutenberg/>
-            <cityzen_feature_jobs/>
-            <cityzen_feature_listings/>
-            <cityzen_feature_newsletters/>
-            <cityzen_feature_notifications/>
-            <cityzen_feature_optimization/>
-            <cityzen_feature_platform/>
-            <cityzen_feature_record_requests/>
-            <cityzen_feature_representation/>
-            <cityzen_feature_responsive_design/>
-            <cityzen_feature_search/>
-            <cityzen_feature_security/>
-            <cityzen_feature_translations/>
-            <cityzen_feature_user_accounts/>
-          </div>
-        </div>
-      </section>
-    </main>
-  </div>
+      </div>
+    </section>
+  </main>
 </template>
 
 <script>

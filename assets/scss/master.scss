@@ -132,11 +132,40 @@ body {
 }
 
 
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  .column {
+    border-radius: 0.2rem;
+    border: 2px solid $color-base-3;
+    padding: 2rem;
+  }
+}
+
+
+label.radio {
+  display: grid;
+  grid-template-columns: 1rem 1fr;
+  grid-gap: 1rem;
+  input[type=radio] {}
+  .radio-right-pane {
+    display: grid;
+    grid-template-areas: "title" "description" "cost";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 4rem;
+    h3 { grid-area: title; }
+    .description { grid-area: description; }
+    .cost { grid-area: cost; }
+  }
+}
+
+
 main {
   article,
   section {
     .title {
-      margin-left: 150px;
+      // margin-left: 150px;
     }
   }
 }

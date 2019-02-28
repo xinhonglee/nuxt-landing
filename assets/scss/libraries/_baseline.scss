@@ -37,7 +37,7 @@ h1,h2,h3,h4,h5,h6 {
 h1 {
 	position: relative;
 	margin: 0 0 2rem;
-	max-width: 30rem;
+	// max-width: 30rem;
 	font-size: 70px;
 	line-height: 1.1;
 	@include font-serif-black-headline;
@@ -107,7 +107,7 @@ img {
 }
 
 form {
-  max-width: 30rem;
+  // max-width: 30rem;
   fieldset {
     border: none;
     margin: 0 0 2rem;

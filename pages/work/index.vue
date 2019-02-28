@@ -1,16 +1,14 @@
 <template>
-  <div class="">
-    <main id="main">
-      <section>
-        <div class="wrap">
-          <div class="title">
-            <h1>Recent work</h1>
-          </div>
-          <clientList/>
+  <main id="main">
+    <section>
+      <div class="wrap">
+        <div class="title">
+          <h1>Recent work</h1>
         </div>
-      </section>
-    </main>
-  </div>
+        <clientList/>
+      </div>
+    </section>
+  </main>
 </template>
 
 <script>

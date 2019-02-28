@@ -1,14 +1,12 @@
 <template>
-  <div class="">
-    <main id="main">
-      <section>
-        <div class="wrap">
-          <h1>Products</h1>
-          <nuxt-link to="/cityzen">Cityzen</nuxt-link>
-        </div>
-      </section>
-    </main>
-  </div>
+  <main id="main">
+    <section>
+      <div class="wrap">
+        <h1>Products</h1>
+        <nuxt-link to="/cityzen">Cityzen</nuxt-link>
+      </div>
+    </section>
+  </main>
 </template>
 
 <script>

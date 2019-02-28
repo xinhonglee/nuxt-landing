@@ -1,14 +1,12 @@
 <template>
-  <div class="">
-    <main id="main">
-      <section>
-        <div class="wrap">
-          <h1>Cityzen</h1>
-          <h2>Support</h2>
-        </div>
-      </section>
-    </main>
-  </div>
+  <main id="main">
+    <section>
+      <div class="wrap">
+        <h1>Cityzen</h1>
+        <h2>Support</h2>
+      </div>
+    </section>
+  </main>
 </template>
 
 <script>
