@@ -1,10 +1,178 @@
 /* Bulma */
-@import '~bulma/sass/utilities/all';
-@import '~bulma/bulma';
+// @import '~bulma/sass/utilities/all';
+// @import '~bulma/bulma';
 
-/* Custom Styles */
-@import "helpers/all";
-@import "components/all";
-@import "layouts/all";
-@import "partials/all";
-@import "pages/all";
+
+
+.is-horizontal-center {
+  justify-content: center;
+}
+
+.is-vertical-center {
+  align-items: center;
+}
+
+.checkbox input,
+.radio input {
+  margin-right: 5px;
+}
+
+.radio {
+  margin-left: 0 !important;
+}
+
+.error-field {
+  margin-bottom: 0.75rem;
+}
+
+
+.mt-1 {
+  margin-top: 5px;
+}
+
+.mt-2 {
+  margin-top: 10px;
+}
+
+.mt-3 {
+  margin-top: 15px;
+}
+
+.mt-4 {
+  margin-top: 20px;
+}
+
+.mt-5 {
+  margin-top: 20px;
+}
+
+
+
+
+// Remotes
+@import url("https://use.typekit.net/hfr6qsf.css");
+
+// Variables
+@import 'variables/media';
+@import 'variables/colors';
+@import 'variables/type';
+@import 'variables/mixins';
+
+// Libraries
+@import 'libraries/baseline';
+@import 'libraries/print';
+
+// Components
+@import 'components/navigation';
+@import 'components/backgrounds';
+@import 'components/icons';
+@import 'components/grid_features';
+@import 'components/team_headshots';
+@import 'components/callout';
+@import 'components/interactions';
+
+// Layouts
+@import 'layouts/header';
+@import 'layouts/sections';
+@import 'layouts/footer';
+
+// Animations
+// @import 'animation/init_timeline';
+// @import 'animation/nuxt_transitions';
+
+
+// .home {
+//   header {
+//     .wrap {
+//       background: url(~assets/images/shapes/circle.svg) 100% 50% no-repeat;
+//       background-size: 800px auto;
+//     }
+//   }
+// }
+
+body {
+  // background: linear-gradient(347deg, #0b0a17 0%, #16202a 100%) ;
+  background: $color-base;
+  color: $color-grey-2;
+  h1,h2,h3,h4,h5,h6 {
+  	color: $color-grey-3;
+  }
+  .text {
+    color: $color-grey;
+  }
+  .navigation menu li.active a:before {
+    background: #fff;
+  }
+  h4 {
+  	color: #fff;
+  }
+  h5 {
+  	color: $color-green;
+  }
+  a {
+    color: $color-grey-2;
+  }
+  .button {
+    color: #fff;
+  }
+  .icon-github {
+    background-image: url("~assets/images/icons/icon-github-light.svg");
+  }
+  .icon-behance {
+    background-image: url("~assets/images/icons/icon-behance-light.svg");
+  }
+  .icon-dribbble {
+    background-image: url("~assets/images/icons/icon-dribbble-light.svg");
+  }
+  .grid-features article .content .description,
+  footer {
+    color: $color-base-5;
+  }
+
+}
+
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  .column {
+    border-radius: 0.2rem;
+    border: 2px solid $color-base-3;
+    padding: 2rem;
+  }
+}
+
+
+label.radio {
+  display: grid;
+  grid-template-columns: 1rem 1fr;
+  grid-gap: 1rem;
+  input[type=radio] {}
+  .radio-right-pane {
+    display: grid;
+    grid-template-areas: "title" "description" "cost";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 4rem;
+    h3 { grid-area: title; }
+    .description { grid-area: description; }
+    .cost { grid-area: cost; }
+  }
+}
+
+
+main {
+  article,
+  section {
+    .title {
+      // margin-left: 150px;
+    }
+  }
+}
+
+
+
+menu {
+  &.client_list {}
+  &.product_list {}
+}

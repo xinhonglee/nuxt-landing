@@ -1,68 +1,53 @@
 <template>
-  <section class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        magnet-co
-      </h1>
-      <h2 class="subtitle">
-        Nuxt.js Magnet site
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >GitHub</a>
-      </div>
-    </div>
-  </section>
+  <main id="main">
+    <section class="puff-grad-invert-2">
+  		<div class="callout duo squish">
+  			<div class="wrap">
+  				<designBlock/>
+  				<engineeringBlock/>
+  			</div>
+  		</div>
+  	</section>
+    <section class="">
+      <serviceFeatures/>
+    </section>
+    <section class="puff-grad-invert">
+      <callout/>
+  	</section>
+    <section class="case_studies">
+      <caseUCLA/>
+  	</section>
+  </main>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
-export default {
-  components: {
-    Logo
+  import caseUCLA from '~/components/services/work/case_study_ucla.vue'
+  import serviceFeatures from '~/components/services/features.vue'
+  import callout from '~/components/callout.vue'
+  import designBlock from '~/components/services/design.vue'
+  import engineeringBlock from '~/components/services/engineering.vue'
+  export default {
+    components: {
+      callout,
+      designBlock,
+      engineeringBlock,
+      serviceFeatures,
+      caseUCLA
+    },
+    layout: 'home',
+    head: {
+      title: 'Magnet Co - Better web by design',
+      meta: [
+        {
+         hid: 'description',
+         name: 'description',
+         content: 'Your next web design and development team'
+        }
+      ]
+    }
   }
-}
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
+<style lang="scss">
+  // @import '~assets/scss/master.scss';
 </style>

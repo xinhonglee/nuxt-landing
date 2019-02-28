@@ -1,0 +1,13 @@
+
+.tick_list {
+  li {
+    padding-left: 35px;
+    background: transparent url("~assets/images/icons/icon-tick.svg") 0% 50% no-repeat;
+    background-size: auto;
+    background-size: 20px auto;
+  }
+}
+
+@include media('>=tablet', '<desktop') {}
+@include media('>=phone', '<tablet') {}
+@include media('>=phone', '<desktop') {}
