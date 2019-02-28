@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg-02">
     <headerPart/>
     <h1>Im the theme</h1>
     <nuxt/>

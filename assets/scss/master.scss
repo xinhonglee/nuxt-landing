@@ -70,6 +70,7 @@
 @import 'components/team_headshots';
 @import 'components/callout';
 @import 'components/interactions';
+@import 'components/case_study_list';
 
 // Layouts
 @import 'layouts/header';
@@ -132,14 +133,17 @@ body {
 }
 
 
-.columns {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2rem;
-  .column {
-    border-radius: 0.2rem;
-    border: 2px solid $color-base-3;
-    padding: 2rem;
+// Used on pricing page
+.option-fields {
+  .columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    .column {
+      border-radius: 0.2rem;
+      border: 2px solid $color-base-3;
+      padding: 2rem;
+    }
   }
 }
 
@@ -175,4 +179,76 @@ main {
 menu {
   &.client_list {}
   &.product_list {}
+}
+
+
+
+
+.titleblock {
+  // margin: 4rem 0 0;
+  padding: 5rem 2rem 0rem;
+  h5 {
+    &:before {
+      content: ' ';
+      display: block;
+      width: 2rem;
+      height: 0.2rem;
+      background-color: $color-base-3;
+      position: relative;
+      top: -1rem;
+      left: 50%;
+      margin-left: -1rem;
+    }
+  }
+}
+
+
+.center-flex {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+
+.with-meta {
+  position: relative;
+  .meta {
+    // position: absolute;
+    span {
+      display: block;
+      position: absolute;
+      // border: 2px solid red;
+      font-size: 0.9rem;
+      opacity: 0.8;
+
+    }
+    &.meta-1 {
+      text-align: right;
+
+      span {
+        display: block;
+        padding: 1rem 2rem 1rem 0.2rem;
+        top: 3.1rem;
+        left: -2rem;
+        transform: rotate(-90deg);
+        border-top: 2px solid rgba(255,255,255,0.1);
+      }
+    }
+    &.meta-2 {
+      // text-align: right;
+
+      span {
+        display: block;
+        padding: 1rem 2rem 1rem 0.2rem;
+        bottom: 4.7rem;
+        right: -2rem;
+        transform: rotate(90deg);
+        border-top: 2px solid rgba(255,255,255,0.1);
+      }
+    }
+  }
 }
