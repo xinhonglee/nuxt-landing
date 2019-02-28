@@ -1,5 +1,5 @@
 <template>
-  <div class="block">
+  <div class="block" style="margin: 0 0 22rem">
     <h4>UI/UX and visual design</h4>
     <h2>Design</h2>
     <p>Seductive design intoxicates. It blurs the world around us and demands attention.</p>

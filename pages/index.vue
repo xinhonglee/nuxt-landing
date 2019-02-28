@@ -1,6 +1,12 @@
 <template>
   <main id="main">
-    <section class="puff-grad-invert-2">
+    <section class="puff-grad-invert-2 with-meta">
+      <div class="meta meta-1">
+        <span>Sketch, HTML, CSS, Javascript</span>
+      </div>
+      <div class="meta meta-2">
+        <span>Another longer text goes here</span>
+      </div>
   		<div class="callout duo squish">
   			<div class="wrap">
   				<designBlock/>
