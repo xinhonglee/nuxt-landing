@@ -26,6 +26,9 @@
             <img src="~assets/images/team-headshots/team-alex.jpg" alt="Alex">
             <img src="~assets/images/team-headshots/team-sarah.jpg" alt="Sarah">
             <img src="~assets/images/team-headshots/team-eugene.jpg" alt="Eugene">
+            <img src="~assets/images/team-headshots/team-igor.jpg" alt="Eugene">
+            <img src="~assets/images/team-headshots/team-bryan.jpg" alt="Eugene">
+            <img src="~assets/images/team-headshots/team-don.jpg" alt="Eugene">
           </div>
         </article>
       </div>
