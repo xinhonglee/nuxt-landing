@@ -1,18 +1,18 @@
 <template>
   <div class="page-pricing">
     <div class="container">
-      <form>
+      <form @submit.prevent="onSubmit">
         <fieldset class="mt-5">
           <h4 class="title is-4">Creative Direction</h4>
           <h5 class="subtitle is-5 mt-2">What level of design assistance do you need?</h5>
           <div class="columns">
             <div class="column" v-for="(option, index) of creativeDirectionOptions" :key="index">
               <label class="radio">
-                <input type="radio" :value="option.value" v-model="creativeDirection">
-                <div>
+                <input type="radio" :value="option.value" v-model="costData.creativeDirection">
+                <div class="radio-right-pane">
                   <p>{{option.value}}</p>
                   <p>{{option.description}}</p>
-                  <p>${{option.cost}}</p>
+                  <p class="has-text-link">${{option.cost}}</p>
                 </div>
               </label>
             </div>
@@ -25,11 +25,11 @@
           <div class="columns">
             <div class="column" v-for="(option, index) of contentManagementSystemOptions" :key="index">
               <label class="radio">
-                <input type="radio" :value="option.value" v-model="contentManagementSystem">
-                <div>
+                <input type="radio" :value="option.value" v-model="costData.contentManagementSystem">
+                <div class="radio-right-pane">
                   <p>{{option.value}}</p>
                   <p>{{option.description}}</p>
-                  <p>${{option.cost}}</p>
+                  <p class="has-text-link">${{option.cost}}</p>
                 </div>
               </label>
             </div>
@@ -42,11 +42,11 @@
           <div class="columns">
             <div class="column" v-for="(option, index) of discoverabilityOptions" :key="index">
               <label class="radio">
-                <input type="radio" :value="option.value" v-model="discoverability">
-                <div>
+                <input type="radio" :value="option.value" v-model="costData.discoverability">
+                <div class="radio-right-pane">
                   <p>{{option.value}}</p>
                   <p>{{option.description}}</p>
-                  <p>${{option.cost}}</p>
+                  <p class="has-text-link">${{option.cost}}</p>
                 </div>
               </label>
             </div>
@@ -59,11 +59,11 @@
           <div class="columns">
             <div class="column" v-for="(option, index) of illustrateOptions" :key="index">
               <label class="radio">
-                <input type="radio" :value="option.value" v-model="illustrate">
-                <div>
+                <input type="radio" :value="option.value" v-model="costData.illustrate">
+                <div class="radio-right-pane">
                   <p>{{option.value}}</p>
                   <p>{{option.description}}</p>
-                  <p>${{option.cost}}</p>
+                  <p class="has-text-link">${{option.cost}}</p>
                 </div>
               </label>
             </div>
@@ -76,55 +76,68 @@
           <div class="columns">
             <div class="column" v-for="(option, index) of customerSupportOptions" :key="index">
               <label class="radio">
-                <input type="radio" :value="option.value" v-model="customerSupport">
-                <div>
+                <input type="radio" :value="option.value" v-model="costData.customerSupport">
+                <div class="radio-right-pane">
                   <p>{{option.value}}</p>
                   <p>{{option.description}}</p>
-                  <p>${{option.cost}}</p>
+                  <p class="has-text-link">${{option.cost}}</p>
                 </div>
               </label>
             </div>
           </div>
         </fieldset>
         <hr>
-        <fieldset>
-          <div class="field">
-            <label class="label">Email Address</label>
-            <div class="control">
-              <input class="input" type="email" v-model.trim="$v.emailAddress.$model" placeholder="">
+        <div class="total-estimate mt-5">
+          <h6 class="title is-4 has-text-primary">Total Estimate Value: ${{totalCost}}</h6>
+        </div>
+        <fieldset class="email-group mt-5">
+          <label class="label">Email Address</label>
+          <template v-for="(emailAddress, index) of emailAddresses">
+            <div class="field">
+              <div class="control">
+                <input class="input" type="email" v-model.trim="emailAddresses[index]" placeholder="">
+                <a class="button is-text" @click="removeEmail(index)"> Remove</a>
+              </div>
             </div>
-          </div>
-          <div class="error-field" v-show="$v.emailAddress.$dirty">
-            <p class="has-text-danger" v-show="!$v.emailAddress.required">Email Address is required</p>
-            <p class="has-text-danger" v-show="!$v.emailAddress.email">Please check the email address was entered
-              correctly.</p>
-          </div>
-          <a class="button is-text">+ Another Email</a>
+            <div class="error-field" v-show="$v.emailAddresses.$each[index].$dirty">
+              <p class="has-text-danger" v-show="!$v.emailAddresses.$each[index].required">Email Address is required</p>
+              <p class="has-text-danger" v-show="!$v.emailAddresses.$each[index].email">Please check the email address
+                was
+                entered correctly.</p>
+            </div>
+          </template>
         </fieldset>
-
+        <a class="button is-text" @click="addEmailAddress">+ Another Email</a>
         <div class="field mt-5">
           <label class="checkbox"><input type="checkbox" v-model="requestFollowUp">Request Follow Up</label>
         </div>
-        <div class="field">
-          <label class="label">Notes</label>
-          <div class="control">
-            <textarea class="textarea" v-model.trim="$v.notes.$model" placeholder=""></textarea>
+        <template v-if="!sentEmail">
+          <div class="field">
+            <label class="label">Notes</label>
+            <div class="control">
+              <textarea class="textarea" v-model.trim="$v.notes.$model" placeholder=""></textarea>
+            </div>
           </div>
-        </div>
-        <div class="error-field" v-show="$v.notes.$dirty">
-          <p class="has-text-danger" v-show="!$v.notes.maxLength">
-            Please enter less than {{$v.notes.$params.maxLength.max}} characters.
-          </p>
-        </div>
-        <vue-recaptcha @verify="verifyRecaptcha" :sitekey="siteKey"></vue-recaptcha>
-        <div class="error-field" v-show="recaptchaErrorMessage">
-          <p class="has-text-danger">{{recaptchaErrorMessage}}</p>
-        </div>
-        <div class="field mt-2">
-          <div class="control">
-            <button class="button is-link" @click="onSubmit">Submit</button>
+          <div class="error-field" v-show="$v.notes.$dirty">
+            <p class="has-text-danger" v-show="!$v.notes.maxLength">
+              Please enter less than {{$v.notes.$params.maxLength.max}} characters.
+            </p>
           </div>
-        </div>
+          <vue-recaptcha @verify="verifyRecaptcha" :sitekey="siteKey"></vue-recaptcha>
+          <div class="error-field" v-show="recaptchaErrorMessage">
+            <p class="has-text-danger">{{recaptchaErrorMessage}}</p>
+          </div>
+          <div class="field mt-2">
+            <div class="control">
+              <button type="submit" class="button is-link">Submit</button>
+            </div>
+          </div>
+        </template>
+        <template v-else>
+          <h6 class="subtitle is-5 mt-5 md-5">
+            Your estimate has been sent to the address(s) listed above.
+            If you have any questions please don't hesitate to <a href="https://magnet.co/contact/">reach out.</a></h6>
+        </template>
       </form>
     </div>
   </div>
@@ -141,34 +154,41 @@
     _customerSupportOptions
   } from "../constants";
   import {gSiteKey} from "../constants";
+  import {getOptionByValue} from "../utils";
 
   export default {
     name: "pricing",
     components: {VueRecaptcha},
     data() {
       return {
-        creativeDirection: '',
+        costData: {
+          creativeDirection: '',
+          contentManagementSystem: '',
+          discoverability: '',
+          illustrate: '',
+          customerSupport: '',
+        },
         creativeDirectionOptions: _creativeDirectionOptions,
-        contentManagementSystem: '',
         contentManagementSystemOptions: _cmsOptions,
-        discoverability: '',
         discoverabilityOptions: _discoverabilityOptions,
-        illustrate: '',
         illustrateOptions: _illustrateOptions,
-        customerSupport: '',
         customerSupportOptions: _customerSupportOptions,
-        emailAddress: '',
+        emailAddresses: [''],
         requestFollowUp: false,
         notes: '',
         siteKey: gSiteKey,
         recaptchaVerified: false,
-        recaptchaErrorMessage: ''
+        recaptchaErrorMessage: '',
+        totalCost: 0,
+        sentEmail: false,
       }
     },
     validations: {
-      emailAddress: {
-        required,
-        email
+      emailAddresses: {
+        $each: {
+          required,
+          email
+        }
       },
       notes: {
         maxLength: maxLength(5000)
@@ -190,15 +210,62 @@
           this.recaptchaErrorMessage = 'Please tick recaptcha.';
           return false;
         }
-        // const result = await this.$axios.$post('/api/contact/request-estimate', data);
-        // console.log(result);
+
+        const data = {
+          creativeDirection: this.costData.creativeDirection,
+          contentManagementSystem: this.costData.contentManagementSystem,
+          discoverability: this.costData.discoverability,
+          illustrate: this.costData.illustrate,
+          customerSupport: this.costData.customerSupport,
+          requestFollowUp: this.requestFollowUp,
+          notes: this.notes,
+          totalCost: this.totalCost,
+          emailAddresses: this.emailAddresses
+        };
+        const result = await this.$axios.$post('/api/contact/pricing', data);
+        console.log(result);
+        this.sentEmail = true;
+      },
+      addEmailAddress() {
+        this.emailAddresses.push('');
+      },
+      removeEmail(index) {
+        this.emailAddresses.splice(index, 1);
+      }
+    },
+    watch: {
+      costData: {
+        handler: function(data) {
+          this.totalCost = 0;
+
+          const creativeDirection = getOptionByValue(_creativeDirectionOptions, data.creativeDirection);
+          const contentManagementSystem = getOptionByValue(_cmsOptions, data.contentManagementSystem);
+          const discoverability = getOptionByValue(_discoverabilityOptions, data.discoverability);
+          const illustrate = getOptionByValue(_illustrateOptions, data.illustrate);
+          const customerSupport = getOptionByValue(_customerSupportOptions, data.customerSupport);
+
+          this.totalCost += creativeDirection ? creativeDirection.cost : 0;
+          this.totalCost += contentManagementSystem ? contentManagementSystem.cost : 0;
+          this.totalCost += illustrate ? illustrate.cost : 0;
+          this.totalCost += discoverability ? discoverability.cost : 0;
+          this.totalCost += customerSupport ? customerSupport.cost : 0;
+        },
+        deep: true
       }
     }
   }
 </script>
 
-
-<style lang="scss" scoped>
+<style scoped lang="scss">
   @import '~bulma/sass/utilities/all';
   @import '~bulma/bulma';
+  .email-group {
+    input {
+      max-width: 400px;
+    }
+  }
+
+  .radio-right-pane {
+    display: inline-grid;
+  }
 </style>
