@@ -70,11 +70,7 @@
         console.log("submit emit action");
         this.sentEmail = true;
       })
-    },
-    beforeDestroy() {
-      this.$root.off("submit:form");
     }
-  }
 </script>
 
 <style lang="scss" scoped>
