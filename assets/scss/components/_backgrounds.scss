@@ -1,0 +1,64 @@
+.puff-grad-invert {
+  margin: 1rem;
+  background: rgba(49,146,143, 0.3);
+  background: linear-gradient(305deg, rgba(49,146,143,0.3) 0%, rgba(99,64,90,0.3) 100%);
+}
+.puff-grad-invert-2 {
+  margin: 1rem;
+  background: rgba(49,146,143, 1);
+  background: linear-gradient(305deg, rgba(49,146,143,1) 0%, rgba(99,64,90,1) 100%);
+}
+
+
+// Angled backgrounds
+
+.angle-grad {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  right: 0;
+  -webkit-transform: skewY(-12deg);
+  transform: skewY(-12deg);
+  pointer-events: none;
+  top: 0;
+  height: 608px;
+  height: calc(190px * 3.2);
+  z-index: -1;
+}
+.angle-grad .angle {
+	position: absolute;
+  top: auto;
+  left: 0;
+  right: 0;
+  height: 190px;
+}
+.angle-grad .one {
+	bottom: 0;
+  // -webkit-transform: skewY(24deg);
+  // transform: skewY(24deg);
+  height: 1000px;
+  background: -webkit-gradient(linear,left top,left bottom,from(rgba(230,235,241,.45)),to(rgba(246,249,252,.5)));
+  background: linear-gradient(180deg,rgba(230,235,241,.45),rgba(246,249,252,.5));
+}
+.angle-grad .two {
+	bottom: 190px;
+bottom: calc(190px * 1);
+background: hsla(0,0%,100%,.45);
+right: 70%;
+}
+.angle-grad .three {
+bottom: 380px;
+bottom: calc(190px * 2);
+background: #f6f9fc;
+// -webkit-transform: skewY(24deg);
+// transform: skewY(24deg);
+
+}
+.angle-grad .four {
+bottom: 570px;
+bottom: calc(190px * 3);
+background: -webkit-gradient(linear,left top,right top,from(#f6f9fc),to(#e6ebf1));
+background: linear-gradient(90deg,#f6f9fc,#e6ebf1);
+// -webkit-transform: skewY(24deg);
+// transform: skewY(24deg);
+}

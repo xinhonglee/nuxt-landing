@@ -1,0 +1,67 @@
+
+// Animated button
+.anim-button {
+  display: block;
+  height: 3rem;
+  margin: 0 auto;
+  // position: relative;
+  // top: 50%;
+  // transform: translateY(-50%);
+  width: 320px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  .shape {
+    fill: transparent;
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+    stroke: #19f6e8;
+  }
+  .text {
+    color: #fff;
+    @include font-demibold-upper;
+    font-size: 1.2rem;
+    letter-spacing: 0.075rem;
+    line-height: 2rem;
+    position: relative;
+    top: -3.1rem;
+  }
+  &:hover {
+    .shape {
+      -webkit-animation: 0.5s draw linear forwards;
+      animation: 0.5s draw linear forwards;
+    }
+  }
+  &.small {
+    .text {
+      color: #fff;
+      @include font-demibold-upper;
+      font-size: 1rem;
+      letter-spacing: 0.075rem;
+      line-height: 2rem;
+      position: relative;
+      top: -3.1rem;
+    }
+    &:hover {
+      .shape {
+
+      }
+    }
+  }
+}
+
+
+
+@keyframes draw {
+  0% {
+  	stroke-dasharray: 140 540;
+  	stroke-dashoffset: -474;
+  	stroke-width: 8px;
+  }
+  100% {
+  	stroke-dasharray: 760;
+  	stroke-dashoffset: 0;
+  	stroke-width: 2px;
+  }
+}
