@@ -10,7 +10,14 @@
 </template>
 
 <script>
+  import { paintCommon } from "~/assets/js/animate";
   export default {
+    data() {
+      return {};
+    },
+    mounted() {
+      paintCommon();
+    },
     layout: 'theme',
     head: {
       title: 'Purchase Cityzen',

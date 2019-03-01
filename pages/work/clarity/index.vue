@@ -78,7 +78,14 @@
 </template>
 
 <script>
+  import { paintCommon } from "~/assets/js/animate";
   export default {
+    data() {
+      return {};
+    },
+    mounted() {
+      paintCommon();
+    },
     layout: 'work',
     head: {
       title: 'UCLA Case Study',

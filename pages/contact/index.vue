@@ -43,11 +43,17 @@
 </template>
 
 <script>
+  import { paintCommon } from "~/assets/js/animate";
+
   import SayHello from "./SayHello";
   import RequestEstimate from "./RequestEstimate";
   import ThankYou from "./ThankYou";
 
   export default {
+    // data() {
+    //   return {};
+    // },
+
     name: "contact",
     components: {
       ThankYou,
@@ -66,6 +72,7 @@
       },
     },
     mounted() {
+      paintCommon(),
       this.$root.$on("submit:form", () => {
         console.log("submit emit action");
         this.sentEmail = true;

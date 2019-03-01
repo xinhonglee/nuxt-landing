@@ -196,6 +196,8 @@
 </template>
 
 <script>
+  import { paintCommon } from "~/assets/js/animate";
+
   import VueRecaptcha from 'vue-recaptcha';
   import {required, maxLength, email} from 'vuelidate/lib/validators';
   import {
@@ -209,6 +211,7 @@
   import {getOptionByValue} from "../utils";
 
   export default {
+
     name: "pricing",
     components: {VueRecaptcha},
     data() {
@@ -234,6 +237,9 @@
         totalCost: 0,
         sentEmail: false,
       }
+    },
+    mounted() {
+      paintCommon();
     },
     validations: {
       emailAddresses: {
@@ -305,6 +311,7 @@
         deep: true
       }
     }
+
   }
 </script>
 

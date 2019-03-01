@@ -3,18 +3,12 @@
   .case_study {
     position: relative;
     display: flex;
-    // align-items: center;
-    // justify-content: center;
     width: auto;
-    // min-height: 4rem;
     height: 30vw;
-    // overflow: hidden;
-    // border-radius: 0.15rem;
     border: 1rem solid rgba(0,0,0,0.2);
     img {
       object-fit: cover;
       object-position: top left;
-      // border-radius: 0.15rem;
     }
     .info {
       opacity: 0;
