@@ -58,6 +58,7 @@
 </template>
 
 <script>
+  import { paintCommon } from "~/assets/js/animate";
   import cityzen_feature_search from '~/components/products/cityzen/features/search.vue'
   import cityzen_feature_analytics from '~/components/products/cityzen/features/analytics.vue'
   import cityzen_feature_directory from '~/components/products/cityzen/features/directory.vue'
@@ -81,6 +82,12 @@
   import cityzen_feature_archives from '~/components/products/cityzen/features/archives.vue'
   import cityzen_feature_security from '~/components/products/cityzen/features/security.vue'
   export default {
+    data() {
+      return {};
+    },
+    mounted() {
+      paintCommon();
+    },
     components: {
       cityzen_feature_search,
       cityzen_feature_analytics,

@@ -35,12 +35,19 @@
 </template>
 
 <script>
+  import { paintCommon } from "~/assets/js/animate";
   import caseStudyList from '~/components/services/work/case_study_list.vue'
   import serviceFeatures from '~/components/services/features.vue'
   import callout from '~/components/callout.vue'
   import designBlock from '~/components/services/design.vue'
   import engineeringBlock from '~/components/services/engineering.vue'
   export default {
+    data() {
+      return {};
+    },
+    mounted() {
+      paintCommon();
+    },
     components: {
       callout,
       designBlock,
