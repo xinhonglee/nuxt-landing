@@ -35,7 +35,7 @@
 </template>
 
 <script>
-  import { paintCommon } from "~/assets/js/animate";
+  import { paintHome } from "~/assets/js/animate";
   import caseStudyList from '~/components/services/work/case_study_list.vue'
   import serviceFeatures from '~/components/services/features.vue'
   import callout from '~/components/callout.vue'
@@ -46,7 +46,7 @@
       return {};
     },
     mounted() {
-      paintCommon();
+      paintHome();
     },
     components: {
       callout,
