@@ -14,10 +14,12 @@
 <script>
 import logo from '~/components/header/logo.vue'
 import navigation from '~/components/header/navigation_theme.vue'
+import mouse from '~/components/header/mouse.vue'
 export default {
   components: {
     logo,
-    navigation
+    navigation,
+    mouse
   }
 }
 </script>
