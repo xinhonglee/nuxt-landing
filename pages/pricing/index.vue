@@ -1,11 +1,11 @@
 <template>
-  <main>
-    <section class="page-pricing">
-      <div class="wrap container">
-        <form @submit.prevent="onSubmit">
-          <fieldset class="mt-5">
-            <h4 class="title is-4">Creative Direction</h4>
-            <h5 class="subtitle is-5 mt-2">What level of design assistance do you need?</h5>
+  <main class="page-pricing">
+    <form @submit.prevent="onSubmit">
+      <section class="option-fields">
+        <div class="wrap">
+          <fieldset>
+            <h5 class="title">Creative Direction</h5>
+            <h2 class="subtitle">What level of design assistance do you need?</h2>
             <div class="columns">
               <div class="column" v-for="(option, index) of creativeDirectionOptions" :key="index"
                    :class="creativeDirectionSelected === index ? 'active' : ''"
@@ -22,10 +22,13 @@
               </div>
             </div>
           </fieldset>
-          <hr>
-          <fieldset class="mt-5">
-            <h4 class="title is-4">Content Management System</h4>
-            <h5 class="subtitle is-5 mt-2">How editable do you need your website to be?</h5>
+        </div>
+      </section>
+      <section class="option-fields">
+        <div class="wrap">
+          <fieldset>
+            <h5 class="title">Content Management System</h5>
+            <h2 class="subtitle">How editable do you need your website to be?</h2>
             <div class="columns">
               <div class="column" v-for="(option, index) of contentManagementSystemOptions" :key="index"
                    :class="contentManagementSystemSelected === index ? 'active' : ''"
@@ -34,7 +37,7 @@
                   <input type="radio" :value="option.value" v-model="costData.contentManagementSystem"
                          :selected="contentManagementSystemSelected === index">
                   <div class="radio-right-pane">
-                    <p>{{option.value}}</p>
+                    <h3>{{option.value}}</h3>
                     <p>{{option.description}}</p>
                     <p class="has-text-link">${{option.cost}}</p>
                   </div>
@@ -42,10 +45,15 @@
               </div>
             </div>
           </fieldset>
-          <hr>
-          <fieldset class="mt-5">
-            <h4 class="title is-4">Discoverability</h4>
-            <h5 class="subtitle is-5 mt-2">Improve your Google Search ranking?</h5>
+        </div>
+      </section>
+      <section class="option-fields">
+        <div class="wrap">
+          <fieldset>
+            <div class="text-wrap">
+              <h5 class="title">Discoverability</h5>
+              <h2 class="subtitle">Improve your Google Search ranking?</h2>
+            </div>
             <div class="columns">
               <div class="column" v-for="(option, index) of discoverabilityOptions" :key="index"
                    :class="discoverabilitySelected === index ? 'active' : ''"
@@ -54,7 +62,7 @@
                   <input type="radio" :value="option.value" v-model="costData.discoverability"
                          :selected="discoverabilitySelected === index">
                   <div class="radio-right-pane">
-                    <p>{{option.value}}</p>
+                    <h3>{{option.value}}</h3>
                     <p>{{option.description}}</p>
                     <p class="has-text-link">${{option.cost}}</p>
                   </div>
@@ -62,10 +70,15 @@
               </div>
             </div>
           </fieldset>
-          <hr>
-          <fieldset class="mt-5">
-            <h4 class="title is-4">Images, illustrating and copywriting</h4>
-            <h5 class="subtitle is-5 mt-2">Need help adding or creating content?</h5>
+        </div>
+      </section>
+      <section class="option-fields">
+        <div class="wrap">
+          <fieldset>
+            <div class="text-wrap">
+              <h5 class="title">Images, illustrating and copywriting</h5>
+              <h2 class="subtitle">Need help adding or creating content?</h2>
+            </div>
             <div class="columns">
               <div class="column" v-for="(option, index) of illustrateOptions" :key="index"
                    :class="illustrateSelected === index ? 'active' : ''"
@@ -74,7 +87,7 @@
                   <input type="radio" :value="option.value" v-model="costData.illustrate"
                          :selected="illustrateSelected === index">
                   <div class="radio-right-pane">
-                    <p>{{option.value}}</p>
+                    <h3>{{option.value}}</h3>
                     <p>{{option.description}}</p>
                     <p class="has-text-link">${{option.cost}}</p>
                   </div>
@@ -82,10 +95,15 @@
               </div>
             </div>
           </fieldset>
-          <hr>
-          <fieldset class="mt-5">
-            <h4 class="title is-4">Customer support</h4>
-            <h5 class="subtitle is-5 mt-2">How long do you need support for?</h5>
+        </div>
+      </section>
+      <section class="option-fields">
+        <div class="wrap">
+          <fieldset>
+            <div class="text-wrap">
+              <h5 class="title">Customer support</h5>
+              <h2 class="subtitle">How long do you need support for?</h2>
+            </div>
             <div class="columns">
               <div class="column" v-for="(option, index) of customerSupportOptions" :key="index"
                    :class="customerSupportSelected === index ? 'active' : ''"
@@ -102,33 +120,53 @@
               </div>
             </div>
           </fieldset>
-          <hr>
-          <div class="total-estimate mt-5">
-            <h6 class="title is-4 has-text-primary">Total Estimate Value: ${{totalCost}}</h6>
-          </div>
-          <fieldset class="email-group mt-5">
-            <label class="label">Email Address</label>
-            <template v-for="(emailAddress, index) of emailAddresses">
-              <div class="field">
-                <div class="control">
-                  <input class="input" type="email" v-model.trim="emailAddresses[index]" placeholder="">
-                  <a class="button is-text" @click="removeEmail(index)"> Remove</a>
+        </div>
+      </section>
+      <section class="total-estimate">
+        <div class="wrap">
+          <h6 class="title has-text-primary">Total Estimate Value: ${{totalCost}}</h6>
+        </div>
+      </section>
+      <template v-if="!sentEmail">
+
+        <section class="email-estimate">
+          <div class="wrap">
+
+            <div class="title">
+              <h2>Save your estimate</h2>
+            </div>
+
+            <fieldset class="email-group mt-5">
+              <label class="label">Email Address</label>
+              <template v-for="(emailAddress, index) of emailAddresses">
+                <div class="field">
+                  <div class="control">
+                    <input class="input" type="email" v-model.trim="emailAddresses[index]" placeholder="">
+                    <a class="button is-text" @click="removeEmail(index)"> Remove</a>
+                  </div>
                 </div>
+                <div class="error-field" v-show="$v.emailAddresses.$each[index].$dirty">
+                  <p class="has-text-danger" v-show="!$v.emailAddresses.$each[index].required">Email Address is required</p>
+                  <p class="has-text-danger" v-show="!$v.emailAddresses.$each[index].email">Please check the email address
+                    was entered correctly.</p>
+                </div>
+              </template>
+            </fieldset>
+
+            <div>
+              <a class="button is-text" @click="addEmailAddress">+ Another Email</a>
+            </div>
+
+            <div class="callout">
+              <div class="text">
+                <h3>Can we call you?</h3>
+                <p>We would love to hear from you and discuss more about the details of your project.</p>
               </div>
-              <div class="error-field" v-show="$v.emailAddresses.$each[index].$dirty">
-                <p class="has-text-danger" v-show="!$v.emailAddresses.$each[index].required">Email Address is
-                  required</p>
-                <p class="has-text-danger" v-show="!$v.emailAddresses.$each[index].email">Please check the email address
-                  was
-                  entered correctly.</p>
+              <div class="field">
+                <label class="checkbox"><input type="checkbox" v-model="requestFollowUp">Request a follow-up with us</label>
               </div>
-            </template>
-          </fieldset>
-          <a class="button is-text" @click="addEmailAddress">+ Another Email</a>
-          <div class="field mt-5">
-            <label class="checkbox"><input type="checkbox" v-model="requestFollowUp">Request Follow Up</label>
-          </div>
-          <template v-if="!sentEmail">
+            </div>
+
             <div class="field">
               <label class="label">Notes</label>
               <div class="control">
@@ -144,25 +182,31 @@
             <div class="error-field" v-show="recaptchaErrorMessage">
               <p class="has-text-danger">{{recaptchaErrorMessage}}</p>
             </div>
-            <div class="field mt-2">
+            <div class="field">
               <div class="control">
                 <button type="submit" class="button is-link">Submit</button>
               </div>
             </div>
-          </template>
-          <template v-else>
-            <h6 class="subtitle is-5 mt-5 md-5">
-              Your estimate has been sent to the address(s) listed above.
-              If you have any questions please don't hesitate to <a href="https://magnet.co/contact/">reach out.</a>
-            </h6>
-          </template>
-        </form>
-      </div>
-    </section>
+          </div>
+        </section>
+
+      </template>
+      <template v-else>
+        <section class="email-notification">
+          <div class="wrap">
+            <h3 class="">On its way!</h3>
+            <p>Your estimate has been sent to the address(s) listed above.</p>
+            <p>If you have any questions please don't hesitate to <a href="/contact/">reach out.</a></p>
+          </div>
+        </section>
+      </template>
+    </form>
   </main>
 </template>
 
 <script>
+  import { paintCommon } from "~/assets/js/animate";
+
   import VueRecaptcha from 'vue-recaptcha';
   import {required, maxLength, email} from 'vuelidate/lib/validators';
   import {
@@ -176,6 +220,7 @@
   import {getOptionByValue} from "../utils";
 
   export default {
+
     name: "pricing",
     components: {VueRecaptcha},
     data() {
@@ -206,6 +251,9 @@
         totalCost: 0,
         sentEmail: false,
       }
+    },
+    mounted() {
+      paintCommon();
     },
     validations: {
       emailAddresses: {
@@ -277,6 +325,7 @@
         deep: true
       }
     }
+
   }
 </script>
 

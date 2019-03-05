@@ -1,5 +1,5 @@
 <template>
-  <div class="block">
+  <div class="block" style="margin: 22rem 0 0">
     <h4>Software engineering</h4>
     <h2>Code</h2>
     <p>Meticulous engineering is at the center of a harmonious and seamless web experience.</p>

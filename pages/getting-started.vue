@@ -11,7 +11,14 @@
 </template>
 
 <script>
+  import { paintCommon } from "~/assets/js/animate";
   export default {
+    data() {
+      return {};
+    },
+    mounted() {
+      paintCommon();
+    },
     head: {
       title: 'This is the getting started page',
       meta: [

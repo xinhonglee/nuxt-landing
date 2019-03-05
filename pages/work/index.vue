@@ -12,8 +12,15 @@
 </template>
 
 <script>
+  import { paintCommon } from "~/assets/js/animate";
   import clientList from '~/components/client_list.vue'
   export default {
+    data() {
+      return {};
+    },
+    mounted() {
+      paintCommon();
+    },
     components: {
       clientList
     },
@@ -32,5 +39,5 @@
 </script>
 
 <style lang="scss">
-  // @import '~assets/scss/master.scss';
+  
 </style>

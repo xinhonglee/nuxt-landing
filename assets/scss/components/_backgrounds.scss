@@ -1,14 +1,48 @@
 .puff-grad-invert {
   margin: 1rem;
+  // border-top: 0.2rem solid rgba(99,64,90,0.02);
+  // border-bottom: 0.2rem solid rgba(49,146,143, 0.02);
   background: rgba(49,146,143, 0.3);
   background: linear-gradient(305deg, rgba(49,146,143,0.3) 0%, rgba(99,64,90,0.3) 100%);
 }
 .puff-grad-invert-2 {
   margin: 1rem;
+  // border-top: 0.2rem solid rgba($color-base-3, 0.1);
+  // border-bottom: 0.2rem solid rgba($color-base-3, 0.1);
   background: rgba(49,146,143, 1);
   background: linear-gradient(305deg, rgba(49,146,143,1) 0%, rgba(99,64,90,1) 100%);
 }
 
+
+// Background images
+.bg-01 {
+  background-size: 60rem auto;
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-image: url(~assets/images/backgrounds/bg-pattern-01.jpg);
+}
+
+.bg-02 {
+  background-size: 40rem auto;
+  background-position: 80vw 0%;
+  background-repeat: no-repeat;
+  background-image: url(~assets/images/backgrounds/bg-pattern-02.png);
+  background-image: url(~assets/images/backgrounds/bg-pattern-02.svg);
+}
+
+.bg-03 {
+  background-size: 50rem auto;
+  background-position: 120% -20%;
+  background-repeat: no-repeat;
+  background-image: url(~assets/images/backgrounds/bg-pattern-03.svg);
+}
+
+.bg-04 {
+  background-size: 60rem auto;
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-image: url(~assets/images/backgrounds/bg-pattern-04.png);
+}
 
 // Angled backgrounds
 

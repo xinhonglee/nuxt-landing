@@ -1,0 +1,63 @@
+.case_study_list {
+  padding: 5rem;
+  .case_study {
+    position: relative;
+    display: flex;
+    width: auto;
+    height: 30vw;
+    border: 1rem solid rgba(0,0,0,0.2);
+    img {
+      object-fit: cover;
+      object-position: top left;
+    }
+    .info {
+      opacity: 0;
+
+      position: absolute;
+      right: -1rem;
+      top: -1rem;
+
+      width: 15rem;
+      // background: $color-green-2;
+      background: $color-base-3;
+      padding: 2rem;
+      transition: 0.5s all;
+      box-shadow: -0.5rem 0.5rem 0rem rgba(49,146,143,0.1);
+      // border-radius: 0.15rem;
+      h3 {
+        font-size: 1.5rem;
+        @include font-light;
+        line-height: 1;
+      }
+      h4 {
+        font-size: 0.7rem;
+        @include font-demibold-upper;
+      }
+    }
+    &:hover {
+      .info {
+        opacity: 1;
+      }
+    }
+  }
+  &.as_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 2vw;
+  }
+}
+.case_study {
+
+  .info {
+
+  }
+  img {
+    object-fit: cover;
+  }
+}
+a.case_study {
+  &:hover {
+
+  }
+}
