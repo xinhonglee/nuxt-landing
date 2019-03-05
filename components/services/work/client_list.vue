@@ -36,29 +36,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.client-aol         { background-image: url(~assets/images/client-logos/logo-aol.png); }
-// .client-barclays    { background-image: url(~assets/images/client-logos/logo-barclays.jpg); }
-.client-cox         { background-image: url(~assets/images/client-logos/logo-cox.png); }
-.client-directv     { background-image: url(~assets/images/client-logos/logo-aol.png); }
-.client-ebookers    { background-image: url(~assets/images/client-logos/logo-ebookers.png); }
-.client-eggbank     { background-image: url(~assets/images/client-logos/logo-aol.png); }
-.client-essque      { background-image: url(~assets/images/client-logos/logo-aol.png); }
-.client-expedia     { background-image: url(~assets/images/client-logos/logo-aol.png); }
-.client-fordasia    { background-image: url(~assets/images/client-logos/logo-aol.png); }
-.client-hgtv        { background-image: url(~assets/images/client-logos/logo-aol.png); }
-.client-huntsman    { background-image: url(~assets/images/client-logos/logo-aol.png); }
-.client-ikea        { background-image: url(~assets/images/client-logos/logo-aol.png); }
-.client-lastminute  { background-image: url(~assets/images/client-logos/logo-aol.png); }
-.client-nashville   { background-image: url(~assets/images/client-logos/logo-aol.png); }
-.client-nike        { background-image: url(~assets/images/client-logos/logo-nacg.png); }
-.client-otg         { background-image: url(~assets/images/client-logos/logo-aol.png); }
-.client-ovation     { background-image: url(~assets/images/client-logos/logo-aol.png); }
-.client-snow        { background-image: url(~assets/images/client-logos/logo-aol.png); }
-.client-shangrila   { background-image: url(~assets/images/client-logos/logo-aol.png); }
-.client-street      { background-image: url(~assets/images/client-logos/logo-aol.png); }
-.client-tiara       { background-image: url(~assets/images/client-logos/logo-aol.png); }
-.client-ucla        { background-image: url(~assets/images/client-logos/logo-aol.png); }
-.client-vonholz     { background-image: url(~assets/images/client-logos/logo-aol.png); }
+// .client-aol         { background-image: url(~assets/images/client-logos/logo-aol.png); }
+// .client-cox         { background-image: url(~assets/images/client-logos/logo-cox.png); }
+// .client-directv     { background-image: url(~assets/images/client-logos/logo-aol.png); }
+// .client-ebookers    { background-image: url(~assets/images/client-logos/logo-ebookers.png); }
+// .client-eggbank     { background-image: url(~assets/images/client-logos/logo-aol.png); }
+// .client-essque      { background-image: url(~assets/images/client-logos/logo-aol.png); }
+// .client-expedia     { background-image: url(~assets/images/client-logos/logo-aol.png); }
+// .client-fordasia    { background-image: url(~assets/images/client-logos/logo-aol.png); }
+// .client-hgtv        { background-image: url(~assets/images/client-logos/logo-aol.png); }
+// .client-huntsman    { background-image: url(~assets/images/client-logos/logo-aol.png); }
+// .client-ikea        { background-image: url(~assets/images/client-logos/logo-aol.png); }
+// .client-lastminute  { background-image: url(~assets/images/client-logos/logo-aol.png); }
+// .client-nashville   { background-image: url(~assets/images/client-logos/logo-aol.png); }
+// .client-nike        { background-image: url(~assets/images/client-logos/logo-nacg.png); }
+// .client-otg         { background-image: url(~assets/images/client-logos/logo-aol.png); }
+// .client-ovation     { background-image: url(~assets/images/client-logos/logo-aol.png); }
+// .client-snow        { background-image: url(~assets/images/client-logos/logo-aol.png); }
+// .client-shangrila   { background-image: url(~assets/images/client-logos/logo-aol.png); }
+// .client-street      { background-image: url(~assets/images/client-logos/logo-aol.png); }
+// .client-tiara       { background-image: url(~assets/images/client-logos/logo-aol.png); }
+// .client-ucla        { background-image: url(~assets/images/client-logos/logo-aol.png); }
+// .client-vonholz     { background-image: url(~assets/images/client-logos/logo-aol.png); }
 
 .client-featured {
 
