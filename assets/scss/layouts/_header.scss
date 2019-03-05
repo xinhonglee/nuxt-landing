@@ -111,6 +111,91 @@ header {
     }
 
   }
+
+  &.header_theme {
+    .wrap {
+      // min-height: 100vh;
+      grid-template-columns: 3rem 1fr 3rem;
+      grid-template-rows: 3rem 3rem auto 3rem;
+      grid-template-areas:
+        "logotype . meta"
+        ". navigation meta"
+        ". content ."
+        ". . mouse";
+    }
+    .navigation {
+      justify-content: flex-start;
+    }
+    .mouse {
+      grid-area: mouse;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a.icon-mouse {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-indent: -999rem;
+        background: url(~assets/images/icons/mouse.svg) 50% 50% no-repeat;
+        background-size: 3.75rem 3.5rem;
+      }
+    }
+    .meta {
+      grid-area: meta;
+      position: relative;
+      display: flex;
+      // align-items: flex-end;
+      .social-icons {
+        width: 100%;
+        margin: 0 auto;
+        a {
+          display: block;
+          margin: 0 0 0.5rem;
+          text-indent: -999rem;
+          display: block;
+          width: 100%;
+          height: 2.2rem;
+          background-position: 50% 50%;
+          background-size: auto 1.8rem;
+          background-repeat: no-repeat;
+          transform: all 0.3s easeInOut;
+          &:hover {
+            background-size: auto 2.1rem;
+          }
+          // images declared in _icons.scss
+        }
+      }
+      .text {
+        position: absolute;
+        top: 15.75rem;
+        left: -8.55rem;
+        transform: rotateZ(90deg);
+        width: 20rem;
+        font-size: 0.9rem;
+        opacity: 0.7;
+      }
+    }
+    .content {
+      grid-area: content;
+      display: flex;
+      // align-items: flex-end;
+      justify-content: flex-start;
+      flex-direction: column;
+      padding: 2rem 0 0;
+      article {
+        max-width: 55ch;
+        min-width: 50ch;
+        p {
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+  }
+
+
+
+
   // &.slim {
   //   .wrap {
   //     grid-template-columns: 3rem 1fr 3rem;
