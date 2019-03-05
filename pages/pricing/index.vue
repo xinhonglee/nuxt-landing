@@ -1,147 +1,164 @@
 <template>
   <main>
     <section class="page-pricing">
-    <div class="wrap container">
-      <form @submit.prevent="onSubmit">
-        <fieldset class="mt-5">
-          <h4 class="title is-4">Creative Direction</h4>
-          <h5 class="subtitle is-5 mt-2">What level of design assistance do you need?</h5>
-          <div class="columns">
-            <div class="column" v-for="(option, index) of creativeDirectionOptions" :key="index">
-              <label class="radio">
-                <input type="radio" :value="option.value" v-model="costData.creativeDirection">
-                <div class="radio-right-pane">
-                  <h3>{{option.value}}</h3>
-                  <div class="description"><p>{{option.description}}</p></div>
-                  <div class="cost"><p class="has-text-link">${{option.cost}}</p></div>
-                </div>
-              </label>
-            </div>
-          </div>
-        </fieldset>
-        <hr>
-        <fieldset class="mt-5">
-          <h4 class="title is-4">Content Management System</h4>
-          <h5 class="subtitle is-5 mt-2">How editable do you need your website to be?</h5>
-          <div class="columns">
-            <div class="column" v-for="(option, index) of contentManagementSystemOptions" :key="index">
-              <label class="radio">
-                <input type="radio" :value="option.value" v-model="costData.contentManagementSystem">
-                <div class="radio-right-pane">
-                  <p>{{option.value}}</p>
-                  <p>{{option.description}}</p>
-                  <p class="has-text-link">${{option.cost}}</p>
-                </div>
-              </label>
-            </div>
-          </div>
-        </fieldset>
-        <hr>
-        <fieldset class="mt-5">
-          <h4 class="title is-4">Discoverability</h4>
-          <h5 class="subtitle is-5 mt-2">Improve your Google Search ranking?</h5>
-          <div class="columns">
-            <div class="column" v-for="(option, index) of discoverabilityOptions" :key="index">
-              <label class="radio">
-                <input type="radio" :value="option.value" v-model="costData.discoverability">
-                <div class="radio-right-pane">
-                  <p>{{option.value}}</p>
-                  <p>{{option.description}}</p>
-                  <p class="has-text-link">${{option.cost}}</p>
-                </div>
-              </label>
-            </div>
-          </div>
-        </fieldset>
-        <hr>
-        <fieldset class="mt-5">
-          <h4 class="title is-4">Images, illustrating and copywriting</h4>
-          <h5 class="subtitle is-5 mt-2">Need help adding or creating content?</h5>
-          <div class="columns">
-            <div class="column" v-for="(option, index) of illustrateOptions" :key="index">
-              <label class="radio">
-                <input type="radio" :value="option.value" v-model="costData.illustrate">
-                <div class="radio-right-pane">
-                  <p>{{option.value}}</p>
-                  <p>{{option.description}}</p>
-                  <p class="has-text-link">${{option.cost}}</p>
-                </div>
-              </label>
-            </div>
-          </div>
-        </fieldset>
-        <hr>
-        <fieldset class="mt-5">
-          <h4 class="title is-4">Customer support</h4>
-          <h5 class="subtitle is-5 mt-2">How long do you need support for?</h5>
-          <div class="columns">
-            <div class="column" v-for="(option, index) of customerSupportOptions" :key="index">
-              <label class="radio">
-                <input type="radio" :value="option.value" v-model="costData.customerSupport">
-                <div class="radio-right-pane">
-                  <p>{{option.value}}</p>
-                  <p>{{option.description}}</p>
-                  <p class="has-text-link">${{option.cost}}</p>
-                </div>
-              </label>
-            </div>
-          </div>
-        </fieldset>
-        <hr>
-        <div class="total-estimate mt-5">
-          <h6 class="title is-4 has-text-primary">Total Estimate Value: ${{totalCost}}</h6>
-        </div>
-        <fieldset class="email-group mt-5">
-          <label class="label">Email Address</label>
-          <template v-for="(emailAddress, index) of emailAddresses">
-            <div class="field">
-              <div class="control">
-                <input class="input" type="email" v-model.trim="emailAddresses[index]" placeholder="">
-                <a class="button is-text" @click="removeEmail(index)"> Remove</a>
+      <div class="wrap container">
+        <form @submit.prevent="onSubmit">
+          <fieldset class="mt-5">
+            <h4 class="title is-4">Creative Direction</h4>
+            <h5 class="subtitle is-5 mt-2">What level of design assistance do you need?</h5>
+            <div class="columns">
+              <div class="column" v-for="(option, index) of creativeDirectionOptions" :key="index"
+                   :class="creativeDirectionSelected === index ? 'active' : ''"
+                   @click="creativeDirectionSelected = index">
+                <label class="radio">
+                  <input type="radio" :value="option.value" v-model="costData.creativeDirection"
+                         :selected="creativeDirectionSelected === index">
+                  <div class="radio-right-pane">
+                    <h3>{{option.value}}</h3>
+                    <div class="description"><p>{{option.description}}</p></div>
+                    <div class="cost"><p class="has-text-link">${{option.cost}}</p></div>
+                  </div>
+                </label>
               </div>
             </div>
-            <div class="error-field" v-show="$v.emailAddresses.$each[index].$dirty">
-              <p class="has-text-danger" v-show="!$v.emailAddresses.$each[index].required">Email Address is required</p>
-              <p class="has-text-danger" v-show="!$v.emailAddresses.$each[index].email">Please check the email address
-                was
-                entered correctly.</p>
+          </fieldset>
+          <hr>
+          <fieldset class="mt-5">
+            <h4 class="title is-4">Content Management System</h4>
+            <h5 class="subtitle is-5 mt-2">How editable do you need your website to be?</h5>
+            <div class="columns">
+              <div class="column" v-for="(option, index) of contentManagementSystemOptions" :key="index"
+                   :class="contentManagementSystemSelected === index ? 'active' : ''"
+                   @click="contentManagementSystemSelected = index">
+                <label class="radio">
+                  <input type="radio" :value="option.value" v-model="costData.contentManagementSystem"
+                         :selected="contentManagementSystemSelected === index">
+                  <div class="radio-right-pane">
+                    <p>{{option.value}}</p>
+                    <p>{{option.description}}</p>
+                    <p class="has-text-link">${{option.cost}}</p>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <hr>
+          <fieldset class="mt-5">
+            <h4 class="title is-4">Discoverability</h4>
+            <h5 class="subtitle is-5 mt-2">Improve your Google Search ranking?</h5>
+            <div class="columns">
+              <div class="column" v-for="(option, index) of discoverabilityOptions" :key="index"
+                   :class="discoverabilitySelected === index ? 'active' : ''"
+                   @click="discoverabilitySelected = index">
+                <label class="radio">
+                  <input type="radio" :value="option.value" v-model="costData.discoverability"
+                         :selected="discoverabilitySelected === index">
+                  <div class="radio-right-pane">
+                    <p>{{option.value}}</p>
+                    <p>{{option.description}}</p>
+                    <p class="has-text-link">${{option.cost}}</p>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <hr>
+          <fieldset class="mt-5">
+            <h4 class="title is-4">Images, illustrating and copywriting</h4>
+            <h5 class="subtitle is-5 mt-2">Need help adding or creating content?</h5>
+            <div class="columns">
+              <div class="column" v-for="(option, index) of illustrateOptions" :key="index"
+                   :class="illustrateSelected === index ? 'active' : ''"
+                   @click="illustrateSelected = index">
+                <label class="radio">
+                  <input type="radio" :value="option.value" v-model="costData.illustrate"
+                         :selected="illustrateSelected === index">
+                  <div class="radio-right-pane">
+                    <p>{{option.value}}</p>
+                    <p>{{option.description}}</p>
+                    <p class="has-text-link">${{option.cost}}</p>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <hr>
+          <fieldset class="mt-5">
+            <h4 class="title is-4">Customer support</h4>
+            <h5 class="subtitle is-5 mt-2">How long do you need support for?</h5>
+            <div class="columns">
+              <div class="column" v-for="(option, index) of customerSupportOptions" :key="index"
+                   :class="customerSupportSelected === index ? 'active' : ''"
+                   @click="customerSupportSelected = index">
+                <label class="radio">
+                  <input type="radio" :value="option.value" v-model="costData.customerSupport"
+                         :selected="customerSupportSelected === index">
+                  <div class="radio-right-pane">
+                    <p>{{option.value}}</p>
+                    <p>{{option.description}}</p>
+                    <p class="has-text-link">${{option.cost}}</p>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <hr>
+          <div class="total-estimate mt-5">
+            <h6 class="title is-4 has-text-primary">Total Estimate Value: ${{totalCost}}</h6>
+          </div>
+          <fieldset class="email-group mt-5">
+            <label class="label">Email Address</label>
+            <template v-for="(emailAddress, index) of emailAddresses">
+              <div class="field">
+                <div class="control">
+                  <input class="input" type="email" v-model.trim="emailAddresses[index]" placeholder="">
+                  <a class="button is-text" @click="removeEmail(index)"> Remove</a>
+                </div>
+              </div>
+              <div class="error-field" v-show="$v.emailAddresses.$each[index].$dirty">
+                <p class="has-text-danger" v-show="!$v.emailAddresses.$each[index].required">Email Address is
+                  required</p>
+                <p class="has-text-danger" v-show="!$v.emailAddresses.$each[index].email">Please check the email address
+                  was
+                  entered correctly.</p>
+              </div>
+            </template>
+          </fieldset>
+          <a class="button is-text" @click="addEmailAddress">+ Another Email</a>
+          <div class="field mt-5">
+            <label class="checkbox"><input type="checkbox" v-model="requestFollowUp">Request Follow Up</label>
+          </div>
+          <template v-if="!sentEmail">
+            <div class="field">
+              <label class="label">Notes</label>
+              <div class="control">
+                <textarea class="textarea" v-model.trim="$v.notes.$model" placeholder=""></textarea>
+              </div>
+            </div>
+            <div class="error-field" v-show="$v.notes.$dirty">
+              <p class="has-text-danger" v-show="!$v.notes.maxLength">
+                Please enter less than {{$v.notes.$params.maxLength.max}} characters.
+              </p>
+            </div>
+            <vue-recaptcha @verify="verifyRecaptcha" :sitekey="siteKey"></vue-recaptcha>
+            <div class="error-field" v-show="recaptchaErrorMessage">
+              <p class="has-text-danger">{{recaptchaErrorMessage}}</p>
+            </div>
+            <div class="field mt-2">
+              <div class="control">
+                <button type="submit" class="button is-link">Submit</button>
+              </div>
             </div>
           </template>
-        </fieldset>
-        <a class="button is-text" @click="addEmailAddress">+ Another Email</a>
-        <div class="field mt-5">
-          <label class="checkbox"><input type="checkbox" v-model="requestFollowUp">Request Follow Up</label>
-        </div>
-        <template v-if="!sentEmail">
-          <div class="field">
-            <label class="label">Notes</label>
-            <div class="control">
-              <textarea class="textarea" v-model.trim="$v.notes.$model" placeholder=""></textarea>
-            </div>
-          </div>
-          <div class="error-field" v-show="$v.notes.$dirty">
-            <p class="has-text-danger" v-show="!$v.notes.maxLength">
-              Please enter less than {{$v.notes.$params.maxLength.max}} characters.
-            </p>
-          </div>
-          <vue-recaptcha @verify="verifyRecaptcha" :sitekey="siteKey"></vue-recaptcha>
-          <div class="error-field" v-show="recaptchaErrorMessage">
-            <p class="has-text-danger">{{recaptchaErrorMessage}}</p>
-          </div>
-          <div class="field mt-2">
-            <div class="control">
-              <button type="submit" class="button is-link">Submit</button>
-            </div>
-          </div>
-        </template>
-        <template v-else>
-          <h6 class="subtitle is-5 mt-5 md-5">
-            Your estimate has been sent to the address(s) listed above.
-            If you have any questions please don't hesitate to <a href="https://magnet.co/contact/">reach out.</a></h6>
-        </template>
-      </form>
-    </div>
-  </section>
+          <template v-else>
+            <h6 class="subtitle is-5 mt-5 md-5">
+              Your estimate has been sent to the address(s) listed above.
+              If you have any questions please don't hesitate to <a href="https://magnet.co/contact/">reach out.</a>
+            </h6>
+          </template>
+        </form>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -170,6 +187,11 @@
           illustrate: '',
           customerSupport: '',
         },
+        creativeDirectionSelected: null,
+        contentManagementSystemSelected: null,
+        discoverabilitySelected: null,
+        illustrateSelected: null,
+        customerSupportSelected: null,
         creativeDirectionOptions: _creativeDirectionOptions,
         contentManagementSystemOptions: _cmsOptions,
         discoverabilityOptions: _discoverabilityOptions,
@@ -237,7 +259,7 @@
     },
     watch: {
       costData: {
-        handler: function(data) {
+        handler: function (data) {
           this.totalCost = 0;
 
           const creativeDirection = getOptionByValue(_creativeDirectionOptions, data.creativeDirection);
