@@ -13,7 +13,7 @@
 
 <script>
   import { paintCommon } from "~/assets/js/animate";
-  import clientList from '~/components/client_list.vue'
+  import clientList from '~/components/services/work/client_list.vue'
   export default {
     data() {
       return {};
@@ -39,5 +39,5 @@
 </script>
 
 <style lang="scss">
-  
+
 </style>

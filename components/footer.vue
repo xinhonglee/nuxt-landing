@@ -34,7 +34,7 @@
 
 <script>
   import navigation from '~/components/navigation.vue'
-  import clientList from '~/components/client_list.vue'
+  import clientList from '~/components/services/work/client_list.vue'
   import productList from '~/components/product_list.vue'
   export default {
     components: {
