@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-01">
+  <div class="scheme_light">
     <headerPart/>
     <nuxt/>
     <footerPart/>
@@ -7,15 +7,16 @@
 </template>
 
 <script>
-import headerThemePart from '~/components/header_theme.vue'
+import headerPart from '~/components/header_theme.vue'
 import footerPart from '~/components/footer.vue'
 export default {
   components: {
-    headerThemePart,
+    headerPart,
     footerPart
   }
 }
 </script>
 
 <style lang="scss" scoped>
+
 </style>

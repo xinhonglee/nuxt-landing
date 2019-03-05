@@ -4,6 +4,7 @@
       <div class="wrap">
         <h1>Cityzen</h1>
         <h2>Buy</h2>
+        
       </div>
     </section>
   </main>
