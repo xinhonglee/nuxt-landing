@@ -294,7 +294,7 @@
           illustrate: this.costData.illustrate,
           customerSupport: this.costData.customerSupport,
           requestFollowUp: this.requestFollowUp,
-          notes: this.notes,
+          notes: this.notes.replace(/(?:\r\n|\r|\n)/g, '<br>'),
           totalCost: this.totalCost,
           emailAddresses: this.emailAddresses
         };
