@@ -4,8 +4,8 @@
       <section class="option-fields">
         <div class="wrap">
           <fieldset>
-            <h4 class="title">Creative Direction</h4>
-            <h5 class="subtitle">What level of design assistance do you need?</h5>
+            <h5 class="title">Creative Direction</h5>
+            <h2 class="subtitle">What level of design assistance do you need?</h2>
             <div class="columns">
               <div class="column" v-for="(option, index) of creativeDirectionOptions" :key="index">
                 <label class="radio">
@@ -24,14 +24,14 @@
       <section class="option-fields">
         <div class="wrap">
           <fieldset>
-            <h4 class="title">Content Management System</h4>
-            <h5 class="subtitle">How editable do you need your website to be?</h5>
+            <h5 class="title">Content Management System</h5>
+            <h2 class="subtitle">How editable do you need your website to be?</h2>
             <div class="columns">
               <div class="column" v-for="(option, index) of contentManagementSystemOptions" :key="index">
                 <label class="radio">
                   <input type="radio" :value="option.value" v-model="costData.contentManagementSystem">
                   <div class="radio-right-pane">
-                    <p>{{option.value}}</p>
+                    <h3>{{option.value}}</h3>
                     <p>{{option.description}}</p>
                     <p class="has-text-link">${{option.cost}}</p>
                   </div>
@@ -44,14 +44,16 @@
       <section class="option-fields">
         <div class="wrap">
           <fieldset>
-            <h4 class="title">Discoverability</h4>
-            <h5 class="subtitle">Improve your Google Search ranking?</h5>
+            <div class="text-wrap">
+              <h5 class="title">Discoverability</h5>
+              <h2 class="subtitle">Improve your Google Search ranking?</h2>
+            </div>
             <div class="columns">
               <div class="column" v-for="(option, index) of discoverabilityOptions" :key="index">
                 <label class="radio">
                   <input type="radio" :value="option.value" v-model="costData.discoverability">
                   <div class="radio-right-pane">
-                    <p>{{option.value}}</p>
+                    <h3>{{option.value}}</h3>
                     <p>{{option.description}}</p>
                     <p class="has-text-link">${{option.cost}}</p>
                   </div>
@@ -64,14 +66,16 @@
       <section class="option-fields">
         <div class="wrap">
           <fieldset>
-            <h4 class="title">Images, illustrating and copywriting</h4>
-            <h5 class="subtitle">Need help adding or creating content?</h5>
+            <div class="text-wrap">
+              <h5 class="title">Images, illustrating and copywriting</h5>
+              <h2 class="subtitle">Need help adding or creating content?</h2>
+            </div>
             <div class="columns">
               <div class="column" v-for="(option, index) of illustrateOptions" :key="index">
                 <label class="radio">
                   <input type="radio" :value="option.value" v-model="costData.illustrate">
                   <div class="radio-right-pane">
-                    <p>{{option.value}}</p>
+                    <h3>{{option.value}}</h3>
                     <p>{{option.description}}</p>
                     <p class="has-text-link">${{option.cost}}</p>
                   </div>
@@ -84,8 +88,10 @@
       <section class="option-fields">
         <div class="wrap">
           <fieldset>
-            <h4 class="title">Customer support</h4>
-            <h5 class="subtitle">How long do you need support for?</h5>
+            <div class="text-wrap">
+              <h5 class="title">Customer support</h5>
+              <h2 class="subtitle">How long do you need support for?</h2>
+            </div>
             <div class="columns">
               <div class="column" v-for="(option, index) of customerSupportOptions" :key="index">
                 <label class="radio">
