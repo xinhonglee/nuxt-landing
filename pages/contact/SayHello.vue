@@ -109,7 +109,7 @@
           contactName: this.contactName,
           companyName: this.companyName,
           emailAddress: this.emailAddress,
-          message: this.message,
+          message: this.message.replace(/(?:\r\n|\r|\n)/g, '<br>'),
         };
         const result = await this.$axios.$post('/api/contact/say-hello', data);
         this.$root.$emit("submit:form");
