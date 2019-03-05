@@ -64,7 +64,10 @@
          name: 'description',
          content: 'Your next web design and development team'
         }
-      ]
+      ],
+      bodyAttrs: {
+        class: 'page_index'
+      }
     }
   }
 </script>

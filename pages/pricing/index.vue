@@ -1,5 +1,5 @@
 <template>
-  <main class="page-pricing">
+  <main class="">
     <form @submit.prevent="onSubmit">
       <section class="option-fields">
         <div class="wrap">
@@ -217,7 +217,6 @@
   import {getOptionByValue} from "../utils";
 
   export default {
-
     name: "pricing",
     components: {VueRecaptcha},
     data() {
@@ -256,6 +255,19 @@
       },
       notes: {
         maxLength: maxLength(5000)
+      }
+    },
+    head: {
+      title: 'Pricing',
+      meta: [
+        {
+         hid: 'description',
+         name: 'description',
+         content: 'Magnet website pricing estimator'
+        }
+      ],
+      bodyAttrs: {
+        class: 'page_pricing'
       }
     },
     methods: {
@@ -317,7 +329,6 @@
         deep: true
       }
     }
-
   }
 </script>
 
@@ -329,7 +340,6 @@
       max-width: 400px;
     }
   }
-
   .radio-right-pane {
     display: inline-grid;
   }

@@ -96,7 +96,10 @@
          name: 'description',
          content: 'Explore Case Study'
         }
-      ]
+      ],
+      bodyAttrs: {
+        class: 'page_work'
+      }
     }
   }
 </script>

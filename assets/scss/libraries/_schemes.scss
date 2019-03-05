@@ -1,17 +1,14 @@
 // Currently applied to the top level div inside /layouts
-
 .scheme_light {
-  header,main {
-    background: #fff;
-    color: $color-base-3;
-    h1,h2,h3,h4 {
-      color: $color-base-2;
-    }
-    a {
-      color: $color-base-2;
-      &:hover {
-        border-color: blue;
-      }
+  background: #fff;
+  color: $color-base-3;
+  h1,h2,h3,h4 {
+    color: $color-base-2;
+  }
+  a {
+    color: $color-base-2;
+    &:hover {
+      border-color: blue;
     }
   }
   header {
@@ -22,3 +19,25 @@
     }
   }
 }
+//
+// .scheme_dark,
+// :not(.scheme_light) {
+//   background: red;
+//   color: $color-base-3;
+//   h1,h2,h3,h4 {
+//     color: $color-base-2;
+//   }
+//   a {
+//     color: $color-base-2;
+//     &:hover {
+//       border-color: blue;
+//     }
+//   }
+//   header {
+//     .logotype {
+//       a {
+//         background: url(~assets/images/logotype-greyscale.svg) 50% 0% no-repeat;
+//       }
+//     }
+//   }
+// }

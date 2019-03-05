@@ -95,7 +95,10 @@
          name: 'description',
          content: 'UCLA Case Study'
         }
-      ]
+      ],
+      bodyAttrs: {
+        class: 'page_work'
+      }
     }
   }
 </script>

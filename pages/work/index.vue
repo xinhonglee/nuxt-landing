@@ -33,7 +33,10 @@
          name: 'description',
          content: 'Case Studies'
         }
-      ]
+      ],
+      bodyAttrs: {
+        class: 'page_work_index'
+      }
     }
   }
 </script>

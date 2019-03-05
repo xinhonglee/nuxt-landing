@@ -50,10 +50,6 @@
   import ThankYou from "./ThankYou";
 
   export default {
-    // data() {
-    //   return {};
-    // },
-
     name: "contact",
     components: {
       ThankYou,
@@ -78,6 +74,19 @@
         this.sentEmail = true;
       })
     },
+    head: {
+      title: 'Contact',
+      meta: [
+        {
+         hid: 'description',
+         name: 'description',
+         content: 'Contact Magnet Co'
+        }
+      ],
+      bodyAttrs: {
+        class: 'page_contact'
+      }
+    }
   }
 </script>
 
