@@ -38,7 +38,8 @@
       </div>
       <div class="error-field" v-show="$v.phoneNumber.$dirty">
         <p class="has-text-danger" v-show="!$v.phoneNumber.required">Phone Number is required</p>
-        <p class="has-text-danger" v-show="!$v.phoneNumber.isPhone && $v.phoneNumber.$model !== ''">Please check the phone
+        <p class="has-text-danger" v-show="!$v.phoneNumber.isPhone && $v.phoneNumber.$model !== ''">Please check the
+          phone
           number was entered correctly.</p>
       </div>
       <div class="field">
@@ -218,7 +219,7 @@
           companyName: this.companyName,
           emailAddress: this.emailAddress,
           phoneNumber: this.phoneNumber,
-          message: this.message,
+          message: this.message.replace(/(?:\r\n|\r|\n)/g, '<br>'),
           projectName: this.projectName,
           projectUrl: this.projectUrl,
           projectType: this.projectType,
