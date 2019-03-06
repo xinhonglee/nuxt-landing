@@ -7,9 +7,12 @@
             <h5 class="title">Creative Direction</h5>
             <h2 class="subtitle">What level of design assistance do you need?</h2>
             <div class="columns">
-              <div class="column" v-for="(option, index) of creativeDirectionOptions" :key="index">
+              <div class="column" v-for="(option, index) of creativeDirectionOptions" :key="index"
+                   :class="creativeDirectionSelected === index ? 'active' : ''"
+                   @click="creativeDirectionSelected = index">
                 <label class="radio">
-                  <input type="radio" :value="option.value" v-model="costData.creativeDirection">
+                  <input type="radio" :value="option.value" v-model="costData.creativeDirection"
+                         :selected="creativeDirectionSelected === index">
                   <div class="radio-right-pane">
                     <h3>{{option.value}}</h3>
                     <div class="description"><p>{{option.description}}</p></div>
@@ -27,9 +30,12 @@
             <h5 class="title">Content Management System</h5>
             <h2 class="subtitle">How editable do you need your website to be?</h2>
             <div class="columns">
-              <div class="column" v-for="(option, index) of contentManagementSystemOptions" :key="index">
+              <div class="column" v-for="(option, index) of contentManagementSystemOptions" :key="index"
+                   :class="contentManagementSystemSelected === index ? 'active' : ''"
+                   @click="contentManagementSystemSelected = index">
                 <label class="radio">
-                  <input type="radio" :value="option.value" v-model="costData.contentManagementSystem">
+                  <input type="radio" :value="option.value" v-model="costData.contentManagementSystem"
+                         :selected="contentManagementSystemSelected === index">
                   <div class="radio-right-pane">
                     <h3>{{option.value}}</h3>
                     <p>{{option.description}}</p>
@@ -49,9 +55,12 @@
               <h2 class="subtitle">Improve your Google Search ranking?</h2>
             </div>
             <div class="columns">
-              <div class="column" v-for="(option, index) of discoverabilityOptions" :key="index">
+              <div class="column" v-for="(option, index) of discoverabilityOptions" :key="index"
+                   :class="discoverabilitySelected === index ? 'active' : ''"
+                   @click="discoverabilitySelected = index">
                 <label class="radio">
-                  <input type="radio" :value="option.value" v-model="costData.discoverability">
+                  <input type="radio" :value="option.value" v-model="costData.discoverability"
+                         :selected="discoverabilitySelected === index">
                   <div class="radio-right-pane">
                     <h3>{{option.value}}</h3>
                     <p>{{option.description}}</p>
@@ -71,9 +80,12 @@
               <h2 class="subtitle">Need help adding or creating content?</h2>
             </div>
             <div class="columns">
-              <div class="column" v-for="(option, index) of illustrateOptions" :key="index">
+              <div class="column" v-for="(option, index) of illustrateOptions" :key="index"
+                   :class="illustrateSelected === index ? 'active' : ''"
+                   @click="illustrateSelected = index">
                 <label class="radio">
-                  <input type="radio" :value="option.value" v-model="costData.illustrate">
+                  <input type="radio" :value="option.value" v-model="costData.illustrate"
+                         :selected="illustrateSelected === index">
                   <div class="radio-right-pane">
                     <h3>{{option.value}}</h3>
                     <p>{{option.description}}</p>
@@ -93,9 +105,12 @@
               <h2 class="subtitle">How long do you need support for?</h2>
             </div>
             <div class="columns">
-              <div class="column" v-for="(option, index) of customerSupportOptions" :key="index">
+              <div class="column" v-for="(option, index) of customerSupportOptions" :key="index"
+                   :class="customerSupportSelected === index ? 'active' : ''"
+                   @click="customerSupportSelected = index">
                 <label class="radio">
-                  <input type="radio" :value="option.value" v-model="costData.customerSupport">
+                  <input type="radio" :value="option.value" v-model="costData.customerSupport"
+                         :selected="customerSupportSelected === index">
                   <div class="radio-right-pane">
                     <p>{{option.value}}</p>
                     <p>{{option.description}}</p>
@@ -112,7 +127,6 @@
           <h6 class="title has-text-primary">Total Estimate Value: ${{totalCost}}</h6>
         </div>
       </section>
-
       <template v-if="!sentEmail">
 
         <section class="email-estimate">
@@ -173,12 +187,10 @@
                 <button type="submit" class="button is-link">Submit</button>
               </div>
             </div>
-
           </div>
         </section>
 
       </template>
-
       <template v-else>
         <section class="email-notification">
           <div class="wrap">
@@ -188,16 +200,7 @@
           </div>
         </section>
       </template>
-
-      <!-- <section class="">
-        <div class="wrap">
-
-        </div>
-      </section> -->
-
-      </form>
-    </div>
-  </section>
+    </form>
   </main>
 </template>
 
@@ -228,6 +231,11 @@
           illustrate: '',
           customerSupport: '',
         },
+        creativeDirectionSelected: null,
+        contentManagementSystemSelected: null,
+        discoverabilitySelected: null,
+        illustrateSelected: null,
+        customerSupportSelected: null,
         creativeDirectionOptions: _creativeDirectionOptions,
         contentManagementSystemOptions: _cmsOptions,
         discoverabilityOptions: _discoverabilityOptions,
@@ -311,7 +319,7 @@
     },
     watch: {
       costData: {
-        handler: function(data) {
+        handler: function (data) {
           this.totalCost = 0;
 
           const creativeDirection = getOptionByValue(_creativeDirectionOptions, data.creativeDirection);
