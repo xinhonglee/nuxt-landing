@@ -15,10 +15,9 @@
     <li class="client-huntsman">Hunstman Sciences</li>
     <li class="client-ikea">Ikea</li>
     <li class="client-lastminute">Lastminute</li>
-    <li class="client-mhe client-featured">McGraw Hill Education</li>
+    <li class="client-mhe">McGraw Hill Education</li>
     <li class="client-nashville">Nashville Airport</li>
     <li class="client-nike">Nike ACG</li>
-
     <li class="client-otg">Online Travel Group</li>
     <li class="client-ovation">Ovation</li>
     <li class="client-snow">Snow.com</li>

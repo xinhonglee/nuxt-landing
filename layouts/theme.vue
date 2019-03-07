@@ -1,5 +1,5 @@
 <template>
-  <div class="scheme_light">
+  <div class="">
     <headerPart/>
     <nuxt/>
     <footerPart/>
@@ -18,5 +18,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+  
 </style>

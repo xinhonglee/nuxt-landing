@@ -6,6 +6,11 @@ footer {
     padding: 2rem 2rem;
     grid-gap: 2rem;
   }
+  menu {
+    li:not(.client-featured) {
+      display: none;
+    }
+  }
   h4 {
     margin: 0 0 1rem;
   }
@@ -32,9 +37,7 @@ footer {
 @include media('>=phone', '<tablet') {}
 @include media('>=phone', '<desktop') {
   footer {
-    .wrap {
-
-    }
+    .wrap {}
     .footer_upper {
       .wrap {
         grid-template-columns: 1fr;
