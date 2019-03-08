@@ -33,14 +33,14 @@ header {
   }
   &.header_home {
     .wrap {
-      // min-height: 100vh;
+      min-height: 100vh;
       grid-template-columns: 3rem 1fr 3rem;
       grid-template-rows: 3rem 3rem auto 3rem;
       grid-template-areas:
         "logotype . meta"
         ". navigation meta"
         ". content ."
-        ". . mouse";
+        ". mouse .";
     }
     .navigation {
       justify-content: flex-start;

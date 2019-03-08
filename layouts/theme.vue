@@ -1,7 +1,9 @@
 <template>
   <div class="">
     <headerPart/>
-    <nuxt/>
+    <main>
+      <nuxt/>
+    </main>
     <footerPart/>
   </div>
 </template>
@@ -18,5 +20,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  
+
 </style>
