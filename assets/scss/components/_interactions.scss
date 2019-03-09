@@ -17,7 +17,24 @@ form {
     }
   }
 
+  input,
+  textarea {
+    max-width: 55ch;
+  }
   input {
+    transition: 0.3s all;
+    &:hover {
+      // border: 2px solid #fff;
+    }
+    &:focus {
+      border: 2px solid $color-green;
+    }
+    &:active {
+      border: 2px solid #fff;
+    }
+    &:visited {
+      // border: 2px solid #fff;
+    }
 
   }
 }
