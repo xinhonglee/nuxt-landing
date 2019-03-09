@@ -41,8 +41,8 @@
             </div>
           </section>
           <section class="content_section content_icons" id="">
-            <div><img src="~assets/images/tech/icon_vue.png"><span>Python</span></div>
-            <div><img src="~assets/images/tech/icon_postgres.png"><span>Angular</span></div>
+            <div><img src="~assets/images/tech/icon_vue.png"><span>Vue JS</span></div>
+            <div><img src="~assets/images/tech/icon_postgres.png"><span>Postgres</span></div>
             <div><img src="~assets/images/tech/icon_html5.png"><span>HTML5</span></div>
             <div><img src="~assets/images/tech/icon_css3.png"><span>CSS3</span></div>
           </section>

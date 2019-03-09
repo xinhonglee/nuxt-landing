@@ -2,7 +2,7 @@
   <menu class="client_list">
     <li class="client-aol"><span>AOL Travel</span></li>
     <!-- <li class="client-barclays">Barclays Bank</li> -->
-    <li class="client-chelonian client-featured"><nuxt-link to="/work/clarity/">Chelonian Research Institute</nuxt-link></li>
+    <li class="client-chelonian client-featured"><nuxt-link to="/work/chelonian/">Chelonian Research Institute</nuxt-link></li>
     <li class="client-clarity client-featured"><nuxt-link to="/work/clarity/">Clarity</nuxt-link></li>
     <li class="client-cox"><span>Cox Communications</span></li>
     <li class="client-directv"><span>DirecTV</span></li>
@@ -14,7 +14,7 @@
     <li class="client-fordasia"><span>Ford Asia</span></li>
     <li class="client-hgtv"><span>HGTV</span></li>
     <!-- <li class="client-huntsman"><span>Hunstman Sciences</span></li> -->
-    <li class="client-ikea"><span>Ikea</span></li>
+    <li class="client-ikea client-featured"><nuxt-link to="/work/ikea/">Ikea</nuxt-link></li>
     <li class="client-lastminute"><span>Lastminute</span></li>
     <li class="client-mhe"><span>McGraw Hill Education</span></li>
     <li class="client-nashville"><span>Nashville Airport</span></li>

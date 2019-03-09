@@ -1,11 +1,13 @@
 <template>
   <main class="">
     <form @submit.prevent="onSubmit">
-      <section class="option-fields">
+      <section class="option_fields">
         <div class="wrap">
           <fieldset>
-            <h5 class="title">Creative Direction</h5>
-            <h2 class="subtitle">What level of design assistance do you need?</h2>
+            <div class="title">
+              <h4>Creative Direction</h4>
+              <h2>What level of design assistance do you need?</h2>
+            </div>
             <div class="columns">
               <div class="column" v-for="(option, index) of creativeDirectionOptions" :key="index"
                    :class="creativeDirectionSelected === index ? 'active' : ''"
@@ -24,7 +26,27 @@
           </fieldset>
         </div>
       </section>
-      <section class="option-fields">
+
+
+      <section>
+        <div class="wrap case_study">
+          <div class="title">
+            <h4>Case Study</h4>
+            <h2><a href="/work/ucla/">UCLA Department of English</a></h2>
+          </div>
+          <a href="/work/ucla/" class="action">
+            <img src="~assets/images/icons/arrow-next.svg">
+            <span class="text">Next</span>
+          </a>
+          <a href="/work/ucla/" class="media">
+            <img src="~assets/images/work/ucla-05.jpg" alt="Case study example from the UCLA Department of English project by Magnet Co">
+            <!-- <caption></caption> -->
+          </a>
+        </div>
+      </section>
+
+
+      <section class="option_fields">
         <div class="wrap">
           <fieldset>
             <h5 class="title">Content Management System</h5>
@@ -47,7 +69,7 @@
           </fieldset>
         </div>
       </section>
-      <section class="option-fields">
+      <section class="option_fields">
         <div class="wrap">
           <fieldset>
             <div class="text-wrap">
@@ -72,7 +94,7 @@
           </fieldset>
         </div>
       </section>
-      <section class="option-fields">
+      <section class="option_fields">
         <div class="wrap">
           <fieldset>
             <div class="text-wrap">
@@ -97,7 +119,7 @@
           </fieldset>
         </div>
       </section>
-      <section class="option-fields">
+      <section class="option_fields">
         <div class="wrap">
           <fieldset>
             <div class="text-wrap">

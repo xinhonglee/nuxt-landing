@@ -14,14 +14,18 @@ footer {
   h4 {
     margin: 0 0 1rem;
   }
+
   .footer_upper {
     border-top: 2px solid $color-base-3;
     border-color: rgba($color-base-3,0.5);
     .wrap {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      width: 100%;
+      grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+
     }
   }
   .footer_lower {
+    background-color: rgba($color-base-3, 0.4);
     border-top: 2px solid $color-base-3;
     border-color: rgba($color-base-3,0.5);
     .wrap {
@@ -29,6 +33,9 @@ footer {
     }
     .block:last-child {
       text-align: right;
+    }
+    p {
+      margin: 0;
     }
   }
 }

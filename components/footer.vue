@@ -10,17 +10,21 @@
           <h4>24/7 support</h4>
           <p>Our team is located worldwide and we are available to help anytime you might need.</p>
         </div>
-        <div>
-          <h4>Recent work</h4>
+        <!-- <div>
+          <h4>Recent clients</h4>
           <clientList/>
-        </div>
+        </div> -->
         <div>
-          <h4>Cityzen theme</h4>
-          <ul>
-            <li><nuxt-link active-class="is-active" to="/cityzen" class="navbar-item is-tab" exact>Features</nuxt-link></li>
-            <li><nuxt-link active-class="is-active" to="/cityzen/support" class="navbar-item is-tab" exact>Support</nuxt-link></li>
-            <li><nuxt-link active-class="is-active" to="/cityzen/buy" class="navbar-item is-tab with-icon icon-buy" exact>Buy</nuxt-link></li>
-          </ul>
+          <h4>Upcoming product</h4>
+          <div class="feature feature_cityzen">
+            <h2>Cityzen</h2>
+            <p>A rather mighty yet friendly city website platform that makes creating and supporting city websites a breeze.</p>
+            <ul>
+              <li><nuxt-link active-class="is-active" to="/cityzen" class="navbar-item is-tab" exact>Features</nuxt-link></li>
+              <li><nuxt-link active-class="is-active" to="/cityzen/support" class="navbar-item is-tab" exact>Support</nuxt-link></li>
+              <li><nuxt-link active-class="is-active" to="/cityzen/buy" class="navbar-item is-tab with-icon icon-buy" exact>Buy</nuxt-link></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

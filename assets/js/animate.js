@@ -10,17 +10,28 @@ export function paintCommon(element) {
       .add({
         targets: 'header .logotype',
         opacity: 1,
-        easing: 'easeInOutQuad',
+        easing: 'easeOutQuad',
+        translateY: [
+          { value: 40, duration: 700 }
+        ],
+        duration: 700,
+        loop: false,
+        delay: 200
+      })
+      .add({
+        targets: 'header .navigation',
+        opacity: 1,
+        easing: 'easeOutQuad',
         translateY: [
           { value: 40, duration: 700 }
         ],
         duration: 700,
         loop: false
-      })
+      }, '-=400')
       .add({
-        targets: 'header .navigation',
+        targets: 'header .content',
         opacity: 1,
-        easing: 'easeInOutQuad',
+        easing: 'easeOutQuad',
         translateY: [
           { value: 40, duration: 700 }
         ],
@@ -32,11 +43,21 @@ export function paintCommon(element) {
         opacity: 1,
         easing: 'easeInOutQuad',
         translateY: [
-          { value: 40, duration: 700 }
+          { value: 40, duration: 1700 }
         ],
-        duration: 700,
+        duration: 1700,
         loop: false
-      }, '-=400')
+      }, '-=1400')
+      .add({
+        targets: '.headline h1',
+        opacity: 1,
+        easing: 'easeInOutQuad',
+        translateX: [
+          { value: 40, duration: 1000 }
+        ],
+        duration: 1000,
+        loop: false
+      }, '-=1200')
       .add({
         targets: 'footer',
         opacity: 1,

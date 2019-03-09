@@ -1,13 +1,61 @@
+// Forms
+
+form {
+  .field {
+    padding: 1.5rem 0 0;
+    // border-top: 0.25rem solid $color-base-2;
+    label {
+      display: flex;
+      margin: 0 0 1rem;
+      @include font-demibold-upper;
+      color: $color-base-5;
+      font-size: 0.85rem;
+      letter-spacing: 0.05rem;
+    }
+    &:first-child {
+      // border-top: none;
+    }
+  }
+
+  input {
+
+  }
+}
+
+
+
+.error-field {
+  p {
+    display: inline-flex;
+    padding: 0.5rem 1rem;
+    // justify-content: center;
+    // align-items: center;
+    border-radius: 0.2rem;
+      background-color: #fff;
+      border: 1px solid #fff;
+    &.has-text-danger {
+      background-color: #cc0043;
+      border-color: #e6175b;
+    }
+  }
+
+}
+
+
+
+
+
+
 
 // Animated button
 .anim-button {
   display: block;
   height: 3rem;
-  margin: 0 auto;
+  // margin: 0 auto;
   // position: relative;
   // top: 50%;
   // transform: translateY(-50%);
-  width: 320px;
+  width: 40rem;
   text-align: center;
   cursor: pointer;
   text-decoration: none;
@@ -70,7 +118,7 @@
 // FORMS
 
 // PRICING FORM
-.option-fields {}
+.option_fields {}
 .total-estimate {}
 .email-estimate {}
 .email-notification {}

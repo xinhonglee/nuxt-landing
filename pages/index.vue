@@ -8,7 +8,7 @@
         </div>
         <a href="/" class="action">
           <img src="~assets/images/icons/arrow-next.svg">
-          <span class="text">Next</span>
+          <span class="text">View</span>
         </a>
         <a href="/" class="media">
           <img src="~assets/images/work/ucla-05.jpg">
@@ -19,10 +19,10 @@
 
     <section class="puff-grad-invert-2 with-meta">
       <div class="meta meta-1">
-        <!-- <span>Sketch, HTML, CSS, Javascript</span> -->
+        <span>Sketch, HTML, CSS, Javascript</span>
       </div>
       <div class="meta meta-2">
-        <!-- <span>Another longer text goes here</span> -->
+        <span>Another longer text goes here</span>
       </div>
   		<div class="callout duo squish">
   			<div class="wrap">
