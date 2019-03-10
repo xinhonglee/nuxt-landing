@@ -108,10 +108,11 @@ body {
 
 // Used on pricing page
 .option_fields {
-
-  .title {
-
+  label.radio {
+    height: 100%;
+    margin: 0;
   }
+
   .columns {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -120,7 +121,7 @@ body {
     .column {
       border-radius: 0.2rem;
       border: 2px solid $color-base-3;
-      padding: 2rem;
+      // padding: 2rem;
       transition: 0.3s all;
       &.active {
         border-color: $color-green;
@@ -153,15 +154,36 @@ label.radio {
   display: grid;
   grid-template-columns: 1rem 1fr;
   grid-gap: 1rem;
+  padding: 2rem;
+  cursor: pointer;
+  transition: 0.3s all;
+  &:hover {
+    background-color: $color-base-2;
+  }
   input[type=radio] {}
   .radio-right-pane {
     display: grid;
     grid-template-areas: "title" "description" "cost";
     grid-template-columns: 1fr;
     grid-template-rows: auto auto 4rem;
-    h3 { grid-area: title; }
+    h3 {
+      grid-area: title; margin: 0;
+      font-size: 1.3rem;
+      @include font-medium;
+      color: $color-grey;
+    }
+    p {
+      color: $color-base-5;
+    }
     .description { grid-area: description; }
-    .cost { grid-area: cost; }
+    .cost {
+      grid-area: cost;
+      font-size: 1.5rem;
+    }
+    .has-text-link {
+      font-size: 1.5rem;
+      color: $color-green;
+    }
   }
 }
 

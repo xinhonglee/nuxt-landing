@@ -18,7 +18,7 @@
                 <h4>Creative Direction</h4>
                 <h2>What level of design assistance do you need?</h2>
               </div>
-              <a href="/work/ikea/" class="meta">
+              <a href="#help" class="meta">
                 <img src="~assets/images/icons/help.svg">
                 <!-- <span class="text">Help?</span> -->
               </a>
@@ -45,8 +45,16 @@
       <section class="option_fields">
         <div class="wrap">
           <fieldset>
-            <h5 class="title">Content Management System</h5>
-            <h2 class="subtitle">How editable do you need your website to be?</h2>
+            <div class="title_bar">
+              <div class="title">
+                <h4>Content Management System</h4>
+                <h2>How editable do you need your website to be?</h2>
+              </div>
+              <a href="#help" class="meta">
+                <img src="~assets/images/icons/help.svg">
+                <!-- <span class="text">Help?</span> -->
+              </a>
+            </div>
             <div class="columns">
               <div class="column" v-for="(option, index) of contentManagementSystemOptions" :key="index"
                    :class="contentManagementSystemSelected === index ? 'active' : ''"
@@ -68,9 +76,15 @@
       <section class="option_fields">
         <div class="wrap">
           <fieldset>
-            <div class="text-wrap">
-              <h5 class="title">Discoverability</h5>
-              <h2 class="subtitle">Improve your Google Search ranking?</h2>
+            <div class="title_bar">
+              <div class="title">
+                <h4>Discoverability</h4>
+                <h2>Improve your Google Search ranking?</h2>
+              </div>
+              <a href="#help" class="meta">
+                <img src="~assets/images/icons/help.svg">
+                <!-- <span class="text">Help?</span> -->
+              </a>
             </div>
             <div class="columns">
               <div class="column" v-for="(option, index) of discoverabilityOptions" :key="index"
@@ -93,9 +107,15 @@
       <section class="option_fields">
         <div class="wrap">
           <fieldset>
-            <div class="text-wrap">
-              <h5 class="title">Images, illustrating and copywriting</h5>
-              <h2 class="subtitle">Need help adding or creating content?</h2>
+            <div class="title_bar">
+              <div class="title">
+                <h4>Images, illustrating and copywriting</h4>
+                <h2>Need help adding or creating content?</h2>
+              </div>
+              <a href="#help" class="meta">
+                <img src="~assets/images/icons/help.svg">
+                <!-- <span class="text">Help?</span> -->
+              </a>
             </div>
             <div class="columns">
               <div class="column" v-for="(option, index) of illustrateOptions" :key="index"
@@ -118,9 +138,15 @@
       <section class="option_fields">
         <div class="wrap">
           <fieldset>
-            <div class="text-wrap">
-              <h5 class="title">Customer support</h5>
-              <h2 class="subtitle">How long do you need support for?</h2>
+            <div class="title_bar">
+              <div class="title">
+                <h4>Customer support</h4>
+                <h2>How long do you need support for?</h2>
+              </div>
+              <a href="#help" class="meta">
+                <img src="~assets/images/icons/help.svg">
+                <!-- <span class="text">Help?</span> -->
+              </a>
             </div>
             <div class="columns">
               <div class="column" v-for="(option, index) of customerSupportOptions" :key="index"
@@ -142,16 +168,31 @@
       </section>
       <section class="total-estimate">
         <div class="wrap">
-          <h6 class="title has-text-primary">Total Estimate Value: ${{totalCost}}</h6>
+          <div class="title_bar">
+            <div class="title">
+              <h4>Total</h4>
+              <h2>Our ballpark estimate is ${{totalCost}}</h2>
+            </div>
+            <a href="#help" class="meta">
+              <img src="~assets/images/icons/help.svg">
+              <!-- <span class="text">Help?</span> -->
+            </a>
+          </div>
         </div>
       </section>
       <template v-if="!sentEmail">
 
         <section class="email-estimate">
           <div class="wrap">
-
-            <div class="title">
-              <h2>Save your estimate</h2>
+            <div class="title_bar">
+              <div class="title">
+                <h4>Email this</h4>
+                <h2>Save your estimate</h2>
+              </div>
+              <a href="#help" class="meta">
+                <img src="~assets/images/icons/help.svg">
+                <!-- <span class="text">Help?</span> -->
+              </a>
             </div>
 
             <fieldset class="email-group mt-5">
@@ -368,5 +409,15 @@
   }
   .radio-right-pane {
     display: inline-grid;
+  }
+  .total-estimate {
+    background: rgb(37, 100, 255);
+position: sticky;
+bottom: 0;
+left: 0;
+right: 0;
+padding: 0rem;
+width: 100%;
+position: -webkit-sticky;
   }
 </style>
