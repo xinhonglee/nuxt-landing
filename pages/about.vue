@@ -62,7 +62,10 @@
          name: 'description',
          content: 'About Magnet Co'
         }
-      ]
+      ],
+      bodyAttrs: {
+        class: 'page_about'
+      }
     }
   }
 </script>

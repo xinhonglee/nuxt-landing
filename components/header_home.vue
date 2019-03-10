@@ -21,28 +21,22 @@
         <article class="">
           <h1>Human-centric web design</h1>
           <p>Magnet is an independent web design and production agency, combining art &amp; science with form &amp; function to produce compelling websites.</p>
-          <div class="images team-headshots">
-            <img src="~assets/images/team-headshots/team-gavin.jpg" alt="Gavin">
-            <img src="~assets/images/team-headshots/team-alex.jpg" alt="Alex">
-            <img src="~assets/images/team-headshots/team-sarah.jpg" alt="Sarah">
-            <img src="~assets/images/team-headshots/team-eugene.jpg" alt="Eugene">
-            <img src="~assets/images/team-headshots/team-igor.jpg" alt="Eugene">
-            <img src="~assets/images/team-headshots/team-bryan.jpg" alt="Eugene">
-            <img src="~assets/images/team-headshots/team-don.jpg" alt="Eugene">
-          </div>
+          
         </article>
       </div>
       <div class="mouse">
         <mouse/>
       </div>
     </div>
+
   </header>
+
 </template>
 
 <script>
-import logo from '~/components/header/logo.vue'
-import navigation from '~/components/header/navigation.vue'
-import mouse from '~/components/header/mouse.vue'
+import logo from '~/components/logo.vue'
+import navigation from '~/components/navigation.vue'
+import mouse from '~/components/mouse.vue'
 export default {
   components: {
     logo,
@@ -50,4 +44,9 @@ export default {
     mouse
   }
 }
+
 </script>
+
+<style lang="css" scoped>
+
+</style>

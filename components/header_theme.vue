@@ -12,9 +12,9 @@
 </template>
 
 <script>
-import logo from '~/components/header/logo.vue'
-import navigation from '~/components/header/navigation_theme.vue'
-import mouse from '~/components/header/mouse.vue'
+import logo from '~/components/logo.vue'
+import navigation from '~/components/navigation_theme.vue'
+import mouse from '~/components/mouse.vue'
 export default {
   components: {
     logo,

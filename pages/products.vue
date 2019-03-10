@@ -26,7 +26,10 @@
          name: 'description',
          content: 'Products by Magnet Co'
         }
-      ]
+      ],
+      bodyAttrs: {
+        class: 'page_products'
+      }
     }
   }
 </script>

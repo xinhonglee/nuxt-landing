@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import logo from '~/components/header/logo.vue'
-import navigation from '~/components/header/navigation.vue'
+import logo from '~/components/logo.vue'
+import navigation from '~/components/navigation.vue'
 export default {
   components: {
     logo,

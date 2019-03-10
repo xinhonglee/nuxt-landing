@@ -24,7 +24,7 @@ header {
       margin: 0 1.5rem 0 0;
       a {
         text-decoration: none;
-        @include font-regular-upper;
+        @include font-medium-upper;
         font-size: 0.85rem;
         letter-spacing: 0.02rem;
         &:before {

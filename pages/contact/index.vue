@@ -2,10 +2,13 @@
   <main>
     <section class="page-contact">
       <div class="wrap">
+        <div class="title headline">
+          <h1>Reach out to us</h1>
+        </div>
 
         <!-- BEGIN BULMA -->
         <div class="container">
-          <div class="columns">
+          <div class="columns squish">
             <div class="column is-three-fifths is-offset-one-fifth">
               <template v-if="!sentEmail">
                 <div class="tabs">
@@ -50,10 +53,6 @@
   import ThankYou from "./ThankYou";
 
   export default {
-    // data() {
-    //   return {};
-    // },
-
     name: "contact",
     components: {
       ThankYou,
@@ -78,6 +77,19 @@
         this.sentEmail = true;
       })
     },
+    head: {
+      title: 'Contact',
+      meta: [
+        {
+         hid: 'description',
+         name: 'description',
+         content: 'Contact Magnet Co'
+        }
+      ],
+      bodyAttrs: {
+        class: 'page_contact'
+      }
+    }
   }
 </script>
 

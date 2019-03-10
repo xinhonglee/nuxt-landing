@@ -99,6 +99,13 @@
 	font-style: normal;
 }
 
+@mixin font-serif {
+	// Utopia Std Caption
+	font-family: utopia-std-caption, serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
 
 @mixin font-serif-black-headline {
 	// Utopia Std Black Headline
