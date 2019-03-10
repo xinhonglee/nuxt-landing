@@ -1,5 +1,27 @@
 import anime from "animejs";
 
+// export function testBind(element) {
+//
+//   var testItem = document.querySelector('.logotype a');
+//
+//   function animateButton(scale, duration, elasticity) {
+//     anime.remove(testItem);
+//     anime({
+//       targets: testItem,
+//       scale: scale,
+//       duration: duration,
+//       elasticity: elasticity
+//     });
+//   }
+//
+//   function enterButton() { animateButton(1.2, 400, 400) };
+//   function leaveButton() { animateButton(1.0, 300, 300) };
+//
+//   testItem.addEventListener('mouseenter', enterButton, false);
+//   testItem.addEventListener('mouseleave', leaveButton, false);
+//
+// }
+
 export function paintCommon(element) {
 
   // document.addEventListener('DOMContentLoaded', () => {

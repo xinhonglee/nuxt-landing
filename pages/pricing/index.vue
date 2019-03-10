@@ -1,12 +1,27 @@
 <template>
   <main class="">
+
+    <section>
+      <div class="wrap">
+        <div class="title headline">
+          <h1>Get a ballpark estimate</h1>
+        </div>
+      </div>
+    </section>
+
     <form @submit.prevent="onSubmit">
       <section class="option_fields">
         <div class="wrap">
           <fieldset>
-            <div class="title">
-              <h4>Creative Direction</h4>
-              <h2>What level of design assistance do you need?</h2>
+            <div class="title_bar">
+              <div class="title">
+                <h4>Creative Direction</h4>
+                <h2>What level of design assistance do you need?</h2>
+              </div>
+              <a href="/work/ikea/" class="meta">
+                <img src="~assets/images/icons/help.svg">
+                <!-- <span class="text">Help?</span> -->
+              </a>
             </div>
             <div class="columns">
               <div class="column" v-for="(option, index) of creativeDirectionOptions" :key="index"
@@ -26,25 +41,6 @@
           </fieldset>
         </div>
       </section>
-
-
-      <section>
-        <div class="wrap case_study">
-          <div class="title">
-            <h4>Case Study</h4>
-            <h2><a href="/work/ucla/">UCLA Department of English</a></h2>
-          </div>
-          <a href="/work/ucla/" class="action">
-            <img src="~assets/images/icons/arrow-next.svg">
-            <span class="text">Next</span>
-          </a>
-          <a href="/work/ucla/" class="media">
-            <img src="~assets/images/work/ucla-05.jpg" alt="Case study example from the UCLA Department of English project by Magnet Co">
-            <!-- <caption></caption> -->
-          </a>
-        </div>
-      </section>
-
 
       <section class="option_fields">
         <div class="wrap">

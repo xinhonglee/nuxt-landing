@@ -108,6 +108,7 @@ body {
 
 // Used on pricing page
 .option_fields {
+
   .title {
 
   }
@@ -115,10 +116,16 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
+    padding: 0 0 0 5rem;
     .column {
       border-radius: 0.2rem;
       border: 2px solid $color-base-3;
       padding: 2rem;
+      transition: 0.3s all;
+      &.active {
+        border-color: $color-green;
+        background: $color-base-2;
+      }
     }
 
   }
@@ -177,6 +184,60 @@ main {
 menu {
   &.client_list {}
   &.product_list {}
+}
+
+
+// Used at top of pricing page
+.title_bar {
+  display: grid;
+  grid-template-columns: 1fr 3rem;
+  grid-template-rows: auto;
+  grid-template-areas: "title title-meta";
+  grid-gap: 2rem;
+  margin: 0 0 1rem;
+  .title {
+    grid-area: title;
+    position: relative;
+    padding-left: 5rem;
+    &:before {
+      display: block;
+      content: ' ';
+      width: 3rem;
+      position: absolute;
+      top: 0.65rem;
+      left: 0rem;
+      height: 0.2rem;
+      border-radius: 0.2rem;
+      background: $color-base-3;
+    }
+    h4 {
+      color: $color-green;
+      margin: 0 0 0.75rem;
+    }
+    h2 {
+      @include font-serif;
+      font-size: 1.7rem;
+    }
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: none;
+        border-bottom: 3px solid $color-green;
+      }
+    }
+  }
+  .meta {
+    display: flex;
+    grid-area: title-meta;
+    width: 3rem;
+    justify-content: center;
+    position: relative;
+    img {
+      display: block;
+      width: 2rem;
+      height: 2rem;
+    }
+  }
 }
 
 
