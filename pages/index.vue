@@ -3,7 +3,7 @@
     <section>
       <div class="wrap case_study">
         <div class="title">
-          <h4>Recent Project</h4>
+          <h4>Our work</h4>
           <h2><a href="/">Wordsmith / UCLA Department of English</a></h2>
         </div>
         <a href="/" class="action">
@@ -14,6 +14,9 @@
           <img src="~assets/images/work/ucla-05.jpg">
           <!-- <caption></caption> -->
         </a>
+      </div>
+      <div class="wrap client_logos hide_nonhome">
+        <clientList/>
       </div>
     </section>
 
@@ -55,6 +58,7 @@
   import { paintHome } from "~/assets/js/animate";
   // import { testBind } from "~/assets/js/animate";
   import caseStudyList from '~/components/services/work/case_study_list.vue'
+  import clientList from '~/components/services/work/client_list.vue'
   import serviceFeatures from '~/components/services/features.vue'
   import callout from '~/components/callout.vue'
   import designBlock from '~/components/services/design.vue'
@@ -71,7 +75,8 @@
       designBlock,
       engineeringBlock,
       serviceFeatures,
-      caseStudyList
+      caseStudyList,
+      clientList
     },
     layout: 'home',
     head: {
@@ -90,6 +95,6 @@
   }
 </script>
 
-<style lang="scss">
-  // @import '~assets/scss/master.scss';
+<style lang="scss" scoped>
+
 </style>

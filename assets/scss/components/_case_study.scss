@@ -3,7 +3,7 @@
   grid-template-columns: 1fr 3rem;
   grid-template-rows: auto;
   grid-template-areas: "title action" "media media";
-  grid-gap: 2rem;
+  grid-gap: 1rem;
   .title {
     grid-area: title;
     position: relative;
