@@ -156,7 +156,7 @@
                   <input type="radio" :value="option.value" v-model="costData.customerSupport"
                          :selected="customerSupportSelected === index">
                   <div class="radio-right-pane">
-                    <p>{{option.value}}</p>
+                    <h3>{{option.value}}</h3>
                     <p>{{option.description}}</p>
                     <p class="has-text-link">${{option.cost}}</p>
                   </div>
@@ -419,5 +419,6 @@ right: 0;
 padding: 0rem;
 width: 100%;
 position: -webkit-sticky;
+
   }
 </style>
