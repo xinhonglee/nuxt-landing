@@ -377,6 +377,38 @@ menu {
 
 
 
+// Animated loader
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 (50px / 3);
+  box-shadow: 0 -5px 5px 1px rgba(0,0,0,0.2);
+}
+
+.circle-1 {
+  background-color: #000;
+  background: linear-gradient(tint(#000, -100%), tint(#ccc, 20%));
+}
+
+.circle-2 {
+  background-color: #000;
+  background: linear-gradient(tint(#000, -10%), tint(#33c, 30%));
+}
+
+
+
+
+
 
 
 
@@ -425,5 +457,34 @@ menu {
       }
     }
 
+  }
+}
+
+
+
+
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  .card {
+    // border: 0.5rem solid rgba(#fff, 0.0);
+    padding: 2rem;
+    text-align: center;
+    background: linear-gradient(217deg, $color-green, $color-green-2 70.71%);
+    .title {
+      span {
+        font-size: 8rem;
+        @include font-medium;
+        color: #fff;
+
+      }
+      h2 {
+        @include font-serif;
+        font-size: 1.8rem;
+      }
+    }
+    p {}
   }
 }

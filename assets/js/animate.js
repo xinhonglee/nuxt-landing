@@ -1,26 +1,41 @@
 import anime from "animejs";
 
-// export function testBind(element) {
-//
-//   var testItem = document.querySelector('.logotype a');
-//
-//   function animateButton(scale, duration, elasticity) {
-//     anime.remove(testItem);
-//     anime({
-//       targets: testItem,
-//       scale: scale,
-//       duration: duration,
-//       elasticity: elasticity
-//     });
-//   }
-//
-//   function enterButton() { animateButton(1.2, 400, 400) };
-//   function leaveButton() { animateButton(1.0, 300, 300) };
-//
-//   testItem.addEventListener('mouseenter', enterButton, false);
-//   testItem.addEventListener('mouseleave', leaveButton, false);
-//
-// }
+export function testBind(element) {
+
+  var testItem = document.querySelector('.logotype a');
+
+  function animateButton(scale, duration, elasticity) {
+    anime.remove(testItem);
+    anime({
+      targets: testItem,
+      scale: scale,
+      duration: duration,
+      elasticity: elasticity
+    });
+
+  }
+
+  function enterButton() { animateButton(1.2, 400, 400) };
+  function leaveButton() { animateButton(1.0, 300, 300) };
+
+  testItem.addEventListener('mouseenter', enterButton, false);
+  testItem.addEventListener('mouseleave', leaveButton, false);
+
+}
+
+export function preLoading(element) {
+  var circle = anime ({
+    targets: ['.loader'],
+    rotate: 180,
+    duration: 1600,
+    loop: true,
+    elasticity: 600,
+    easing: 'easeOutElastic',
+    delay: function(el, index) {
+      return index * 80;
+    },
+  });
+}
 
 export function paintCommon(element) {
 
@@ -33,17 +48,19 @@ export function paintCommon(element) {
         targets: 'header .logotype',
         opacity: 1,
         easing: 'easeOutQuad',
+        rotateY: -360,
         translateY: [
           { value: 40, duration: 700 }
         ],
         duration: 700,
-        loop: false,
+        loop: true,
         delay: 200
       })
       .add({
         targets: 'header .navigation',
         opacity: 1,
         easing: 'easeOutQuad',
+        rotateX: -360,
         translateY: [
           { value: 40, duration: 700 }
         ],
