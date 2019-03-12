@@ -1,6 +1,6 @@
 <template>
   <main class="">
-
+    <news-letter></news-letter>
     <section>
       <div class="wrap">
         <div class="title headline">
@@ -272,10 +272,11 @@
     _customerSupportOptions
   } from "../constants";
   import {getOptionByValue} from "../utils";
+  import NewsLetter from "../../components/newsletter";
 
   export default {
     name: "pricing",
-    components: {},
+    components: {NewsLetter},
     data() {
       return {
         costData: {

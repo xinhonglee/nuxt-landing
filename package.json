@@ -23,6 +23,7 @@
     "imagesloaded": "^4.1.4",
     "nuxt": "^2.4.3",
     "vue-recaptcha": "^1.1.1",
+    "vue-swal": "^1.0.0",
     "vuelidate": "^0.7.4"
   },
   "devDependencies": {
