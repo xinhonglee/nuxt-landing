@@ -133,9 +133,7 @@ body {
 }
 
 .columns {
-  &.squish {
-    margin: 0 5rem;
-  }
+
   // display: grid;
   // grid-template-columns: repeat(3, 1fr);
   // grid-gap: 2rem;
@@ -147,6 +145,10 @@ body {
 }
 
 
+.squish {
+  margin: 0 5rem;
+}
+
 
 
 
@@ -157,6 +159,7 @@ label.radio {
   padding: 2rem;
   cursor: pointer;
   transition: 0.3s all;
+  align-items: flex-start;
   &:hover {
     background-color: $color-base-2;
   }
@@ -378,12 +381,18 @@ menu {
 
 
 // Animated loader
-.center {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
+.loader-wrap {
+  .center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    .loader {
+      &.blur {}
+    }
+  }
 }
+
 
 .circle {
   width: 50px;
@@ -473,6 +482,7 @@ menu {
     padding: 2rem;
     text-align: center;
     background: linear-gradient(217deg, $color-green, $color-green-2 70.71%);
+    color: #2c4b4b;
     .title {
       span {
         font-size: 8rem;

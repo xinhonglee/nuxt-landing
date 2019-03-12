@@ -2,12 +2,12 @@
   <main id="main">
     <section class="about">
       <div class="wrap">
-        <div class="title">
+        <div class="headline title">
           <h1>How we work</h1>
           <p>Psychology-focused design that thoughtfully combines art and science, form and function. </p>
         </div>
-        <div class="cards">
-          
+        <div class="cards squish">
+
           <div class="card">
             <div class="title">
               <span>01</span>
