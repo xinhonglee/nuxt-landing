@@ -1,6 +1,7 @@
 <template>
   <div class="say-hello-form">
     <form @submit.prevent="onSubmit">
+      <input id="project_url_3" class="input" type="text" value="">
       <div class="field">
         <label class="label">Contact Name</label>
         <div class="control">
@@ -44,10 +45,6 @@
           Please enter less than {{$v.message.$params.maxLength.max}} characters.
         </p>
       </div>
-      <vue-recaptcha @verify="verifyRecaptcha" :sitekey="siteKey"></vue-recaptcha>
-      <div class="error-field" v-show="recaptchaErrorMessage">
-        <p class="has-text-danger">{{recaptchaErrorMessage}}</p>
-      </div>
       <div class="field mt-2">
         <div class="control">
           <button type="submit" class="button is-link">Submit</button>
@@ -58,22 +55,17 @@
 </template>
 
 <script>
-  import VueRecaptcha from 'vue-recaptcha';
   import {required, minLength, maxLength, email} from 'vuelidate/lib/validators';
-  import {gSiteKey} from '../constants';
 
   export default {
     name: "say-hello",
-    components: {VueRecaptcha},
+    components: {},
     data() {
       return {
         contactName: '',
         companyName: '',
         emailAddress: '',
         message: '',
-        siteKey: gSiteKey,
-        recaptchaVerified: false,
-        recaptchaErrorMessage: ''
       }
     },
     validations: {
@@ -90,19 +82,20 @@
         maxLength: maxLength(3000)
       }
     },
+    mounted() {
+      document.getElementById('project_url_3').style.display = "none";
+    },
     methods: {
-      verifyRecaptcha(response) {
-        this.recaptchaErrorMessage = '';
-        this.recaptchaVerified = true;
-      },
+
       async onSubmit() {
         this.$v.$touch();
         if (this.$v.$invalid) {
           console.log('form validation error-field');
           return false;
         }
-        if (!this.recaptchaVerified) {
-          this.recaptchaErrorMessage = 'Please tick recaptcha.'
+        if(document.getElementById('project_url_3').value.length !== 0) {
+          this.$root.$emit("submit:form");
+          console.log("!!! this is bot !!!");
           return false;
         }
         const data = {
@@ -115,7 +108,7 @@
         this.$root.$emit("submit:form");
         console.log(result);
       }
-    }
+    },
   }
 </script>
 

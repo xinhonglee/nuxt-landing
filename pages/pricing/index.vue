@@ -11,6 +11,7 @@
     </section>
 
     <form @submit.prevent="onSubmit">
+      <input id="project_url_1" class="input" type="text" value="">
       <section class="option_fields">
         <div class="wrap">
           <fieldset>
@@ -238,10 +239,6 @@
                 Please enter less than {{$v.notes.$params.maxLength.max}} characters.
               </p>
             </div>
-            <vue-recaptcha @verify="verifyRecaptcha" :sitekey="siteKey"></vue-recaptcha>
-            <div class="error-field" v-show="recaptchaErrorMessage">
-              <p class="has-text-danger">{{recaptchaErrorMessage}}</p>
-            </div>
             <div class="field">
               <div class="control">
                 <button type="submit" class="button is-link">Submit</button>
@@ -266,8 +263,6 @@
 
 <script>
   import { paintCommon } from "~/assets/js/animate";
-
-  import VueRecaptcha from 'vue-recaptcha';
   import {required, maxLength, email} from 'vuelidate/lib/validators';
   import {
     _creativeDirectionOptions,
@@ -276,12 +271,11 @@
     _illustrateOptions,
     _customerSupportOptions
   } from "../constants";
-  import {gSiteKey} from "../constants";
   import {getOptionByValue} from "../utils";
 
   export default {
     name: "pricing",
-    components: {VueRecaptcha},
+    components: {},
     data() {
       return {
         costData: {
@@ -304,15 +298,13 @@
         emailAddresses: [''],
         requestFollowUp: false,
         notes: '',
-        siteKey: gSiteKey,
-        recaptchaVerified: false,
-        recaptchaErrorMessage: '',
         totalCost: 0,
         sentEmail: false,
       }
     },
     mounted() {
       paintCommon();
+      document.getElementById('project_url_1').style.display = "none";
     },
     validations: {
       emailAddresses: {
@@ -339,10 +331,6 @@
       }
     },
     methods: {
-      verifyRecaptcha(response) {
-        this.recaptchaErrorMessage = '';
-        this.recaptchaVerified = true;
-      },
       async onSubmit() {
         console.log('submit!');
         this.$v.$touch();
@@ -350,11 +338,11 @@
           console.log('form validation error-field');
           return false;
         }
-        if (!this.recaptchaVerified) {
-          this.recaptchaErrorMessage = 'Please tick recaptcha.';
+        if(document.getElementById('project_url_1').value.length !== 0) {
+          this.$root.$emit("submit:form");
+          console.log("!!! this is bot !!!");
           return false;
         }
-
         const data = {
           creativeDirection: this.costData.creativeDirection,
           contentManagementSystem: this.costData.contentManagementSystem,
@@ -413,13 +401,13 @@
   }
   .total-estimate {
     background: rgb(37, 100, 255);
-position: sticky;
-bottom: 0;
-left: 0;
-right: 0;
-padding: 0rem;
-width: 100%;
-position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0rem;
+    width: 100%;
+    position: -webkit-sticky;
 
   }
 </style>
