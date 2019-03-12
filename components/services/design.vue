@@ -1,5 +1,5 @@
 <template>
-  <div class="block" style="margin: 0 0 22rem">
+  <div class="block" style="">
     <h4>UI/UX and visual design</h4>
     <h2>Design</h2>
     <p>Seductive design intoxicates. It blurs the world around us and demands attention.</p>
@@ -23,5 +23,11 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
+.block {
+  /* margin: 0 0 22rem; */
+  p {
+    font-size: 1.2rem;
+  }
+}
 </style>

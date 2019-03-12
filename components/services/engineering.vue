@@ -1,5 +1,5 @@
 <template>
-  <div class="block" style="margin: 22rem 0 0">
+  <div class="block" style="">
     <h4>Software engineering</h4>
     <h2>Code</h2>
     <p>Meticulous engineering is at the center of a harmonious and seamless web experience.</p>
@@ -23,5 +23,11 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
+  .block {
+    // margin: 22rem 0 0
+    p {
+      font-size: 1.2rem;
+    }
+  }
 </style>

@@ -4,7 +4,8 @@
     <section>
       <div class="wrap">
         <div class="title headline">
-          <h1>Get a ballpark estimate</h1>
+          <h1>Pricing</h1>
+          <p>Get a ballpark estimate of pricing using the form below.</p>
         </div>
       </div>
     </section>
