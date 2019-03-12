@@ -27,7 +27,10 @@
          name: 'description',
          content: 'Get support with your Cityzen theme and plugin suite'
         }
-      ]
+      ],
+      bodyAttrs: {
+        class: 'page_cityzen page_cityzen_support'
+      }
     }
   }
 </script>

@@ -1,6 +1,10 @@
 .callout {
   padding: 4rem 0;
   @include max-width;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   .block {
     padding: 2rem;
     // background: rgba(0, 0, 0, 0.46);
@@ -23,6 +27,12 @@
       padding: 2rem;
       grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 2rem;
+    }
+  }
+  .images {
+    margin: 0 0 2rem;
+    .image {
+      margin: 0 0.5rem;
     }
   }
 }

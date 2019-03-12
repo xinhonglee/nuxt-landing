@@ -24,7 +24,7 @@ header {
       margin: 0 1.5rem 0 0;
       a {
         text-decoration: none;
-        @include font-regular-upper;
+        @include font-medium-upper;
         font-size: 0.85rem;
         letter-spacing: 0.02rem;
         &:before {
@@ -36,12 +36,20 @@ header {
           position: relative;
           top: -0.5rem;
           content: ' ';
+          transition: 0.2s all;
         }
         &.is-active {
           @include font-demibold-upper;
           font-weight: 600;
           &:before {
             background-color: #fff;
+          }
+        }
+        &:hover {
+          text-decoration: none;
+          border-bottom: none;
+          &:before {
+            background-color: $color-green;
           }
         }
       }

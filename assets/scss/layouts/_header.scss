@@ -21,7 +21,7 @@ header {
       display: block;
       width: 2.5rem;
       height: 2.5rem;
-      background: url(~assets/images/logotype.svg) 50% 0% no-repeat;
+      background: url(~assets/images/logos/logotype.svg) 50% 0% no-repeat;
       background-size: 2.25rem auto;
       text-indent: -999rem;
     }
@@ -33,14 +33,14 @@ header {
   }
   &.header_home {
     .wrap {
-      // min-height: 100vh;
+      min-height: 100vh;
       grid-template-columns: 3rem 1fr 3rem;
       grid-template-rows: 3rem 3rem auto 3rem;
       grid-template-areas:
         "logotype . meta"
         ". navigation meta"
         ". content ."
-        ". . mouse";
+        ". mouse .";
     }
     .navigation {
       justify-content: flex-start;
@@ -105,7 +105,8 @@ header {
         max-width: 55ch;
         min-width: 50ch;
         p {
-          font-size: 1.2rem;
+          font-size: 1.5rem;
+          @include font-light;
         }
       }
     }

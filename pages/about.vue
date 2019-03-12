@@ -1,45 +1,95 @@
 <template>
   <main id="main">
-    <section>
+    <section class="about">
       <div class="wrap">
-        <h1>About</h1>
-        <p>Psychology-focused design that thoughtfully combines art and science, form and function. </p>
+        <div class="headline title">
+          <h1>How we work</h1>
+          <p>Psychology-focused design that thoughtfully combines art and science, form and function. </p>
+        </div>
+        <div class="cards squish">
 
-        <h2>Precise</h2>
+          <div class="card">
+            <div class="title">
+              <span>01</span>
+              <h2>Precise</h2>
+            </div>
+            <p>A balanced website utilizes a modern technology stack, tested software and responsive design.</p>
+          </div>
 
-        <p>A balanced website utilizes a modern technology stack, tested software and responsive design.</p>
+          <div class="card">
+            <div class="title">
+              <span>02</span>
+              <h2>Beautiful</h2>
+            </div>
+            <p>Design has the power to transform perception of relevance, credibility and usability.</p>
 
-        <h2>Beautiful</h2>
+          </div>
 
-        <p>Design has the power to transform perception of relevance, credibility and usability.</p>
+          <div class="card">
+            <div class="title">
+              <span>03</span>
+              <h2>Intelligent</h2>
+            </div>
+            <p>Functional design creates an intuitive experience, while future-oriented technology adapts and delivers.</p>
 
-        <h2>Intelligent</h2>
+          </div>
 
-        <p>Functional design creates an intuitive experience, while future-oriented technology adapts and delivers.</p>
+          <div class="card">
+            <div class="title">
+              <span>04</span>
+              <h2>Manageable</h2>
+            </div>
+            <p>Empowerment through intuitive content management and a range of support options.</p>
 
-        <h2>Manageable</h2>
+          </div>
 
-        <p>Empowerment through intuitive content management and a range of support options.</p>
+          <div class="card">
+            <div class="title">
+              <span>05</span>
+              <h2>Accessible</h2>
+            </div>
+            <p>Equal access to information for all.</p>
 
-        <h2>Accessible</h2>
+          </div>
 
-        <p>Equal access to information for all.</p>
+          <div class="card">
+            <div class="title">
+              <span>06</span>
+              <h2>Accurate</h2>
+            </div>
+            <p>Credibility is maintained through built-in monitoring and daily backups.</p>
 
-        <h2>Accurate</h2>
+          </div>
 
-        <p>Credibility is maintained through built-in monitoring and daily backups.</p>
+          <div class="card">
+            <div class="title">
+              <span>07</span>
+              <h2>Secure</h2>
+            </div>
+            <p>Peace of mind with powerful tools and access control. </p>
 
-        <h2>Secure</h2>
+          </div>
 
-        <p>Peace of mind with powerful tools and access control. </p>
+          <div class="card">
+            <div class="title">
+              <span>08</span>
+              <h2>Data-driven</h2>
+            </div>
+            <p>Information architecture built upon quantitative data and supported by qualitative studies.</p>
 
-        <h2>Data-driven</h2>
+          </div>
 
-        <p>Information architecture built upon quantitative data and supported by qualitative studies.</p>
+          <div class="card">
+            <div class="title">
+              <span>09</span>
+              <h2>Connecting</h2>
+            </div>
+            <p>Encourage dialogue with features that connect people.</p>
+          </div>
 
-        <h2>Connecting</h2>
 
-        <p>Encourage dialogue with features that connect people.</p>
+        </div><!-- END cards -->
+
       </div>
     </section>
   </main>
@@ -62,7 +112,10 @@
          name: 'description',
          content: 'About Magnet Co'
         }
-      ]
+      ],
+      bodyAttrs: {
+        class: 'page_about'
+      }
     }
   }
 </script>

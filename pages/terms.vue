@@ -25,7 +25,10 @@
          name: 'description',
          content: 'Magnet Co terms of service'
         }
-      ]
+      ],
+      bodyAttrs: {
+        class: 'page_terms'
+      }
     }
   }
 </script>

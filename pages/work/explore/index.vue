@@ -10,7 +10,7 @@
           <section class="content_section content_image">
             <img src="~assets/images/work/explore-01.jpg">
           </section>
-          <section class="content_section half_first">
+          <section class="content_section half_last">
             <div class="text">
               <h4>The challenge</h4>
               <p>Explore contacted Magnet with a brief to help them design, build and support a comprehensive web platform for their audience.</p>
@@ -20,25 +20,14 @@
           <section class="content_section content_image">
             <img src="~assets/images/work/explore-02.jpg">
           </section>
-          <section class="content_section half_last">
+          <section class="content_section half_first">
             <div class="text">
               <h4>Our approach</h4>
               <p>We built a future-proof technology stack that included websites, microsites and a comprehensive media delivery platform to gather live feeds of exotic and endangered animals worldwide and stitch into useable web clips in real time.</p>
             </div>
           </section>
           <section class="content_section content_image">
-            <img src="~assets/images/work/ucla-03.jpg">
-          </section>
-          <section class="content_section half_first">
-            <div class="text">
-              <h4>Powerful technology</h4>
-              <p>The platform was built using Python, Angular, HTML5, CSS, Terraform, Tesseract OCR and a few more magic things.</p>
-              <p>We built a custom platform to integrate advanced document management with OCR processing and multi-threaded annotations.</p>
-            </div>
-          </section>
-          <section class="content_section content_image">
-            <img src="~assets/images/work/ucla-06.jpg">
-            <img src="~assets/images/work/ucla-04.jpg">
+            <img src="~assets/images/work/explore-03.jpg">
           </section>
           <section class="content_section half_last">
             <div class="text">
@@ -56,7 +45,7 @@
             <div><img src="~assets/images/tech/icon_swift.png"><span>Swift</span></div>
             <div><img src="~assets/images/tech/icon_android.png"><span>Android</span></div>
           </section>
-          <section class="content_section half_first">
+          <section class="content_section half_last">
             <div class="text">
               <h4>A platform for growth</h4>
               <p>The solution we built successfully scaled with Explore Org's growing audience over the years.</p>
@@ -96,7 +85,10 @@
          name: 'description',
          content: 'Explore Case Study'
         }
-      ]
+      ],
+      bodyAttrs: {
+        class: 'page_work'
+      }
     }
   }
 </script>

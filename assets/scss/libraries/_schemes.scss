@@ -1,0 +1,64 @@
+// Currently applied to the top level div inside /layouts
+.scheme_light {
+  background: #fff;
+  color: $color-base-3;
+  h1,h2,h3,h4 {
+    color: $color-base-2;
+  }
+  a {
+    color: $color-base-2;
+    &:hover {
+      border-color: blue;
+    }
+  }
+  header {
+    .logotype {
+      a {
+        background: url(~assets/images/logos/logotype.svg) 50% 0% no-repeat;
+      }
+    }
+    menu {
+      li {
+        a {
+          &:hover {
+            border: none;
+          }
+          &.is-active {
+            &:before {
+              background-color: $color-grey-2;
+            }
+          }
+        }
+      }
+    }
+  }
+  footer {
+    background-color: $color-grey-3;
+    .footer_upper {
+      border-color: rgba($color-grey-2,0.5);
+    }
+    .footer_lower {
+      border-color: rgba($color-grey-2,0.5);
+    }
+  }
+}
+
+
+
+.scheme_light.page_cityzen {
+  header {
+    .logotype {
+      width: 8.75rem;
+      // position: absolute;
+      // top: 0.5rem;
+      // left: 0;
+      a {
+        width: 100%;
+        // position: absolute;
+        // top: 0.5rem;
+        // left: 0;
+        background-image: url("~assets/images/logos/logo-cityzen-light.svg") !important;
+      }
+    }
+  }
+}

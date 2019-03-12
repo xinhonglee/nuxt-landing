@@ -123,7 +123,10 @@
          name: 'description',
          content: 'An incredible municipal website experience for your community'
         }
-      ]
+      ],
+      bodyAttrs: {
+        class: 'scheme_light page_cityzen page_cityzen_index'
+      }
     }
   }
 </script>

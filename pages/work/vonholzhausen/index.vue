@@ -65,7 +65,10 @@
          name: 'description',
          content: 'Vicki Vonholzhausen Case Study'
         }
-      ]
+      ],
+      bodyAttrs: {
+        class: 'page_work'
+      }
     }
   }
 </script>
