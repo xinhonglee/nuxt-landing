@@ -1,9 +1,9 @@
 <template>
   <main id="main">
-    <section>
+    <section class="">
       <div class="wrap case_study">
         <div class="title">
-          <h4>Recent Project</h4>
+          <h4>Our work</h4>
           <h2><a href="/">Wordsmith / UCLA Department of English</a></h2>
         </div>
         <a href="/" class="action">
@@ -13,6 +13,17 @@
         <a href="/" class="media">
           <img src="~assets/images/work/ucla-05.jpg">
           <!-- <caption></caption> -->
+        </a>
+      </div>
+      <div class="wrap client_logos hide_nonhome">
+        <clientList/>
+      </div>
+      <div class="wrap callout">
+        <a href="/work" class="anim-button">
+          <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+            <rect class="shape" height="60" width="320" />
+          </svg>
+           <div class="text">See more examples</div>
         </a>
       </div>
     </section>
@@ -31,13 +42,13 @@
   			</div>
   		</div>
   	</section>
-    <section class="bg-02 case_studies">
+    <!-- <section class="bg-02 case_studies">
       <div class="titleblock center-flex">
         <h5>Case studies</h5>
         <h2>Some of our recent activity</h2>
       </div>
       <caseStudyList/>
-  	</section>
+  	</section> -->
     <section class="">
       <div class="titleblock center-flex">
         <h5>Our approach</h5>
@@ -54,11 +65,14 @@
 <script>
   import { paintHome } from "~/assets/js/animate";
   // import { testBind } from "~/assets/js/animate";
-  import caseStudyList from '~/components/services/work/case_study_list.vue'
+  // import caseStudyList from '~/components/services/work/case_study_list.vue'
+  import clientList from '~/components/services/work/client_list.vue'
   import serviceFeatures from '~/components/services/features.vue'
   import callout from '~/components/callout.vue'
   import designBlock from '~/components/services/design.vue'
   import engineeringBlock from '~/components/services/engineering.vue'
+
+
   export default {
     data() {
       return {};
@@ -71,7 +85,8 @@
       designBlock,
       engineeringBlock,
       serviceFeatures,
-      caseStudyList
+      // caseStudyList,
+      clientList
     },
     layout: 'home',
     head: {
@@ -90,6 +105,12 @@
   }
 </script>
 
-<style lang="scss">
-  // @import '~assets/scss/master.scss';
+<style lang="scss" scoped>
+  .case_study + .client_logos {
+    padding-top: 0.5rem;
+  }
+  .client_logos + .callout {
+    padding-top: 0.5rem;
+    padding-bottom: 3rem;
+  }
 </style>

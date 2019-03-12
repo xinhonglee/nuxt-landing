@@ -3,7 +3,8 @@
     <section class="page-contact">
       <div class="wrap">
         <div class="title headline">
-          <h1>Reach out to us</h1>
+          <h1>Contact Magnet</h1>
+          <p>Use the form below to email us</p>
         </div>
 
         <!-- BEGIN BULMA -->

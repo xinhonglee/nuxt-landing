@@ -1,15 +1,16 @@
 <template>
   <main class="">
-
-    <section>
+     <section>
       <div class="wrap">
         <div class="title headline">
-          <h1>Get a ballpark estimate</h1>
+          <h1>Pricing</h1>
+          <p>Get a ballpark estimate of pricing using the form below.</p>
         </div>
       </div>
     </section>
 
     <form @submit.prevent="onSubmit">
+      <input id="project_url_1" class="input" type="text" value="">
       <section class="option_fields">
         <div class="wrap">
           <fieldset>
@@ -156,7 +157,7 @@
                   <input type="radio" :value="option.value" v-model="costData.customerSupport"
                          :selected="customerSupportSelected === index">
                   <div class="radio-right-pane">
-                    <p>{{option.value}}</p>
+                    <h3>{{option.value}}</h3>
                     <p>{{option.description}}</p>
                     <p class="has-text-link">${{option.cost}}</p>
                   </div>
@@ -237,10 +238,6 @@
                 Please enter less than {{$v.notes.$params.maxLength.max}} characters.
               </p>
             </div>
-            <vue-recaptcha @verify="verifyRecaptcha" :sitekey="siteKey"></vue-recaptcha>
-            <div class="error-field" v-show="recaptchaErrorMessage">
-              <p class="has-text-danger">{{recaptchaErrorMessage}}</p>
-            </div>
             <div class="field">
               <div class="control">
                 <button type="submit" class="button is-link">Submit</button>
@@ -265,8 +262,6 @@
 
 <script>
   import { paintCommon } from "~/assets/js/animate";
-
-  import VueRecaptcha from 'vue-recaptcha';
   import {required, maxLength, email} from 'vuelidate/lib/validators';
   import {
     _creativeDirectionOptions,
@@ -275,12 +270,12 @@
     _illustrateOptions,
     _customerSupportOptions
   } from "../constants";
-  import {gSiteKey} from "../constants";
   import {getOptionByValue} from "../utils";
+  import NewsLetter from "../../components/newsletter";
 
   export default {
     name: "pricing",
-    components: {VueRecaptcha},
+    components: {NewsLetter},
     data() {
       return {
         costData: {
@@ -303,15 +298,13 @@
         emailAddresses: [''],
         requestFollowUp: false,
         notes: '',
-        siteKey: gSiteKey,
-        recaptchaVerified: false,
-        recaptchaErrorMessage: '',
         totalCost: 0,
         sentEmail: false,
       }
     },
     mounted() {
       paintCommon();
+      document.getElementById('project_url_1').style.display = "none";
     },
     validations: {
       emailAddresses: {
@@ -338,10 +331,6 @@
       }
     },
     methods: {
-      verifyRecaptcha(response) {
-        this.recaptchaErrorMessage = '';
-        this.recaptchaVerified = true;
-      },
       async onSubmit() {
         console.log('submit!');
         this.$v.$touch();
@@ -349,11 +338,11 @@
           console.log('form validation error-field');
           return false;
         }
-        if (!this.recaptchaVerified) {
-          this.recaptchaErrorMessage = 'Please tick recaptcha.';
+        if(document.getElementById('project_url_1').value.length !== 0) {
+          this.$root.$emit("submit:form");
+          console.log("!!! this is bot !!!");
           return false;
         }
-
         const data = {
           creativeDirection: this.costData.creativeDirection,
           contentManagementSystem: this.costData.contentManagementSystem,
@@ -412,12 +401,13 @@
   }
   .total-estimate {
     background: rgb(37, 100, 255);
-position: sticky;
-bottom: 0;
-left: 0;
-right: 0;
-padding: 0rem;
-width: 100%;
-position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0rem;
+    width: 100%;
+    position: -webkit-sticky;
+
   }
 </style>

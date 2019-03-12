@@ -1,6 +1,7 @@
 <template>
   <div class="request-estimate-form">
     <form @submit.prevent="onSubmit">
+      <input id="project_url_2" class="input" type="text" value="">
       <div class="field">
         <label class="label">Contact Name</label>
         <div class="control">
@@ -65,12 +66,6 @@
       <div class="error-field" v-show="$v.projectName.$dirty">
         <p class="has-text-danger" v-show="!$v.projectName.required">Project Name is required</p>
       </div>
-      <div class="field">
-        <label class="label">Project URL</label>
-        <div class="control">
-          <input class="input" type="text" v-model.trim="projectUrl" placeholder="">
-        </div>
-      </div>
       <div class="columns">
         <div class="column">
           <div class="field">
@@ -114,10 +109,6 @@
           </div>
         </div>
       </div>
-      <vue-recaptcha @verify="verifyRecaptcha" :sitekey="siteKey"></vue-recaptcha>
-      <div class="error-field" v-show="recaptchaErrorMessage">
-        <p class="has-text-danger">{{recaptchaErrorMessage}}</p>
-      </div>
       <div class="field mt-2">
         <div class="control">
           <button type="submit" class="button is-link">Submit</button>
@@ -128,10 +119,8 @@
 </template>
 
 <script>
-  import VueRecaptcha from 'vue-recaptcha';
   import {required, minLength, maxLength, email} from 'vuelidate/lib/validators';
   import {isPhone} from "../utils";
-  import {gSiteKey} from "../constants";
 
   const _projectTypeOptions = [
     'Static website',
@@ -148,7 +137,7 @@
 
   export default {
     name: "request-estimate",
-    components: {VueRecaptcha},
+    components: {},
     data() {
       return {
         contactName: '',
@@ -157,7 +146,6 @@
         phoneNumber: '',
         message: '',
         projectName: '',
-        projectUrl: '',
         projectType: '',
         projectTypeOptions: _projectTypeOptions,
         designServices: false,
@@ -165,9 +153,6 @@
         deploymentServices: false,
         projectSize: '',
         projectSizeOptions: _projectSizeOptions,
-        siteKey: gSiteKey,
-        recaptchaVerified: false,
-        recaptchaErrorMessage: ''
       }
     },
     validations: {
@@ -198,11 +183,10 @@
         required
       },
     },
+    mounted() {
+      document.getElementById('project_url_2').style.display = "none";
+    },
     methods: {
-      verifyRecaptcha(response) {
-        this.recaptchaErrorMessage = '';
-        this.recaptchaVerified = true;
-      },
       async onSubmit() {
         console.log('submit!');
         this.$v.$touch();
@@ -210,8 +194,9 @@
           console.log('form validation error-field');
           return false;
         }
-        if (!this.recaptchaVerified) {
-          this.recaptchaErrorMessage = 'Please tick recaptcha.'
+        if(document.getElementById('project_url_2').value.length !== 0) {
+          this.$root.$emit("submit:form");
+          console.log("!!! this is bot !!!");
           return false;
         }
         const data = {
@@ -221,7 +206,6 @@
           phoneNumber: this.phoneNumber,
           message: this.message.replace(/(?:\r\n|\r|\n)/g, '<br>'),
           projectName: this.projectName,
-          projectUrl: this.projectUrl,
           projectType: this.projectType,
           designServices: this.designServices,
           contentServices: this.contentServices,
@@ -232,7 +216,7 @@
         this.$root.$emit("submit:form");
         console.log(result);
       }
-    }
+    },
   }
 </script>
 
