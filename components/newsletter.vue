@@ -28,6 +28,12 @@
 
   export default {
     name: "newsletter",
+    data() {
+      return {
+        contactName: '',
+        emailAddress: '',
+      }
+    },
     validations: {
       emailAddress: {
         required,
