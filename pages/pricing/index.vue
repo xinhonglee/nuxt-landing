@@ -1,7 +1,6 @@
 <template>
   <main class="">
-    <news-letter></news-letter>
-    <section>
+     <section>
       <div class="wrap">
         <div class="title headline">
           <h1>Pricing</h1>
