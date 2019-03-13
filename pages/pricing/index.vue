@@ -1,6 +1,6 @@
 <template>
   <main class="">
-     <section>
+    <section>
       <div class="wrap">
         <div class="title headline">
           <h1>Pricing</h1>
@@ -399,15 +399,14 @@
   .radio-right-pane {
     display: inline-grid;
   }
-  .total-estimate {
-    background: rgb(37, 100, 255);
-    position: sticky;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 0rem;
-    width: 100%;
-    position: -webkit-sticky;
-
-  }
+  // .total-estimate {
+  //   background: rgb(37, 100, 255);
+  //   position: sticky;
+  //   bottom: 0;
+  //   left: 0;
+  //   right: 0;
+  //   padding: 0rem;
+  //   width: 100%;
+  //   position: -webkit-sticky;
+  // }
 </style>

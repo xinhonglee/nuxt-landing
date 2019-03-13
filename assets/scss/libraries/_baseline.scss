@@ -115,40 +115,7 @@ img {
 	}
 }
 
-form {
-  // max-width: 30rem;
-  fieldset {
-    border: none;
-    margin: 0 0 2rem;
-    padding: 0;
-    label {
-      display: block;
-      margin: 0 0 0.5rem;
-    }
-  }
-}
-input,textarea {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  background: $color-base-2;
-  border: 1px solid $color-base-3;
-  font-size: 1.2rem;
-  color: $color-grey;
-}
-textarea {
-  min-height: 20rem;
-}
 
-.fields {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 2rem;
-  fieldset {
-    input {
-      width: 100%;
-    }
-  }
-}
 
 hr {
   box-sizing: content-box; /* 1 */
