@@ -45,7 +45,7 @@
             <div><img src="~assets/images/tech/icon_swift.png"><span>Swift</span></div>
             <div><img src="~assets/images/tech/icon_android.png"><span>Android</span></div>
           </section>
-          <section class="content_section half_last">
+          <section class="content_section half_first">
             <div class="text">
               <h4>A platform for growth</h4>
               <p>The solution we built successfully scaled with Explore Org's growing audience over the years.</p>
@@ -63,7 +63,16 @@
           </section>
         </div><!-- content -->
       </article>
+      <div class="callout">
+        <a href="/work" class="anim-button">
+          <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+            <rect class="shape" height="60" width="320" />
+          </svg>
+           <div class="text">View more work</div>
+        </a>
+      </div>
     </div>
+
   </main>
 </template>
 

@@ -108,12 +108,16 @@
         <clientList/>
       </div>
     </section>
+    <section class="call">
+      <callout/>
+  	</section>
   </main>
 </template>
 
 <script>
   import { paintCommon } from "~/assets/js/animate";
   import clientList from '~/components/services/work/client_list.vue'
+  import callout from '~/components/callout.vue'
   export default {
     data() {
       return {};
@@ -122,6 +126,7 @@
       paintCommon();
     },
     components: {
+      callout,
       clientList
     },
     layout: 'work',
@@ -142,5 +147,5 @@
 </script>
 
 <style lang="scss">
-  
+
 </style>

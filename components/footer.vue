@@ -3,7 +3,7 @@
     <div class="wrap">
       <div class="flex-end">
         <img src="~assets/images/logos/logotype.svg" class="logo">
-        <p>Magnet is a web design and development agency located in Cincinnati.</p>
+        <p>Magnet is a web design and development agency based in Cincinnati with a distributed team around the world.</p>
         <p class="muted">&copy; Copyright Magnet Co, LLC. All rights reserved.</p>
 
       </div>
@@ -23,7 +23,7 @@
           <li><nuxt-link active-class="is-active" to="/work" class="navbar-item is-tab" exact>Case studies</nuxt-link></li>
           <li><a href="https://www.behance.net/magnetco" target="_blank">Behance</a></li>
           <li><a href="https://dribbble.com/gavinhall" target="_blank">Dribbble</a></li>
-          <li><a href="https://github.com" target="_blank">Github</a></li>
+          <li><a href="https://github.com/magnetco" target="_blank">Github</a></li>
         </ul>
       </div>
       <div>
