@@ -49,21 +49,14 @@
         <designCode/>
         <a href="/" class="action graphic">
           <div class="graphic-content">
-            <h4>A holistic process</h4>
-            <h2>6 aspects</h2>
+            <h4>The process</h4>
+            <h2>6 steps</h2>
             <img src="~assets/images/icons/arrow-next.svg">
           </div>
         </a>
       </div>
   	</section>
-    <!-- <section class="bg-02 case_studies">
-      <div class="titleblock center-flex">
-        <h5>Case studies</h5>
-        <h2>Some of our recent activity</h2>
-      </div>
-      <caseStudyList/>
-  	</section> -->
-    <section class="">
+    <section class="approach">
       <div class="titleblock center-flex">
         <h5>Our approach</h5>
         <h2>Things we care most about</h2>
