@@ -47,23 +47,23 @@
         <!-- <designBlock/> -->
         <!-- <engineeringBlock/> -->
         <designCode/>
-        <a href="/" class="action graphic">
+        <a href="/about" class="action graphic">
           <div class="graphic-content">
-            <h4>The process</h4>
-            <h2>6 steps</h2>
-            <img src="~assets/images/icons/arrow-next.svg">
+            <h4>How it works</h4>
+            <h2>6-step process</h2>
+            <img src="~assets/images/icons/arrow-next.svg" alt="View our process">
           </div>
         </a>
       </div>
   	</section>
-    <section class="approach">
+    <section class="features">
       <div class="titleblock center-flex">
-        <h5>Our approach</h5>
-        <h2>Things we care most about</h2>
+        <h5>Why choose Magnet</h5>
+        <h2>A few good reasons</h2>
       </div>
       <serviceFeatures/>
     </section>
-    <section class="">
+    <section class="call">
       <callout/>
   	</section>
   </main>

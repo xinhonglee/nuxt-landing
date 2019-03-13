@@ -125,12 +125,12 @@ main {
 //   background-color: $color-base-2;
 // }
 
-.case {
+section.case {
   padding: 4rem 0;
   background-color: $color-base-2;
 }
 
-.services {
+section.services {
   padding: 4rem 0;
   overflow: hidden;
 
@@ -244,6 +244,11 @@ main {
       font-size: 1.1rem;
     }
   }
+}
+
+
+section.features {
+  background-color: $color-base-2;
 }
 
 @include media('>=tablet', '<desktop') {}
