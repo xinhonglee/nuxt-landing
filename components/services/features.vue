@@ -65,7 +65,7 @@
         <div class="content">
           <h4 class="title">Focus</h4>
           <div class="description">
-            <p>A data-driven design process brights to light the most important aspects of a page. We omit everything else.</p>
+            <p>We are not a full-service digital agency. Our highly specialized team only designs and builds websites.</p>
           </div>
         </div>
       </article>
@@ -97,9 +97,9 @@
           <img src="~assets/images/icons/icon-help.svg" alt="">
         </div>
         <div class="content">
-          <h4 class="title">Support</h4>
+          <h4 class="title">24/7 Support</h4>
           <div class="description">
-            <p>Our training, documentation and 24/7 chat support provide the peace-of-mind you need at any time.</p>
+            <p>Our training, documentation, phone and chat support provide the peace of mind you need at any time.</p>
           </div>
         </div>
       </article>

@@ -1,7 +1,7 @@
 <template>
   <div class="design_code">
     <h4>What we do</h4>
-    <h2>Design + Code</h2>
+    <h2>Design &amp; code</h2>
     <p>We make websites by combining seductive design with meticulous engineering. The goal is a seamless and harmonious experience that blurs the world around us and demands attention.</p>
     <ul class="tick_list">
       <li>Content strategy and writing</li>

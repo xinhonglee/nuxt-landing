@@ -88,6 +88,9 @@ img {
 }
 
 .button {
+	display: inline-flex;
+	margin: 0 0 1rem;
+	// text-align: center;
 	padding: 0.6rem 1.25rem 1rem;
 	justify-content: center;
 	border-radius: 0.2rem;
@@ -103,6 +106,12 @@ img {
 	&:hover {
 		background-color: $color-green-2;
 		border-color: $color-green-2;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+	&.full {
+		display: flex;
 	}
 }
 
