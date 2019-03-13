@@ -3,41 +3,35 @@
     <section class="page-contact">
       <div class="wrap">
         <div class="title headline">
-          <h1>Contact</h1>
+          <h1>Hello</h1>
         </div>
 
-        <!-- BEGIN BULMA -->
-        <div class="container">
-          <div class="columns squish">
-            <div class="column is-three-fifths is-offset-one-fifth">
-              <template v-if="!sentEmail">
-                <div class="tabs">
-                  <ul>
-                    <li :class="{'is-active' : activeTab === 'say-hello'}"
-                        @click="activeTab = 'say-hello'">
-                      <a>Say Hello</a>
-                    </li>
-                    <li :class="{'is-active' : activeTab === 'request-estimate'}"
-                        @click="activeTab = 'request-estimate'">
-                      <a>Request Estimate</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="tabs-content">
-                  <say-hello v-show="activeTab === 'say-hello'"></say-hello>
-                  <request-estimate v-show="activeTab === 'request-estimate'"></request-estimate>
-                </div>
-              </template>
-              <thank-you v-if="sentEmail"></thank-you>
-              <div class="field backward" v-if="sentEmail">
-                <div class="control">
-                  <button class="button is-text" @click="back">Back</button>
-                </div>
-              </div>
+        <template v-if="!sentEmail">
+          <div class="tabs-wrap">
+            <div class="tabs">
+              <ul>
+                <li :class="{'is-active' : activeTab === 'say-hello'}"
+                    @click="activeTab = 'say-hello'">
+                  <a>Say Hello</a>
+                </li>
+                <li :class="{'is-active' : activeTab === 'request-estimate'}"
+                    @click="activeTab = 'request-estimate'">
+                  <a>Request Estimate</a>
+                </li>
+              </ul>
+            </div>
+            <div class="tabs-content">
+              <say-hello v-show="activeTab === 'say-hello'"></say-hello>
+              <request-estimate v-show="activeTab === 'request-estimate'"></request-estimate>
             </div>
           </div>
-        </div><!-- container -->
-        <!-- END BULMA -->
+        </template>
+        <thank-you v-if="sentEmail"></thank-you>
+        <div class="field backward" v-if="sentEmail">
+          <div class="control">
+            <button class="button is-text" @click="back">Back</button>
+          </div>
+        </div>
 
       </div><!-- wrap -->
     </section>

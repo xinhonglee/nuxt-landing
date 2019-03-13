@@ -2,23 +2,23 @@
   ul {
     width: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     // border-bottom: 2px solid $color-base-3;
 
     // grid-template-columns: 1fr 1fr;
     // grid-gap: 2rem;
     li {
-      margin: 0 1rem 1rem 0;
+      margin: 0 0 1rem 0;
       a {
-        display: inline-flex;
+        display: flex;
         // border-radius: 0.2rem 0.2rem 0 0;
         // padding: 1rem 1.5rem;
         border: 2px solid transparent;
         // border-bottom: 2px solid $color-base-3;
         color: $color-grey;
-        background-color: $color-base;
+        background-color: $color-base-2;
         @include font-medium;
-        border-radius: 0.3rem;
+        // border-radius: 0.3rem;
         padding: 0.75rem 1.5rem;
         &:hover {
           text-decoration: none;
@@ -34,4 +34,47 @@
       }
     }
   }
+}
+
+.tabs-content {
+  background: $color-grey-3;
+  padding: 2rem;
+  color: $color-base;
+  input,textarea {
+    background: #fff;
+    border-color: #e7e7e7;
+    color: $color-base;
+
+  }
+  label.checkbox,
+  label.radio {
+    margin: 0 0 0.2rem;
+    background: #f2f2f2;
+    border: 1px solid transparent;
+    &:hover {
+      color: $color-base;
+      background-color: #fff;
+      border-color: #e7e7e7;
+    }
+  }
+  .button {
+    color: $color-base;
+    &:hover {
+      color: #fff;
+    }
+  }
+  .error-field p.has-text-danger {
+    color: #fff;
+    border-color: #ae1145;
+  }
+  .fields.three {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tabs-wrap {
+  .tabs {
+    margin-right: 2rem;
+  }
+  .tabs-content {}
 }
