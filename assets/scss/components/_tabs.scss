@@ -1,0 +1,35 @@
+.tabs {
+  ul {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid $color-base-3;
+
+    // grid-template-columns: 1fr 1fr;
+    // grid-gap: 2rem;
+    li {
+      margin: 0 1rem -2px 0;
+      a {
+        display: inline-flex;
+        border-radius: 0.2rem 0.2rem 0 0;
+        padding: 1rem 1.5rem;
+        border: 2px solid transparent;
+        border-bottom: 2px solid $color-base-3;
+        color: $color-grey;
+        background-color: $color-base;
+        @include font-medium;
+        &:hover {
+          text-decoration: none;
+          border-bottom: none;
+        }
+      }
+      &.is-active {
+        a {
+          border-bottom-color: $color-base;
+          border-color: $color-base-3;
+          color: $color-green;
+        }
+      }
+    }
+  }
+}

@@ -81,19 +81,15 @@ a.case_study {
       background-position: 50% 50%;
       background-repeat: no-repeat;
       background-size: 5rem auto;
-      background-color: $color-base-2;
-      transition: 0.5s all; // animates when breakpoint hit
-
-      a {
-        // display: flex;
-        // width: 100%;
-        // height: 100%;
-        text-decoration: none;
-      }
-      span {
+      background-color: rgba($color-base-3,0.3);
+      transition: 0.3s all; // animates when breakpoint hit
+      a,span {
         display: none;
         color: $color-base-4;
-        transition: 0.5s all; // animates when breakpoint hit
+        transition: 0.3s all; // animates when breakpoint hit
+      }
+      a {
+        padding: 0 0 0rem;
       }
       span {
         padding: 0 0 0.5rem;

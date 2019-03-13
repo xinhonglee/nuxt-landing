@@ -21,6 +21,7 @@
 @import 'components/grid_features';
 @import 'components/team_headshots';
 @import 'components/callout';
+@import 'components/tabs';
 @import 'components/interactions';
 @import 'components/case_study';
 @import 'components/case_study_list';
@@ -106,89 +107,12 @@ body {
 }
 
 
-// Used on pricing page
-.option_fields {
-  label.radio {
-    height: 100%;
-    margin: 0;
-  }
-
-  .columns {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2rem;
-    padding: 0 0 0 5rem;
-    .column {
-      border-radius: 0.2rem;
-      border: 2px solid $color-base-3;
-      // padding: 2rem;
-      transition: 0.3s all;
-      &.active {
-        border-color: $color-green;
-        background: $color-base-2;
-      }
-    }
-
-  }
-}
-
-.columns {
-
-  // display: grid;
-  // grid-template-columns: repeat(3, 1fr);
-  // grid-gap: 2rem;
-  .column {
-    // border-radius: 0.2rem;
-    // border: 2px solid $color-base-3;
-    // padding: 2rem;
-  }
-}
-
 
 .squish {
   margin: 0 5rem;
 }
 
 
-
-
-label.radio {
-  display: grid;
-  grid-template-columns: 1rem 1fr;
-  grid-gap: 1rem;
-  padding: 2rem;
-  cursor: pointer;
-  transition: 0.3s all;
-  align-items: flex-start;
-  &:hover {
-    background-color: $color-base-2;
-  }
-  input[type=radio] {}
-  .radio-right-pane {
-    display: grid;
-    grid-template-areas: "title" "description" "cost";
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto 4rem;
-    h3 {
-      grid-area: title; margin: 0;
-      font-size: 1.3rem;
-      @include font-medium;
-      color: $color-grey;
-    }
-    p {
-      color: $color-base-5;
-    }
-    .description { grid-area: description; }
-    .cost {
-      grid-area: cost;
-      font-size: 1.5rem;
-    }
-    .has-text-link {
-      font-size: 1.5rem;
-      color: $color-green;
-    }
-  }
-}
 
 
 .headline {
@@ -200,41 +124,7 @@ label.radio {
   }
 }
 
-.tabs {
-  ul {
-    width: auto;
-    display: flex;
-    flex-direction: row;
-    border-bottom: 2px solid $color-base-3;
 
-    // grid-template-columns: 1fr 1fr;
-    // grid-gap: 2rem;
-    li {
-      margin: 0 1rem -2px 0;
-      a {
-        display: inline-flex;
-        border-radius: 0.2rem 0.2rem 0 0;
-        padding: 1rem 1.5rem;
-        border: 2px solid transparent;
-        border-bottom: 2px solid $color-base-3;
-        color: $color-grey;
-        background-color: $color-base;
-        @include font-medium;
-        &:hover {
-          text-decoration: none;
-          border-bottom: none;
-        }
-      }
-      &.is-active {
-        a {
-          border-bottom-color: $color-base;
-          border-color: $color-base-3;
-          color: $color-green;
-        }
-      }
-    }
-  }
-}
 
 main {
   section {
@@ -338,45 +228,46 @@ menu {
 
 
 
+// DEPRECATED
 
-.with-meta {
-  position: relative;
-  .meta {
-    // position: absolute;
-    span {
-      display: block;
-      position: absolute;
-      // border: 2px solid red;
-      font-size: 0.9rem;
-      opacity: 0.8;
-
-    }
-    &.meta-1 {
-      text-align: right;
-
-      span {
-        display: block;
-        padding: 1rem 2rem 1rem 0.2rem;
-        top: 4.8rem;
-        left: -2rem;
-        transform: rotate(-90deg);
-        border-top: 2px solid rgba(255,255,255,0.1);
-      }
-    }
-    &.meta-2 {
-      // text-align: right;
-
-      span {
-        display: block;
-        padding: 1rem 2rem 1rem 0.2rem;
-        bottom: 4.7rem;
-        right: -2rem;
-        transform: rotate(90deg);
-        border-top: 2px solid rgba(255,255,255,0.1);
-      }
-    }
-  }
-}
+// .with-meta {
+//   position: relative;
+//   .meta {
+//     // position: absolute;
+//     span {
+//       display: block;
+//       position: absolute;
+//       // border: 2px solid red;
+//       font-size: 0.9rem;
+//       opacity: 0.8;
+//
+//     }
+//     &.meta-1 {
+//       text-align: right;
+//
+//       span {
+//         display: block;
+//         padding: 1rem 2rem 1rem 0.2rem;
+//         top: 4.8rem;
+//         left: -2rem;
+//         transform: rotate(-90deg);
+//         border-top: 2px solid rgba(255,255,255,0.1);
+//       }
+//     }
+//     &.meta-2 {
+//       // text-align: right;
+//
+//       span {
+//         display: block;
+//         padding: 1rem 2rem 1rem 0.2rem;
+//         bottom: 4.7rem;
+//         right: -2rem;
+//         transform: rotate(90deg);
+//         border-top: 2px solid rgba(255,255,255,0.1);
+//       }
+//     }
+//   }
+// }
 
 
 

@@ -1,5 +1,5 @@
 .puff-grad-invert {
-  margin: 1rem;
+  // margin: 1rem;
   // border-top: 0.2rem solid rgba(99,64,90,0.02);
   // border-bottom: 0.2rem solid rgba(49,146,143, 0.02);
   background: rgba(49,146,143, 0.3);
@@ -38,8 +38,8 @@
 }
 
 .bg-04 {
-  background-size: 60rem auto;
-  background-position: top right;
+  background-size: auto 80%;
+  background-position: 110% 50%;
   background-repeat: no-repeat;
   background-image: url(~assets/images/backgrounds/bg-pattern-04.png);
 }
