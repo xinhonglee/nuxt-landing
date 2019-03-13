@@ -1,5 +1,8 @@
 <template>
   <main id="main">
+
+    <!-- <preLoader/> -->
+
     <section class="about">
       <div class="wrap">
         <div class="headline title">
@@ -96,14 +99,20 @@
 </template>
 
 <script>
+  // import preLoader from '~/components/loader.vue'
+  // import { preLoading } from "~/assets/js/animate";
   import { paintCommon } from "~/assets/js/animate";
   export default {
     data() {
       return {};
     },
     mounted() {
+      // preLoading();
       paintCommon();
     },
+    // components: {
+    //   preLoader
+    // },
     head: {
       title: 'About Magnet Co',
       meta: [
