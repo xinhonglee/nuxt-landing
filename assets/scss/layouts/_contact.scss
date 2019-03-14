@@ -1,17 +1,39 @@
 .page-contact {
   .wrap {
-    .tabs-wrap {
-      margin: 0 5rem;
-      display: grid;
-      grid-template-columns: 1fr 2fr;
+    display: grid;
+    grid-template-areas: "title title" "team team" "form asides";
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 2rem;
+    .title {
+      grid-area: title;
     }
+    .team-members {
+      grid-area: team;
+    }
+    .form {
+      grid-area: form;
+      margin: 0 2rem 0 5rem;
+    }
+    .asides {
+      grid-area: asides;
+    }
+    .tabs-wrap {}
     .tabs {
+      padding: 0 0 0rem 0;
+      border-bottom: 3px solid $color-base-2;
       ul {
+        display: inline-flex;
+        flex-direction: row;
 
       }
       li {
+        margin: 0 1rem 0 0;
       }
     }
     .tabs-content {}
   }
 }
+
+// @include media('>=tablet', '<desktop') {}
+// @include media('>=phone', '<tablet') {}
+// @include media('>=phone', '<desktop') {}

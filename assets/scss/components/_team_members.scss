@@ -1,0 +1,30 @@
+.team-members {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
+  grid-gap: 1rem;
+  .team-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: $color-base-2;
+    padding: 1rem;
+    img {
+      margin: 0 0 1rem;
+      border-radius: 50%;
+    }
+    h3 {
+      margin: 0 0 0.5rem;
+      color: $color-grey-2;
+      @include font-medium;
+    }
+    p {
+      margin: 0;
+      color: $color-base-5;
+    }
+  }
+}
+
+// @include media('>=tablet', '<desktop') {}
+// @include media('>=phone', '<tablet') {}
+// @include media('>=phone', '<desktop') {}

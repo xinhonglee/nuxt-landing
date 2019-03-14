@@ -96,3 +96,38 @@ background: linear-gradient(90deg,#f6f9fc,#e6ebf1);
 // -webkit-transform: skewY(24deg);
 // transform: skewY(24deg);
 }
+
+
+
+@include media('>=tablet', '<desktop') {}
+@include media('>=phone', '<tablet') {
+  .bg-01 {
+    background-size: 40rem auto;
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-image: url(~assets/images/backgrounds/bg-pattern-01.jpg);
+  }
+
+  .bg-02 {
+    // background-size: 40rem auto;
+    // background-position: 80vw 0%;
+    // background-repeat: no-repeat;
+    // background-image: url(~assets/images/backgrounds/bg-pattern-02.png);
+    // background-image: url(~assets/images/backgrounds/bg-pattern-02.svg);
+  }
+
+  .bg-03 {
+    // background-size: 50rem auto;
+    // background-position: 120% -20%;
+    // background-repeat: no-repeat;
+    // background-image: url(~assets/images/backgrounds/bg-pattern-03.svg);
+  }
+
+  .bg-04 {
+    // background-size: auto 80%;
+    // background-position: 110% 50%;
+    // background-repeat: no-repeat;
+    // background-image: url(~assets/images/backgrounds/bg-pattern-04.png);
+  }
+}
+@include media('>=phone', '<desktop') {}

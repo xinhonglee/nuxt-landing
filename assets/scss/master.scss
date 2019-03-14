@@ -22,6 +22,7 @@
 @import 'components/team_headshots';
 @import 'components/callout';
 @import 'components/tabs';
+@import 'components/team_members';
 @import 'components/interactions';
 @import 'components/case_study';
 @import 'components/case_study_list';
@@ -71,6 +72,7 @@
 // }
 
 body {
+
   // background: linear-gradient(347deg, #0b0a17 0%, #16202a 100%) ;
   background: $color-base;
   color: $color-grey-2;
@@ -395,3 +397,34 @@ menu {
     p {}
   }
 }
+
+// @include media('>=tablet', '<desktop') {}
+// @include media('>=phone', '<tablet') {}
+// @include media('>=phone', '<desktop') {}
+
+
+
+@include media('>=tablet', '<desktop') {}
+
+@include media('>=phone', '<tablet') {
+  body {
+    overflow-x: hidden;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  h4 {
+    font-size: 0.9rem;
+  }
+  main {
+    .wrap {
+      grid-gap: 0.5rem;
+      padding: 1.25rem;
+    }
+  }
+  .headline {
+    margin-left: 0rem;
+  }
+}
+
+@include media('>=phone', '<desktop') {}
