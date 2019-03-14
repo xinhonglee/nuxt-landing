@@ -277,6 +277,17 @@ label.checkbox {
 
 
 
-// @include media('>=tablet', '<desktop') {}
-// @include media('>=phone', '<tablet') {}
-// @include media('>=phone', '<desktop') {}
+@include media('>=tablet', '<desktop') {}
+@include media('>=phone', '<tablet') {
+  .option_fields {
+    .columns {
+      grid-template-columns: 1fr;
+      grid-gap: 0.75rem;
+      padding: 0;
+    }
+  }
+  label.radio {
+    padding: 1.5rem;
+  }
+}
+@include media('>=phone', '<desktop') {}

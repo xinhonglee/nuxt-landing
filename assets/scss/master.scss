@@ -425,6 +425,27 @@ menu {
   .headline {
     margin-left: 0rem;
   }
+  .title_bar {
+    .title {
+      padding-left: 1.25rem;
+      min-height: 5rem;
+      h2 {
+        // font-size: 1.4rem;
+      }
+      &:before {
+        display: block;
+        content: ' ';
+        width: 0.2rem;
+        position: absolute;
+        top: 0.2rem;
+        left: 0rem;
+        height: 4rem;
+        border-radius: 0.2rem;
+        background: #222E39;
+      }
+    }
+  }
+  
 }
 
 @include media('>=phone', '<desktop') {}
