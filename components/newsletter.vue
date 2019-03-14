@@ -55,9 +55,9 @@
           contactName: this.contactName,
           emailAddress: this.emailAddress,
         };
-        //const result = await this.$axios.$post('/api/contact/newsletter', data);
+        const result = await this.$axios.$post('/api/contact/newsletter', data);
         this.$swal('Thanks. You have been subscribed.');
-        //console.log(result);
+        console.log(result);
       }
     }
   }

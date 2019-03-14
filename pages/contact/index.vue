@@ -52,10 +52,12 @@
   import SayHello from "./SayHello";
   import RequestEstimate from "./RequestEstimate";
   import ThankYou from "./ThankYou";
+  import NewsLetter from "../../components/newsletter";
 
   export default {
     name: "contact",
     components: {
+      NewsLetter,
       ThankYou,
       RequestEstimate,
       SayHello
