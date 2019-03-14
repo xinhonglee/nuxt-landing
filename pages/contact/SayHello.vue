@@ -2,50 +2,48 @@
   <div class="say-hello-form">
     <form @submit.prevent="onSubmit">
       <input id="project_url_3" class="input" type="text" value="">
-      <div class="field">
-        <label class="label">Contact Name</label>
-        <div class="control">
-          <input class="input" type="text" v-model.trim="$v.contactName.$model" placeholder="">
+      <div class="fields">
+        <div class="field">
+          <label class="label">Contact Name</label>
+          <div class="control">
+            <input class="input" type="text" v-model.trim="$v.contactName.$model" placeholder="">
+          </div>
+          <div class="error-field" v-show="$v.contactName.$dirty">
+            <p class="has-text-danger" v-show="!$v.contactName.required">Contact Name is required</p>
+            <p class="has-text-danger" v-show="!$v.contactName.minLength">
+              Please enter more than {{$v.contactName.$params.minLength.min}} characters
+            </p>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Email Address</label>
+          <div class="control">
+            <input class="input" type="email" v-model.trim="$v.emailAddress.$model" placeholder="">
+          </div>
+          <div class="error-field" v-show="$v.emailAddress.$dirty">
+            <p class="has-text-danger" v-show="!$v.emailAddress.required">Email Address is required</p>
+            <p class="has-text-danger" v-show="!$v.emailAddress.email">Please check the email address was entered
+              correctly.</p>
+          </div>
         </div>
       </div>
-      <div class="error-field" v-show="$v.contactName.$dirty">
-        <p class="has-text-danger" v-show="!$v.contactName.required">Contact Name is required</p>
-        <p class="has-text-danger" v-show="!$v.contactName.minLength">
-          Please enter more than {{$v.contactName.$params.minLength.min}} characters
-        </p>
-      </div>
-      <div class="field">
-        <label class="label">Company Name</label>
-        <div class="control">
-          <input class="input" type="text" v-model.trim="companyName" placeholder="">
-        </div>
-      </div>
-      <div class="field">
-        <label class="label">Email Address</label>
-        <div class="control">
-          <input class="input" type="email" v-model.trim="$v.emailAddress.$model" placeholder="">
-        </div>
-      </div>
-      <div class="error-field" v-show="$v.emailAddress.$dirty">
-        <p class="has-text-danger" v-show="!$v.emailAddress.required">Email Address is required</p>
-        <p class="has-text-danger" v-show="!$v.emailAddress.email">Please check the email address was entered
-          correctly.</p>
-      </div>
+
       <div class="field">
         <label class="label">Message</label>
         <div class="control">
           <textarea class="textarea" v-model.trim="$v.message.$model" placeholder=""></textarea>
         </div>
+        <div class="error-field" v-show="$v.message.$dirty">
+          <p class="has-text-danger" v-show="!$v.message.minLength">
+            Please enter more than {{$v.message.$params.minLength.min}} characters.
+          </p>
+          <p class="has-text-danger" v-show="!$v.message.maxLength">
+            Please enter less than {{$v.message.$params.maxLength.max}} characters.
+          </p>
+        </div>
       </div>
-      <div class="error-field" v-show="$v.message.$dirty">
-        <p class="has-text-danger" v-show="!$v.message.minLength">
-          Please enter more than {{$v.message.$params.minLength.min}} characters.
-        </p>
-        <p class="has-text-danger" v-show="!$v.message.maxLength">
-          Please enter less than {{$v.message.$params.maxLength.max}} characters.
-        </p>
-      </div>
-      <div class="field mt-2">
+      <div class="field actions">
         <div class="control">
           <button type="submit" class="button is-link">Submit</button>
         </div>

@@ -1,7 +1,6 @@
 <template>
   <div class="about">
-    <headerPart/>
-    <preLoader/>
+    <headerPart/>    
     <main>
       <nuxt/>
     </main>
@@ -10,17 +9,22 @@
 </template>
 
 <script>
-import { preLoading } from "~/assets/js/animate";
-import preLoader from '~/components/loader.vue'
+// import { preLoading } from "~/assets/js/animate";
+// import preLoader from '~/components/loader.vue'
 import headerPart from '~/components/header.vue'
 import footerPart from '~/components/footer.vue'
 export default {
+  // data() {
+  //   return {};
+  // },
+  // mounted() {
+  //   preLoading();
+  // },
   components: {
-    preLoader,
+    // preLoader,
     headerPart,
     footerPart
   }
-
 }
 </script>
 

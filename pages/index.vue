@@ -1,6 +1,20 @@
 <template>
   <main id="main">
-    <section class="">
+    <!-- <section class="about-short bg-02">
+      <div class="wrap">
+        <div class="images team-headshots">
+          <img src="~assets/images/team-headshots/team-gavin.jpg" alt="Gavin">
+          <img src="~assets/images/team-headshots/team-alex.jpg" alt="Alex">
+          <img src="~assets/images/team-headshots/team-sarah.jpg" alt="Sarah">
+          <img src="~assets/images/team-headshots/team-eugene.jpg" alt="Eugene">
+          <img src="~assets/images/team-headshots/team-bryan.jpg" alt="Bryan">
+          <img src="~assets/images/team-headshots/team-igor.jpg" alt="Igor">
+          <img src="~assets/images/team-headshots/team-andres.jpg" alt="Andres">
+          <img src="~assets/images/team-headshots/team-don.jpg" alt="Don">
+        </div>
+      </div>
+    </section> -->
+    <section class="case">
       <div class="wrap case_study">
         <div class="title">
           <h4>Our work</h4>
@@ -28,35 +42,28 @@
       </div>
     </section>
 
-    <section class="puff-grad-invert-2 with-meta">
-      <div class="meta meta-1">
-        <span>Sketch, HTML, CSS, Javascript</span>
+    <section class="services">
+      <div class="wrap">
+        <!-- <designBlock/> -->
+        <!-- <engineeringBlock/> -->
+        <designCode/>
+        <a href="/about" class="action graphic">
+          <div class="graphic-content">
+            <h4>How it works</h4>
+            <h2>6-step process</h2>
+            <img src="~assets/images/icons/arrow-next.svg" alt="View our process">
+          </div>
+        </a>
       </div>
-      <div class="meta meta-2">
-        <span>Another longer text goes here</span>
-      </div>
-  		<div class="callout duo squish">
-  			<div class="wrap">
-  				<designBlock/>
-  				<engineeringBlock/>
-  			</div>
-  		</div>
   	</section>
-    <!-- <section class="bg-02 case_studies">
+    <section class="features">
       <div class="titleblock center-flex">
-        <h5>Case studies</h5>
-        <h2>Some of our recent activity</h2>
-      </div>
-      <caseStudyList/>
-  	</section> -->
-    <section class="">
-      <div class="titleblock center-flex">
-        <h5>Our approach</h5>
-        <h2>Things we care most about</h2>
+        <h5>Why choose Magnet</h5>
+        <h2>A few good reasons</h2>
       </div>
       <serviceFeatures/>
     </section>
-    <section class="puff-grad-invert-2">
+    <section class="call">
       <callout/>
   	</section>
   </main>
@@ -69,8 +76,9 @@
   import clientList from '~/components/services/work/client_list.vue'
   import serviceFeatures from '~/components/services/features.vue'
   import callout from '~/components/callout.vue'
-  import designBlock from '~/components/services/design.vue'
-  import engineeringBlock from '~/components/services/engineering.vue'
+  // import designBlock from '~/components/services/design.vue'
+  // import engineeringBlock from '~/components/services/engineering.vue'
+  import designCode from '~/components/services/design_code.vue'
 
 
   export default {
@@ -82,8 +90,9 @@
     },
     components: {
       callout,
-      designBlock,
-      engineeringBlock,
+      // designBlock,
+      // engineeringBlock,
+      designCode,
       serviceFeatures,
       // caseStudyList,
       clientList

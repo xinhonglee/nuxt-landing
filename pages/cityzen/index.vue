@@ -54,11 +54,18 @@
         </div>
       </div>
     </section>
+    <section class="newsletter-signup">
+      <div class="wrap">
+        <newsletter/>
+      </div>
+    </section>
   </main>
 </template>
 
 <script>
   import { paintCommon } from "~/assets/js/animate";
+
+  import newsletter from '~/components/newsletter.vue'
 
   import cityzen_feature_search from '~/components/products/cityzen/features/search.vue'
   import cityzen_feature_analytics from '~/components/products/cityzen/features/analytics.vue'
@@ -92,6 +99,7 @@
       paintCommon();
     },
     components: {
+      newsletter,
       cityzen_feature_search,
       cityzen_feature_analytics,
       cityzen_feature_directory,

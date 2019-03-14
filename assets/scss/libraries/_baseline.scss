@@ -38,7 +38,7 @@ h1 {
 	position: relative;
 	margin: 0 0 2rem;
 	// max-width: 30rem;
-	font-size: 70px;
+	font-size: 3.6rem;
 	line-height: 1.1;
 	@include font-serif-black-headline;
 	&:before {
@@ -63,7 +63,7 @@ h1 {
 }
 h2 {
 	margin: 0 0 1rem;
-	font-size: 48px;
+	font-size: 2.8rem;
 	line-height: 1.1;
 	@include font-serif-black-headline;
 }
@@ -88,6 +88,9 @@ img {
 }
 
 .button {
+	display: inline-flex;
+	margin: 0 0 1rem;
+	// text-align: center;
 	padding: 0.6rem 1.25rem 1rem;
 	justify-content: center;
 	border-radius: 0.2rem;
@@ -104,42 +107,15 @@ img {
 		background-color: $color-green-2;
 		border-color: $color-green-2;
 	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+	&.full {
+		display: flex;
+	}
 }
 
-form {
-  // max-width: 30rem;
-  fieldset {
-    border: none;
-    margin: 0 0 2rem;
-    padding: 0;
-    label {
-      display: block;
-      margin: 0 0 0.5rem;
-    }
-  }
-}
-input,textarea {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  background: $color-base-2;
-  border: 1px solid $color-base-3;
-  font-size: 1.2rem;
-  color: $color-grey;
-}
-textarea {
-  min-height: 20rem;
-}
 
-.fields {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 2rem;
-  fieldset {
-    input {
-      width: 100%;
-    }
-  }
-}
 
 hr {
   box-sizing: content-box; /* 1 */
