@@ -52,7 +52,7 @@ header {
       align-items: center;
       a.icon-mouse {
         display: block;
-        width: 100%;
+        width: 3rem;
         height: 100%;
         text-indent: -999rem;
         background: url(~assets/images/icons/mouse.svg) 50% 50% no-repeat;
@@ -134,7 +134,7 @@ header {
       align-items: center;
       a.icon-mouse {
         display: block;
-        width: 100%;
+        width: 3rem;
         height: 100%;
         text-indent: -999rem;
         background: url(~assets/images/icons/mouse.svg) 50% 50% no-repeat;
@@ -194,64 +194,38 @@ header {
 
   }
 
-
-
-
-  // &.slim {
-  //   .wrap {
-  //     grid-template-columns: 3rem 1fr 3rem;
-  //     grid-template-rows: 3rem auto;
-  //     grid-template-areas:
-  //       "logotype navigation navigation"
-  //       ". content .";
-  //     min-height: auto;
-  //     height: auto;
-  //     .content {
-  //       padding: 8rem 0 4rem;
-  //     }
-  //   }
-  // }
 }
 
 
-// Lives at end of DOM but appears in header
-// .menu-toggle {
-//   display: none;
-//
-//   position: fixed;
-//   top: 1.3rem;
-//   right: 1.3rem;
-//   a {
-//     display: block;
-//     background: #fff;
-//     border-radius: 0.2rem;
-//     width: 2.25rem;
-//     height: 2.25rem;
-//     text-indent: -999rem;
-//   }
-// }
+// @include media('>=tablet', '<desktop') {}
+// @include media('>=phone', '<tablet') {}
+// @include media('>=phone', '<desktop') {}
 
+
+
+
+// RESPONSIVE
 
 @include media('>=tablet', '<desktop') {
 
+
+
+}
+
+@include media('>=phone', '<tablet') {
+
   header {
     .wrap {
-      // width: 100%;
-      // min-height: 100vh;
-      // height: auto;
-      // padding: 1.5rem;
-      // grid-template-columns: 2rem 1fr 2rem;
-      // grid-template-rows: 2rem 2rem auto 2rem;
-      // grid-template-areas:
-      //   "logotype . ."
-      //   "meta . ."
-      //   "meta content ."
-      //   "meta . mouse";
-      // grid-gap: 1rem;
-      // background-position: 150% 80%;
-      // background-repeat: no-repeat;
-      // background-size: 50vw auto;
+      grid-gap: 0.5rem;
+      padding: 1.25rem;
+      max-width: 100%;
+
+      grid-template-columns: 1fr 2rem;
+      grid-template-rows: 3rem 3rem auto;
+      grid-template-areas: "logotype ." "navigation navigation" "content content";
+
       .logotype {
+        justify-content: flex-start;
         a {
           // width: 2rem;
           // height: 2rem;
@@ -260,95 +234,65 @@ header {
       }
       .content {
         article {
+          min-width: auto;
           // max-width: 100%;
           // min-width: auto;
+          p {
+            font-size: 1.2rem;
+          }
         }
       }
       .navigation {
         // display: none;
+        li {
+          margin: 0 0.75rem 0 0;
+          a {
+            font-size: 0.7rem;
+          }
+          &:last-child {
+            margin-right: 0rem;
+          }
+        }
       }
     }
     &.header_home {
+      .wrap {
+        grid-template-columns: 1fr 2rem;
+        grid-template-rows: 3rem 3rem 1fr 3rem;
+        grid-template-areas: "logotype ." "navigation navigation" "content meta" "mouse meta";
+        .content {
+          article {
 
-    }
-    // &.slim {
-    //   .wrap {
-    //     grid-template-columns: 3rem 1fr 3rem;
-    //     grid-template-rows: 3rem 3rem auto 3rem;
-    //     grid-template-areas:
-    //       "logotype . ."
-    //       "meta . ."
-    //       "meta content ."
-    //       "meta . mouse";
-    //     min-height: auto;
-    //     height: auto;
-    //   }
-    // }
-  }
-
-  // .menu-toggle {
-  //   top: 1.5rem;
-  //   right: 1.5rem;
-  // }
-
-}
-
-@include media('>=phone', '<tablet') {
-
-  header {
-    .wrap {
-      // padding: 1rem;
-      // grid-template-columns: 2rem 1fr;
-      // grid-template-rows: 2rem auto;
-      // grid-template-areas: "logotype ." "content content";
-      // grid-gap: 1rem;
-      // background-position: -110% 50%;
-      // background-repeat: no-repeat;
-      // background-size: 150vw auto;
-      .logotype {
-        a {
-          // width: 1.75rem;
-          // height: 1.75rem;
-          // background-size: 1.65rem auto;
+          }
         }
       }
-      .navigation,
-      .meta,
       .mouse {
-        // display: none;
+        justify-content: flex-start;
+        a.icon-mouse {
+          background-position: 100% 50%;
+        }
       }
-      .content {
-        article {
-          // max-width: 100%;
-          // min-width: auto;
+      .meta {
+        align-items: flex-end;
+        justify-content: flex-end;
+        .text {
+          text-align: right;
+          top: auto;
+          bottom: 16rem;
+          left: -9rem;
+
+          display: none;
+        }
+        .social-icons {
+
         }
       }
     }
-    &.header_home {
-
-    }
-    // &.slim {
-    //   .wrap {
-    //     grid-template-columns: 2rem 1fr;
-    //     grid-template-rows: 3rem auto;
-    //     grid-template-areas:
-    //       "logotype ."
-    //       "content content";
-    //     min-height: auto;
-    //     height: auto;
-    //   }
-    // }
   }
-
-
 
 }
 
 
 @include media('>=phone', '<desktop') {
-  // .menu-toggle {
-  //   top: 1rem;
-  //   right: 1rem;
-  //   display: block;
-  // }
+
 }

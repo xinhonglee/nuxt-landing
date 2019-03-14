@@ -158,3 +158,29 @@ a.case_study {
     margin: 0 0 0.5rem;
   }
 }
+
+
+
+// @include media('>=tablet', '<desktop') {}
+// @include media('>=phone', '<tablet') {}
+// @include media('>=phone', '<desktop') {}
+
+
+@include media('>=tablet', '<desktop') {}
+@include media('>=phone', '<tablet') {
+  .client_logos {
+    .client_list {
+      grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
+      li {
+        background-position: 50% 35%;
+        background-size: 3rem auto;
+        height: 7rem;
+        a,span {
+          font-size: 0.7rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+@include media('>=phone', '<desktop') {}

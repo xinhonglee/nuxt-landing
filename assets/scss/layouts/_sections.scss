@@ -249,6 +249,13 @@ section.services {
 }
 
 
+// Callout
+section.call {
+  padding: 0 0 2rem;
+}
+
+
+
 section.features {
   background-color: $color-base-2;
   border-top: 2px solid rgba($color-base-3,0.25);
@@ -256,5 +263,42 @@ section.features {
 }
 
 @include media('>=tablet', '<desktop') {}
-@include media('>=phone', '<tablet') {}
+@include media('>=phone', '<tablet') {
+  .content_section {
+    &.half_first,
+    &.half_last {
+      grid-template-columns: 1fr;
+      grid-template-areas: "text";
+      .text {
+        padding-left: 0rem;
+        padding-right: 0rem;
+        border-left: none;
+        border-right: none;
+      }
+    }
+    &.content_icons {
+      padding: 0.5rem;
+      display: grid;
+      grid-gap: 0.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
+      div {
+        max-width: auto;
+        width: auto;
+        padding: 0 0 0.5rem;
+        img {
+          margin: 0.5rem;
+          width: 2.8rem;
+        }
+        span {
+          font-size: 0.8rem;
+          // padding: 0
+        }
+      }
+    }
+  }
+}
 @include media('>=phone', '<desktop') {}
+
+// @include media('>=tablet', '<desktop') {}
+// @include media('>=phone', '<tablet') {}
+// @include media('>=phone', '<desktop') {}

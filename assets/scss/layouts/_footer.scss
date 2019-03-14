@@ -58,20 +58,46 @@ footer {
   // }
 }
 
+
+
+
+// @include media('>=tablet', '<desktop') {}
+// @include media('>=phone', '<tablet') {}
+// @include media('>=phone', '<desktop') {}
+
+
 @include media('>=tablet', '<desktop') {}
-@include media('>=phone', '<tablet') {}
-@include media('>=phone', '<desktop') {
+@include media('>=phone', '<tablet') {
   footer {
-    .wrap {}
-    .footer_upper {
-      .wrap {
-        grid-template-columns: 1fr;
+    .wrap {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-gap: 1rem;
+      padding: 2rem 1.25rem;
+      grid-template-areas:
+        "company"
+        "work"
+        "products"
+        "signoff";
+
+      .signoff {
+        grid-area: signoff;
+      }
+      .links-company {
+        grid-area: company;
+      }
+      .links-work {
+        grid-area: work;
+      }
+      .links-products {
+        grid-area: products;
       }
     }
-    .footer_lower {
-      .wrap {
-        grid-template-columns: 1fr;
-      }
+    p {
+      max-width: 55ch;
     }
   }
+}
+@include media('>=phone', '<desktop') {
+
 }

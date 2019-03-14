@@ -1,8 +1,6 @@
 <template>
   <main id="main">
 
-    <!-- <preLoader/> -->
-
     <section class="about">
       <div class="wrap">
         <div class="headline title">
@@ -91,28 +89,28 @@
           </div>
 
 
-        </div><!-- END cards -->
+        </div>
 
       </div>
     </section>
   </main>
+
 </template>
 
 <script>
   // import preLoader from '~/components/loader.vue'
-  // import { preLoading } from "~/assets/js/animate";
   import { paintCommon } from "~/assets/js/animate";
   export default {
     data() {
       return {};
     },
     mounted() {
-      // preLoading();
       paintCommon();
     },
-    // components: {
-    //   preLoader
-    // },
+    components: {
+
+    },
+    layout: 'about',
     head: {
       title: 'About Magnet Co',
       meta: [
@@ -129,6 +127,6 @@
   }
 </script>
 
-<style lang="scss">
-  // @import '~assets/scss/master.scss';
+<style lang="scss" scoped>
+  
 </style>
