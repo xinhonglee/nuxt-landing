@@ -248,3 +248,16 @@ textarea {
 [hidden] {
   display: none;
 }
+
+
+
+@include media('>=tablet', '<desktop') {}
+@include media('>=phone', '<tablet') {
+	h1 {}
+	h2 {}
+	h3 {
+		font-size: 1.5rem;
+		letter-spacing: 0rem;
+	}
+}
+@include media('>=phone', '<desktop') {}

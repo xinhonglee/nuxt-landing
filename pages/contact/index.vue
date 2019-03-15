@@ -6,7 +6,7 @@
         <div class="title headline">
           <h1>Get in touch</h1>
         </div>
-        
+
         <div class="form">
           <template v-if="!sentEmail">
             <div class="tabs-wrap">
@@ -73,6 +73,7 @@
 
   export default {
     name: "contact",
+    layout: 'contact',
     components: {
       NewsLetter,
       ThankYou,

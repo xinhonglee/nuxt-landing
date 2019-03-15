@@ -275,6 +275,7 @@
 
   export default {
     name: "pricing",
+    layout: 'pricing',
     components: {NewsLetter},
     data() {
       return {
