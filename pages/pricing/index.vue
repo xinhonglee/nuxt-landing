@@ -196,7 +196,7 @@
               </a>
             </div>
 
-            <fieldset class="email-group mt-5">
+            <fieldset class="actions email-group mt-5">
               <label class="label">Email Address</label>
               <template v-for="(emailAddress, index) of emailAddresses">
                 <div class="field">
@@ -211,38 +211,40 @@
                     was entered correctly.</p>
                 </div>
               </template>
-            </fieldset>
-
-            <div>
-              <a class="button is-text" @click="addEmailAddress">+ Another Email</a>
-            </div>
-
-            <div class="callout">
-              <div class="text">
-                <h3>Can we call you?</h3>
-                <p>We would love to hear from you and discuss more about the details of your project.</p>
+              <div class="add-email">
+                <a class="" @click="addEmailAddress">Add another recipient</a>
               </div>
               <div class="field">
-                <label class="checkbox"><input type="checkbox" v-model="requestFollowUp">Request a follow-up with us</label>
+                <label class="label">Follow-up</label>
+                <label class="checkbox"><input type="checkbox" v-model="requestFollowUp">May we schedule a call with you?</label>
               </div>
-            </div>
+            </fieldset>
+            <fieldset class="actions">
 
-            <div class="field">
-              <label class="label">Notes</label>
-              <div class="control">
-                <textarea class="textarea" v-model.trim="$v.notes.$model" placeholder=""></textarea>
+              <div class="field">
+                <label class="label">Notes</label>
+                <div class="control">
+                  <textarea class="textarea" v-model.trim="$v.notes.$model" placeholder=""></textarea>
+                </div>
+                <div class="error-field" v-show="$v.notes.$dirty">
+                  <p class="has-text-danger" v-show="!$v.notes.maxLength">
+                    Please enter less than {{$v.notes.$params.maxLength.max}} characters.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="error-field" v-show="$v.notes.$dirty">
-              <p class="has-text-danger" v-show="!$v.notes.maxLength">
-                Please enter less than {{$v.notes.$params.maxLength.max}} characters.
-              </p>
-            </div>
-            <div class="field">
-              <div class="control">
-                <button type="submit" class="button is-link">Submit</button>
+
+            </fieldset>
+
+            <fieldset class="actions">
+              <div class="field">
+                <div class="control">
+                  <button type="submit" class="button is-link">Send estimate</button>
+                </div>
               </div>
-            </div>
+            </fieldset>
+
+
+
           </div>
         </section>
 
@@ -399,6 +401,21 @@
   }
   .radio-right-pane {
     display: inline-grid;
+  }
+
+  fieldset.actions {
+    padding: 0 0 0 5rem;
+    label {
+
+    }
+    .field {
+      padding: 0.5rem 0 0;
+    }
+    .button {}
+  }
+  .add-email {
+    margin: 0.75rem 0 1.5rem;
+    // padding: 0 0 0 5rem;
   }
   // .total-estimate {
   //   background: rgb(37, 100, 255);
