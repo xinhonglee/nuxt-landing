@@ -21,7 +21,7 @@
           </section>
           <section class="content_section half_last">
             <div class="text">
-              <h4>Our approach</h4>
+              <h4>Our about</h4>
               <p>Through interviews, focus groups and feedback, we learned that teachers needed a way to easily upload or scan content, edit it, set permissions and restraints, and respond to student's comments.</p>
             </div>
           </section>

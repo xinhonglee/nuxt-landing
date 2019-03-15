@@ -1,17 +1,19 @@
 .team-members {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
-  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  grid-gap: 0.5rem;
   .team-profile {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background: $color-base-2;
-    padding: 1rem;
+    padding: 1.5rem 1rem;
     img {
       margin: 0 0 1rem;
       border-radius: 50%;
+      max-width: 6rem;
+      border: 0.2rem solid $color-base-3;
     }
     h3 {
       margin: 0 0 0.5rem;

@@ -220,9 +220,13 @@ header {
       padding: 1.25rem;
       max-width: 100%;
 
-      grid-template-columns: 1fr 2rem;
       grid-template-rows: 3rem 3rem auto;
-      grid-template-areas: "logotype ." "navigation navigation" "content content";
+
+      // grid-template-columns: 1fr 2rem;
+      // grid-template-areas: "logotype ." "navigation navigation" "content content";
+
+      grid-template-columns: 3rem 1fr 2rem;
+      grid-template-areas: "logotype . ." "navigation navigation navigation" "content content content";
 
       .logotype {
         justify-content: flex-start;
@@ -244,6 +248,7 @@ header {
       }
       .navigation {
         // display: none;
+        justify-content: flex-start;
         li {
           margin: 0 0.75rem 0 0;
           a {
@@ -259,7 +264,7 @@ header {
       .wrap {
         grid-template-columns: 1fr 2rem;
         grid-template-rows: 3rem 3rem 1fr 3rem;
-        grid-template-areas: "logotype ." "navigation navigation" "content meta" "mouse meta";
+        grid-template-areas: "logotype ." "navigation navigation" "content content" "mouse meta";
         .content {
           article {
 
@@ -280,7 +285,6 @@ header {
           top: auto;
           bottom: 16rem;
           left: -9rem;
-
           display: none;
         }
         .social-icons {

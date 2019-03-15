@@ -172,12 +172,16 @@ a.case_study {
     .client_list {
       grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
       li {
-        background-position: 50% 35%;
+        // background-position: 50% 35%;
         background-size: 3rem auto;
-        height: 7rem;
+        height: 5rem;
         a,span {
-          font-size: 0.7rem;
-          text-align: center;
+          display: none;
+          // font-size: 0.7rem;
+          // text-align: center;
+          &:hover {
+            display: none;
+          }
         }
       }
     }

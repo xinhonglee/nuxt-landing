@@ -28,7 +28,7 @@
     <section>
       <div class="wrap">
         <h2>Features</h2>
-        <div class="grid-features">
+        <div class="grid-iconblocks">
           <cityzen_feature_analytics/>
           <cityzen_feature_archives/>
           <cityzen_feature_content_list/>

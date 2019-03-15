@@ -125,30 +125,28 @@ main {
 //   background-color: $color-base-2;
 // }
 
-section.case {
-  padding: 4rem 0;
+
+section.lighter {
   background-color: $color-base-2;
   border-top: 2px solid rgba($color-base-3,0.25);
   border-bottom: 2px solid rgba($color-base-3,0.25);
 }
 
+section.case {
+  padding: 4rem 0;
+
+}
+
 section.services {
   padding: 4rem 0;
   overflow: hidden;
-
-  // background-color: #835e7d;
   .wrap {
-    // padding: 4rem 0;
     display: grid;
-    // min-height: 80vh;
     grid-template-columns: 3rem 1fr 1fr;
     grid-template-areas: "meta design_code .";
     grid-template-rows: 100%;
     grid-gap: 2rem;
-    // align-items: center;
-    .meta {
-
-    }
+    .meta {}
     .design_code {
       grid-area: design_code;
       position: relative;
@@ -224,14 +222,11 @@ section.services {
           width: 2rem;
           height: 2rem;
           position: relative;
-          top: 0.5rem;
-
+          top: 0.15rem;
+          color: $color-green;
         }
       }
     }
-    // .engineering {
-    //   grid-area: engineering;
-    // }
     .design,
     .engineering {
       max-width: 50ch;
@@ -251,19 +246,132 @@ section.services {
 
 // Callout
 section.call {
-  padding: 0 0 2rem;
+  padding: 0 0 1rem;
 }
 
 
 
 section.features {
-  background-color: $color-base-2;
-  border-top: 2px solid rgba($color-base-3,0.25);
-  border-bottom: 2px solid rgba($color-base-3,0.25);
+  
 }
 
 @include media('>=tablet', '<desktop') {}
 @include media('>=phone', '<tablet') {
+
+  section.services {
+    // padding: 4rem 0;
+    // overflow: hidden;
+    .wrap {
+      // display: grid;
+      grid-template-columns: 2rem 1fr;
+      grid-template-areas:
+        "meta design_code"
+        "graphic graphic";
+      grid-template-rows: auto;
+      // grid-gap: 2rem;
+      .meta {}
+      .design_code {
+        // grid-area: design_code;
+        // position: relative;
+        margin: 0rem;
+        &:before {
+          // display: block;
+          // content: ' ';
+          width: 2rem;
+          // position: absolute;
+          // top: 0.65rem;
+          left: -4rem;
+          // height: 0.2rem;
+          // border-radius: 0.2rem;
+          // background: $color-base-3;
+        }
+      }
+      .graphic {
+        // background: $color-green;
+        grid-area: graphic;
+        position: relative;
+        bottom: auto;
+        right: auto;
+        margin: 2rem auto 0rem;
+        width: 20rem;
+        height: 24rem;
+        // display: block;
+        // background-size: 100% auto;
+        // background-position: 50% 50%;
+        // background-repeat: no-repeat;
+        // background-image: url(~assets/images/backgrounds/bg-pattern-04.png);
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // flex-direction: column;
+        // text-decoration: none;
+        // transition: 0.7s all;
+        h4 {
+          // color: $color-green;
+          &:before {
+            // content: ' ';
+            // display: block;
+            // width: 2rem;
+            // height: 0.2rem;
+            // background-color: $color-base-3;
+            // position: relative;
+            // top: -1rem;
+            // left: 50%;
+            // margin-left: -1rem;
+          }
+        }
+        h2 {}
+        img {
+          // display: block;
+          // width: 1.5rem;
+          // height: 1.5rem;
+          // transition: 0.3s all;
+        }
+        .graphic-content {
+          // display: flex;
+          // justify-content: center;
+          // align-items: center;
+          // flex-direction: column;
+          // transition: 0.7s all;
+        }
+        &:hover {
+          // -webkit-transform: rotate(180deg);
+          // transform: rotate(180deg);
+          .graphic-content {
+            // -webkit-transform: rotate(-180deg);
+            // transform: rotate(-180deg);
+          }
+          h4 {
+          }
+          h2 {
+            // text-decoration: underline;
+          }
+          img {
+            // width: 2rem;
+            // height: 2rem;
+            // position: relative;
+            // top: 0.5rem;
+
+          }
+        }
+      }
+      .design,
+      .engineering {
+        // max-width: 50ch;
+      }
+      h4 {
+        // color: $color-green;
+      }
+      p {
+        // font-size: 1.3rem;
+      }
+      li {
+        // font-size: 1.1rem;
+      }
+    }
+  }
+
+
   .content_section {
     &.half_first,
     &.half_last {

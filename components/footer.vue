@@ -11,7 +11,7 @@
         <h5>Company</h5>
         <ul>
           <li><nuxt-link active-class="is-active" to="/" class="navbar-item is-tab" exact>Services</nuxt-link></li>
-          <li><nuxt-link active-class="is-active" to="/about" class="navbar-item is-tab" exact>About Magnet</nuxt-link></li>
+          <li><nuxt-link active-class="is-active" to="/about" class="navbar-item is-tab" exact>About</nuxt-link></li>
           <li><nuxt-link active-class="is-active" to="/pricing" class="navbar-item is-tab" exact>Pricing</nuxt-link></li>
           <li><nuxt-link active-class="is-active" to="/contact" class="navbar-item is-tab" exact>Contact us</nuxt-link></li>
           <!-- <li><nuxt-link active-class="is-active" to="/terms" class="navbar-item is-tab with-icon icon-buy" exact>Terms of service</nuxt-link></li> -->
@@ -29,9 +29,10 @@
       <div class="links-products">
         <h5>Products</h5>
         <ul>
-          <li><nuxt-link active-class="is-active" to="/cityzen" class="navbar-item is-tab" exact>Cityzen</nuxt-link></li>
+          <!-- <li><nuxt-link active-class="is-active" to="/cityzen" class="navbar-item is-tab" exact>Cityzen</nuxt-link></li> -->
+          <li>Cityzen</li>
           <li>Wordsmith</li>
-          <li>Pitchable</li>
+          <li>Hunter</li>
           <li>Concierge</li>
         </ul>
       </div>
@@ -40,7 +41,6 @@
 </template>
 
 <script>
-  // import { stickyHeader } from "~/assets/js/main";
 
   import navigation from '~/components/navigation.vue'
   import clientList from '~/components/services/work/client_list.vue'
@@ -51,8 +51,5 @@
       clientList,
       productList
     }
-    // mounted() {
-    //   stickyHeader();
-    // }
   }
 </script>

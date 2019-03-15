@@ -1,7 +1,7 @@
 .page-contact {
   .wrap {
     display: grid;
-    grid-template-areas: "title title" "team team" "form asides";
+    grid-template-areas: "title title" "form asides";
     grid-template-columns: 3fr 1fr;
     grid-gap: 2rem;
     .title {
@@ -34,6 +34,26 @@
   }
 }
 
-// @include media('>=tablet', '<desktop') {}
-// @include media('>=phone', '<tablet') {}
-// @include media('>=phone', '<desktop') {}
+@include media('>=tablet', '<desktop') {}
+@include media('>=phone', '<tablet') {
+  .page-contact {
+    .wrap {
+      grid-template-areas: "title" "asides" "form";
+      grid-template-columns: 1fr;
+      grid-gap: 1rem;
+      .form {
+        margin: 2rem 0 0;
+      }
+      .tabs {
+        ul {
+          li {
+            a {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include media('>=phone', '<desktop') {}
