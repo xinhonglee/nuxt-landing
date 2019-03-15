@@ -3,7 +3,7 @@
     <h3 class="title">
       Thank you.
     </h3>
-    <p>We have received your request for an estimate and will respond via email at the earliest possible time with a ballpark estimate of time and costs.</p>
+    <p>We have received your email and will respond via email at the earliest possible time with more information.</p>
   </div>
 </template>
 

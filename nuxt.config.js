@@ -13,7 +13,8 @@ module.exports = {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon-48.png' },
+      { rel: 'apple-touch-icon', type: 'image/x-icon', href: '/favicon.png' }
     ],
     script: [
       { src: 'https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit' }
@@ -41,7 +42,8 @@ module.exports = {
     "~plugins/global.js",
     "~plugins/Vuelidate.js",
     "~plugins/VueSwal.js",
-    '~/plugins/axios'
+    '~plugins/axios',
+    '~plugins/ga'
   ],
 
   /*

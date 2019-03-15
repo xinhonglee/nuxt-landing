@@ -252,7 +252,7 @@ section.call {
 
 
 section.features {
-  
+
 }
 
 @include media('>=tablet', '<desktop') {}
@@ -263,7 +263,7 @@ section.features {
     // overflow: hidden;
     .wrap {
       // display: grid;
-      grid-template-columns: 2rem 1fr;
+      grid-template-columns: 0.2rem 1fr;
       grid-template-areas:
         "meta design_code"
         "graphic graphic";
@@ -275,15 +275,10 @@ section.features {
         // position: relative;
         margin: 0rem;
         &:before {
-          // display: block;
-          // content: ' ';
-          width: 2rem;
-          // position: absolute;
-          // top: 0.65rem;
-          left: -4rem;
-          // height: 0.2rem;
-          // border-radius: 0.2rem;
-          // background: $color-base-3;
+          top: 0.2rem;
+          width: 0.2rem;
+          left: -2rem;
+          height: 3rem;
         }
       }
       .graphic {
@@ -293,7 +288,7 @@ section.features {
         bottom: auto;
         right: auto;
         margin: 2rem auto 0rem;
-        width: 20rem;
+        width: 18rem;
         height: 24rem;
         // display: block;
         // background-size: 100% auto;
@@ -404,6 +399,8 @@ section.features {
       }
     }
   }
+
+
 }
 @include media('>=phone', '<desktop') {}
 

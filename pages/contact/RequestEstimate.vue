@@ -111,7 +111,7 @@
 
       <div class="field actions">
         <div class="control">
-          <button type="submit" class="button is-link">Submit</button>
+          <button type="submit" class="button is-link">Send request</button>
         </div>
       </div>
     </form>

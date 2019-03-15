@@ -45,7 +45,7 @@
       </div>
       <div class="field actions">
         <div class="control">
-          <button type="submit" class="button is-link">Submit</button>
+          <button type="submit" class="button is-link">Send email</button>
         </div>
       </div>
     </form>
