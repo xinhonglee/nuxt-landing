@@ -6,49 +6,7 @@
         <div class="title headline">
           <h1>Get in touch</h1>
         </div>
-        <div class="team-members">
-          <div class="team-profile">
-            <img src="~assets/images/team-headshots/team-gavin.jpg" alt="Gavin">
-            <h3>Gavin</h3>
-            <p>Design</p>
-          </div>
-          <div class="team-profile">
-            <img src="~assets/images/team-headshots/team-sarah.jpg" alt="Sarah">
-            <h3>Sarah</h3>
-            <p>Design</p>
-          </div>
-          <div class="team-profile">
-            <img src="~assets/images/team-headshots/team-alex.jpg" alt="Alex">
-            <h3>Alex</h3>
-            <p>Engineering</p>
-          </div>
-          <div class="team-profile">
-            <img src="~assets/images/team-headshots/team-eugene.jpg" alt="Eugene">
-            <h3>Eugene</h3>
-            <p>Engineering</p>
-          </div>
-          <div class="team-profile">
-            <img src="~assets/images/team-headshots/team-don.jpg" alt="Don">
-            <h3>Don</h3>
-            <p>Engineering</p>
-          </div>
-          <div class="team-profile">
-            <img src="~assets/images/team-headshots/team-igor.jpg" alt="Igor">
-            <h3>Igor</h3>
-            <p>Engineering</p>
-          </div>
-          <div class="team-profile">
-            <img src="~assets/images/team-headshots/team-bryan.jpg" alt="Bryan">
-            <h3>Bryan</h3>
-            <p>Engineering</p>
-          </div>
-          <div class="team-profile">
-            <img src="~assets/images/team-headshots/team-andres.jpg" alt="Andres">
-            <h3>Andres</h3>
-            <p>Engineering</p>
-          </div>
-
-        </div>
+        
         <div class="form">
           <template v-if="!sentEmail">
             <div class="tabs-wrap">

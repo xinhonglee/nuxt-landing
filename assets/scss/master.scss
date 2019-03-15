@@ -18,7 +18,7 @@
 @import 'components/navigation';
 @import 'components/backgrounds';
 @import 'components/icons';
-@import 'components/grid_features';
+@import 'components/grid_iconblocks';
 @import 'components/team_headshots';
 @import 'components/callout';
 @import 'components/tabs';
@@ -54,7 +54,7 @@
 .page_service_engineering {}
 .page_work_index {}
 .page_work {}
-.page_approach {}
+.page_about {}
 .page_pricing {}
 .page_contact {}
 .page_terms {}
@@ -106,7 +106,7 @@ body {
   .icon-dribbble {
     background-image: url("~assets/images/icons/icon-dribbble-light.svg");
   }
-  .grid-features article .content .description,
+  .grid-iconblocks article .content .description,
   footer {
     color: $color-base-5;
   }
@@ -208,6 +208,7 @@ menu {
 
 
 
+
 // Text titles
 
 .headline {
@@ -217,6 +218,12 @@ menu {
     font-size: 1.5rem;
     @include font-light;
     color: $color-grey;
+  }
+  h3 {
+  	margin: 0 0 1rem;
+  	font-size: 2.3rem;
+  	line-height: 1.1;
+  	@include font-serif-black-headline;
   }
 }
 
@@ -244,40 +251,45 @@ menu {
 
 
 
-// Used on Approach page
+// Used on about page
 .split-content {
   display: grid;
-  margin: 0rem 5rem 2rem;
+  margin: 0rem 5rem 4rem;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: "content media";
-  grid-gap: 2rem;
+  grid-template-areas: "area-1 area-2";
+  grid-gap: 4rem;
+  // align-items: center;
   &.pull-left {
     margin-left: 0rem;
   }
   &.pull-right {
     margin-right: 0rem;
   }
-  .content {
-    grid-area: content;
-    // background: purple;
-    span {
-      @include font-regular-upper;
-      font-size: 4rem;
-      color: $color-base-3;
-      // transform-origin: left;
-      // transform: rotate(40deg)
-      transform: rotateZ(90deg);
-    }
-    h2 {
-      @include font-serif;
-    }
+  &:last-child {
+    margin-bottom: 0;
   }
-  .media {
-    grid-area: media;
-    background: blue;
-    img {
-      object-fit: cover;
-    }
+  img {
+    object-fit: cover;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    max-height: 30rem;
+  }
+  h2 {
+    @include font-serif;
+  }
+  p {
+    @include font-light;
+    font-size: 1.3rem;
+    color: $color-grey;
+  }
+  .area-1 {
+    grid-area: area-1;
+
+  }
+  .area-2 {
+    grid-area: area-2;
+    // background: blue;
   }
   &.switch {
     grid-template-columns: 1fr 1fr;
@@ -331,6 +343,61 @@ menu {
   background-color: #000;
   background: linear-gradient(tint(#000, -10%), tint(#33c, 30%));
 }
+
+
+
+
+
+
+
+
+
+
+// PROCESS
+.process {
+  // display: grid;
+  // width: 100%;
+  .step {
+    margin: 0 0 4rem;
+    display: grid;
+    grid-template-columns: 3rem 1fr 1.25fr;
+    grid-template-areas: "icon content-1 content-2";
+    grid-gap: 2rem;
+    p,li {
+      color: $color-grey;
+    }
+    .icon {
+      grid-area: icon;
+      img {
+
+      }
+    }
+    .content-1 {
+      grid-area: content-1;
+      h3 {
+
+      }
+      p {
+        font-size: 1.3rem;
+        @include font-light;
+      }
+    }
+    .content-2 {
+      padding: 6.5rem 0 0 4rem;
+      grid-area: content-2;
+      ul {
+        // margin-top: 6.5rem;
+        display: grid;
+        grid-gap: 1rem / 0.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        li {
+
+        }
+      }
+    }
+  }
+}
+
 
 
 
@@ -481,6 +548,69 @@ menu {
         border-radius: 0.2rem;
         background: #222E39;
       }
+    }
+  }
+
+  .split-content {
+    display: grid;
+    margin: 0rem 0rem 4rem;
+    grid-template-columns: 1fr;
+    grid-template-areas: "area-1" "area-2";
+    grid-gap: 0;
+    p {
+      font-size: 1.1rem;
+    }
+  }
+
+  .process {
+    .step {
+      margin: 0 0 3rem;
+      grid-template-columns: 3rem 1fr;
+      grid-template-areas:
+      "icon content-1"
+        ". content-2";
+      grid-gap: 1rem;
+      p,li {
+      }
+      .icon {
+        img {
+
+        }
+      }
+      .content-1 {
+        grid-area: content-1;
+        h3 {
+        }
+        p {
+          font-size: 1.2rem;
+          @include font-light;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+      .content-2 {
+        padding: 0rem 0 0 0rem;
+        grid-area: content-2;
+        ul {
+          // margin-top: 6.5rem;
+          display: grid;
+          grid-gap: 1rem / 0.5rem;
+          grid-template-columns: 1fr;
+          li {
+
+          }
+        }
+      }
+    }
+  }
+
+
+
+  form {
+    .fields {
+      grid-template-columns: 1fr;
+      grid-column-gap: 1rem;
     }
   }
 

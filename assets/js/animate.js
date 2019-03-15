@@ -12,7 +12,6 @@ export function testBind(element) {
       duration: duration,
       elasticity: elasticity
     });
-
   }
 
   function enterButton() { animateButton(1.2, 400, 400) };

@@ -1,0 +1,57 @@
+.grid-iconblocks {
+  padding: 4rem 0rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 4rem;
+  article {
+    display: grid;
+    grid-template-columns: 4rem 1fr;
+    grid-template-areas: "icon content";
+    grid-gap: 1.5rem;
+    .icon {
+      grid-area: icon;
+      img {
+        max-width: 100%;
+      }
+    }
+    .content {
+      grid-area: content;
+      .title {
+        margin: 0 0 1rem;
+      }
+      h4.title {}
+      .description {}
+      .long_description {
+        display: none;
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+@include media('>=tablet', '<desktop') {
+  .grid-iconblocks {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+    article {
+      display: grid;
+      grid-template-columns: 3rem 1fr;
+      grid-template-areas: "icon content";
+      grid-gap: 1.25rem;
+    }
+  }
+}
+@include media('>=phone', '<tablet') {
+  .grid-iconblocks {
+    grid-template-columns: 1fr;
+    grid-gap: 2.5rem;
+    article {
+      display: grid;
+      grid-template-columns: 2.5rem 1fr;
+      grid-template-areas: "icon content";
+      grid-gap: 1rem;
+    }
+  }
+}
+@include media('>=phone', '<desktop') {}

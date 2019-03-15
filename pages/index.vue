@@ -1,20 +1,6 @@
 <template>
   <main id="main">
-    <!-- <section class="about-short bg-02">
-      <div class="wrap">
-        <div class="images team-headshots">
-          <img src="~assets/images/team-headshots/team-gavin.jpg" alt="Gavin">
-          <img src="~assets/images/team-headshots/team-alex.jpg" alt="Alex">
-          <img src="~assets/images/team-headshots/team-sarah.jpg" alt="Sarah">
-          <img src="~assets/images/team-headshots/team-eugene.jpg" alt="Eugene">
-          <img src="~assets/images/team-headshots/team-bryan.jpg" alt="Bryan">
-          <img src="~assets/images/team-headshots/team-igor.jpg" alt="Igor">
-          <img src="~assets/images/team-headshots/team-andres.jpg" alt="Andres">
-          <img src="~assets/images/team-headshots/team-don.jpg" alt="Don">
-        </div>
-      </div>
-    </section> -->
-    <section class="case">
+    <section class="case lighter">
       <div class="wrap case_study">
         <div class="title">
           <h4>Our work</h4>
@@ -47,7 +33,7 @@
         <!-- <designBlock/> -->
         <!-- <engineeringBlock/> -->
         <designCode/>
-        <a href="/approach" class="action graphic">
+        <a href="/about" class="action graphic">
           <div class="graphic-content">
             <h4>How it works</h4>
             <h2>6-step process</h2>
@@ -56,7 +42,7 @@
         </a>
       </div>
   	</section>
-    <section class="features">
+    <section class="features lighter">
       <div class="titleblock center-flex">
         <h5>Why choose Magnet</h5>
         <h2>A few good reasons</h2>

@@ -22,7 +22,7 @@
           </section>
           <section class="content_section half_first">
             <div class="text">
-              <h4>Our approach</h4>
+              <h4>Our about</h4>
               <p>We built a future-proof technology stack that included websites, microsites and a comprehensive media delivery platform to gather live feeds of exotic and endangered animals worldwide and stitch into useable web clips in real time.</p>
             </div>
           </section>

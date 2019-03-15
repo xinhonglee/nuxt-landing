@@ -1,6 +1,6 @@
 <template>
-  <div class="wrap ">
-    <div class="grid-features">
+  <div class="wrap">
+    <div class="grid-iconblocks">
       <article>
         <div class="icon">
           <img src="~assets/images/icons/icon-console.svg" alt="">

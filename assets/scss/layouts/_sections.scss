@@ -125,11 +125,16 @@ main {
 //   background-color: $color-base-2;
 // }
 
-section.case {
-  padding: 4rem 0;
+
+section.lighter {
   background-color: $color-base-2;
   border-top: 2px solid rgba($color-base-3,0.25);
   border-bottom: 2px solid rgba($color-base-3,0.25);
+}
+
+section.case {
+  padding: 4rem 0;
+
 }
 
 section.services {
@@ -241,15 +246,13 @@ section.services {
 
 // Callout
 section.call {
-  padding: 0 0 2rem;
+  padding: 0 0 1rem;
 }
 
 
 
 section.features {
-  background-color: $color-base-2;
-  border-top: 2px solid rgba($color-base-3,0.25);
-  border-bottom: 2px solid rgba($color-base-3,0.25);
+  
 }
 
 @include media('>=tablet', '<desktop') {}

@@ -1,3 +1,4 @@
+
 .callout {
   padding: 4rem 0;
   @include max-width;
@@ -39,7 +40,7 @@
 @include media('>=tablet', '<desktop') {}
 @include media('>=phone', '<tablet') {
   .callout {
-    padding: 2.5rem 0 0;
+    // padding: 2.5rem 0 0;
     &.duo,
     &.trio {
       .wrap {

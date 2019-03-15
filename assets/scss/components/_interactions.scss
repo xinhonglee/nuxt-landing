@@ -146,14 +146,12 @@ label.checkbox {
     .column {
       border-radius: 0.2rem;
       border: 2px solid $color-base-3;
-      // padding: 2rem;
       transition: 0.3s all;
       &.active {
         border-color: $color-green;
         background: $color-base-2;
       }
     }
-
   }
 }
 
