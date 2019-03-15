@@ -47,7 +47,7 @@
         <!-- <designBlock/> -->
         <!-- <engineeringBlock/> -->
         <designCode/>
-        <a href="/about" class="action graphic">
+        <a href="/approach" class="action graphic">
           <div class="graphic-content">
             <h4>How it works</h4>
             <h2>6-step process</h2>

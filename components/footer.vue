@@ -11,7 +11,7 @@
         <h5>Company</h5>
         <ul>
           <li><nuxt-link active-class="is-active" to="/" class="navbar-item is-tab" exact>Services</nuxt-link></li>
-          <li><nuxt-link active-class="is-active" to="/about" class="navbar-item is-tab" exact>About Magnet</nuxt-link></li>
+          <li><nuxt-link active-class="is-active" to="/approach" class="navbar-item is-tab" exact>Approach</nuxt-link></li>
           <li><nuxt-link active-class="is-active" to="/pricing" class="navbar-item is-tab" exact>Pricing</nuxt-link></li>
           <li><nuxt-link active-class="is-active" to="/contact" class="navbar-item is-tab" exact>Contact us</nuxt-link></li>
           <!-- <li><nuxt-link active-class="is-active" to="/terms" class="navbar-item is-tab with-icon icon-buy" exact>Terms of service</nuxt-link></li> -->

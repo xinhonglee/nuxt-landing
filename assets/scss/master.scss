@@ -54,7 +54,7 @@
 .page_service_engineering {}
 .page_work_index {}
 .page_work {}
-.page_about {}
+.page_approach {}
 .page_pricing {}
 .page_contact {}
 .page_terms {}
@@ -115,22 +115,14 @@ body {
 
 
 
+
+
 .squish {
   margin: 0 5rem;
 }
 
 
 
-
-.headline {
-  margin-left: 5rem;
-  max-width: 65ch;
-  p {
-    font-size: 1.5rem;
-    @include font-light;
-    color: $color-grey;
-  }
-}
 
 
 
@@ -145,10 +137,18 @@ main {
 
 
 
+
+
 menu {
   &.client_list {}
   &.product_list {}
 }
+
+
+
+
+
+
 
 
 // Used at top of pricing page
@@ -207,6 +207,19 @@ menu {
 
 
 
+
+// Text titles
+
+.headline {
+  margin-left: 5rem;
+  max-width: 65ch;
+  p {
+    font-size: 1.5rem;
+    @include font-light;
+    color: $color-grey;
+  }
+}
+
 .titleblock {
   // margin: 4rem 0 0;
   padding: 5rem 2rem 0rem;
@@ -226,56 +239,62 @@ menu {
 }
 
 
-.center-flex {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+
+
+
+
+
+// Used on Approach page
+.split-content {
+  display: grid;
+  margin: 0rem 5rem 2rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "content media";
+  grid-gap: 2rem;
+  &.pull-left {
+    margin-left: 0rem;
+  }
+  &.pull-right {
+    margin-right: 0rem;
+  }
+  .content {
+    grid-area: content;
+    // background: purple;
+    span {
+      @include font-regular-upper;
+      font-size: 4rem;
+      color: $color-base-3;
+      // transform-origin: left;
+      // transform: rotate(40deg)
+      transform: rotateZ(90deg);
+    }
+    h2 {
+      @include font-serif;
+    }
+  }
+  .media {
+    grid-area: media;
+    background: blue;
+    img {
+      object-fit: cover;
+    }
+  }
+  &.switch {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "media content";
+    .content {}
+    .media {}
+  }
 }
 
 
 
-// DEPRECATED
 
-// .with-meta {
-//   position: relative;
-//   .meta {
-//     // position: absolute;
-//     span {
-//       display: block;
-//       position: absolute;
-//       // border: 2px solid red;
-//       font-size: 0.9rem;
-//       opacity: 0.8;
-//
-//     }
-//     &.meta-1 {
-//       text-align: right;
-//
-//       span {
-//         display: block;
-//         padding: 1rem 2rem 1rem 0.2rem;
-//         top: 4.8rem;
-//         left: -2rem;
-//         transform: rotate(-90deg);
-//         border-top: 2px solid rgba(255,255,255,0.1);
-//       }
-//     }
-//     &.meta-2 {
-//       // text-align: right;
-//
-//       span {
-//         display: block;
-//         padding: 1rem 2rem 1rem 0.2rem;
-//         bottom: 4.7rem;
-//         right: -2rem;
-//         transform: rotate(90deg);
-//         border-top: 2px solid rgba(255,255,255,0.1);
-//       }
-//     }
-//   }
-// }
+
+
+
+
+
 
 
 
@@ -398,6 +417,25 @@ menu {
   }
 }
 
+// Utility classes
+.center-flex {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
+
 // @include media('>=tablet', '<desktop') {}
 // @include media('>=phone', '<tablet') {}
 // @include media('>=phone', '<desktop') {}
@@ -445,7 +483,7 @@ menu {
       }
     }
   }
-  
+
 }
 
 @include media('>=phone', '<desktop') {}

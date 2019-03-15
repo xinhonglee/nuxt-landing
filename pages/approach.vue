@@ -4,92 +4,155 @@
     <section class="about">
       <div class="wrap">
         <div class="headline title">
-          <h1>How we work</h1>
-          <p>Psychology-focused design that thoughtfully combines art and science, form and function. </p>
+          <h5>All things considered</h5>
+          <h2>How we approach your website project</h2>
+          <!-- <p>Psychology-focused design that thoughtfully combines art and science, form and function. </p> -->
         </div>
-        <div class="cards squish">
 
-          <div class="card">
+        <div class="split-content pull-right">
+          <div class="content">
             <div class="title">
               <span>01</span>
               <h2>Precise</h2>
             </div>
             <p>A balanced website utilizes a modern technology stack, tested software and responsive design.</p>
           </div>
+          <div class="media">
+            media
+          </div>
+        </div>
 
-          <div class="card">
+        <div class="split-content pull-left switch">
+          <div class="content">
             <div class="title">
               <span>02</span>
               <h2>Beautiful</h2>
             </div>
             <p>Design has the power to transform perception of relevance, credibility and usability.</p>
-
           </div>
+          <div class="media">
+            media
+          </div>
+        </div>
 
-          <div class="card">
+        <div class="split-content pull-right">
+          <div class="content">
             <div class="title">
               <span>03</span>
               <h2>Intelligent</h2>
             </div>
             <p>Functional design creates an intuitive experience, while future-oriented technology adapts and delivers.</p>
-
           </div>
+          <div class="media">
+            media
+          </div>
+        </div>
 
-          <div class="card">
+        <div class="split-content pull-left switch">
+          <div class="content">
             <div class="title">
               <span>04</span>
               <h2>Manageable</h2>
             </div>
             <p>Empowerment through intuitive content management and a range of support options.</p>
-
           </div>
+          <div class="media">
+            media
+          </div>
+        </div>
 
-          <div class="card">
+        <div class="split-content pull-right">
+          <div class="content">
             <div class="title">
               <span>05</span>
               <h2>Accessible</h2>
             </div>
             <p>Equal access to information for all.</p>
-
           </div>
+          <div class="media">
+            media
+          </div>
+        </div>
 
-          <div class="card">
+        <div class="split-content pull-left switch">
+          <div class="content">
             <div class="title">
               <span>06</span>
               <h2>Accurate</h2>
             </div>
             <p>Credibility is maintained through built-in monitoring and daily backups.</p>
-
           </div>
+          <div class="media">
+            media
+          </div>
+        </div>
 
-          <div class="card">
+        <div class="split-content pull-right">
+          <div class="content">
             <div class="title">
               <span>07</span>
               <h2>Secure</h2>
             </div>
             <p>Peace of mind with powerful tools and access control. </p>
-
           </div>
+          <div class="media">
+            media
+          </div>
+        </div>
 
-          <div class="card">
+        <div class="split-content pull-left switch">
+          <div class="content">
             <div class="title">
               <span>08</span>
               <h2>Data-driven</h2>
             </div>
             <p>Information architecture built upon quantitative data and supported by qualitative studies.</p>
-
           </div>
+          <div class="media">
+            media
+          </div>
+        </div>
 
-          <div class="card">
+        <div class="split-content pull-right">
+          <div class="content">
             <div class="title">
               <span>09</span>
               <h2>Connecting</h2>
             </div>
             <p>Encourage dialogue with features that connect people.</p>
           </div>
-
-
+          <div class="media">
+            media
+          </div>
         </div>
+<!--
+        <div class="split-content pull-left switch">
+          <div class="content">
+            content
+          </div>
+          <div class="media">
+            media
+          </div>
+        </div>
+
+        <div class="split-content pull-right">
+          <div class="content">
+            content
+          </div>
+          <div class="media">
+            media
+          </div>
+        </div>
+
+        <div class="split-content pull-left switch">
+          <div class="content">
+            content
+          </div>
+          <div class="media">
+            media
+          </div>
+        </div> -->
+
 
       </div>
     </section>
@@ -110,7 +173,7 @@
     components: {
 
     },
-    layout: 'about',
+    layout: 'approach',
     head: {
       title: 'About Magnet Co',
       meta: [
@@ -128,5 +191,5 @@
 </script>
 
 <style lang="scss" scoped>
-  
+
 </style>
