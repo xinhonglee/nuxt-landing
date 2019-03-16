@@ -41,8 +41,8 @@ module.exports = {
     "~plugins/Vuelidate.js",
     "~plugins/VueSwal.js",
     '~plugins/ga',
-    '~plugins/axios'
-  ],
+    '~plugins/axios',
+   ],
 
   /*
   ** Nuxt.js modules
@@ -50,7 +50,7 @@ module.exports = {
   modules: [
     ['@nuxtjs/axios', {
       baseURL: process.env.NODE_ENV ==='development' ? 'http://localhost:3001' : 'https://api.magnet.co/'
-    }]
+    }],
   ],
 
   axios: {
