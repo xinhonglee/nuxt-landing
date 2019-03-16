@@ -54,7 +54,7 @@
           </section>
           <section class="content_section content_quote">
             <blockquote cite="">
-              <p>""The engineers at Magnet provide outstanding design and development services to our non-profit foundation. Their contribution efficiently captures a range of web camera feeds of rare and exciting wildlife around the world in real time and streams it across our range of websites. We highly recommend their services."</p>
+              <p>"The engineers at Magnet provide outstanding design and development services to our non-profit foundation. Their contribution efficiently captures a range of web camera feeds of rare and exciting wildlife around the world in real time and streams it across our range of websites. We highly recommend their services."</p>
               <cite>
                 <img src="~assets/images/client-headshots/img-jonathan-silvio-small.jpg">
                 <span><strong>Jonathan Silvio</strong>, Technical Director</span>
