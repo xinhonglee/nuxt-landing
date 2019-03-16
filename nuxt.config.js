@@ -18,7 +18,6 @@ module.exports = {
     ],
     script: [
       { src: 'https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit' }
-      // { src: '~/assets/js/main.js' }
     ],
   },
 
@@ -32,7 +31,6 @@ module.exports = {
   */
   css: [
     { src: '~/assets/scss/master.scss', lang: 'scss' }
-    // { src: 'font-awesome/scss/font-awesome.scss', lang: 'scss' }
   ],
 
   /*
@@ -42,8 +40,8 @@ module.exports = {
     "~plugins/global.js",
     "~plugins/Vuelidate.js",
     "~plugins/VueSwal.js",
-    '~/plugins/axios',
-    '~plugins/ga'
+    // '~plugins/ga',
+    '~plugins/axios'
   ],
 
   /*
