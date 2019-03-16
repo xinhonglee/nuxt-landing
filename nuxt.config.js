@@ -42,6 +42,7 @@ module.exports = {
     "~plugins/VueSwal.js",
     '~plugins/ga',
     '~plugins/axios',
+    '~plugins/imagesLoaded',
    ],
 
   /*
