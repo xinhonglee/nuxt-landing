@@ -40,7 +40,8 @@ module.exports = {
     "~plugins/global.js",
     "~plugins/Vuelidate.js",
     "~plugins/VueSwal.js",
-    '~/plugins/axios'
+    // '~plugins/ga',
+    '~plugins/axios'
   ],
 
   /*
