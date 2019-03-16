@@ -8,25 +8,18 @@
         </div>
         <div class="content">
           <section class="content_section content_image">
-            <img src="~assets/images/work/ucla-location.jpg">
+            <img src="~assets/images/work/von-01.jpg">
           </section>
           <section class="content_section half_first">
             <div class="text">
               <h4>Something different</h4>
               <p>Vicki von Holzhausen's brand is a little unconventional. We used fresh thinking to produce a modern design that held up to her and her audience's expectations.</p>
-            </div>
-          </section>
-          <section class="content_section content_image">
-            <img src="~assets/images/work/ucla-preview.jpg">
-          </section>
-          <section class="content_section half_last">
-            <div class="text">
-              <h4>A fixed viewport</h4>
               <p>As most ecommerce sites tend to look and feel the same, we decided to change things up. Here, a fixed frame viewport features animated panels and interactive flyouts, such as the details link that folds outwards from the top right into a series of boxes showing price, size and color options.</p>
+
             </div>
           </section>
           <section class="content_section content_image">
-            <img src="~assets/images/work/ucla-05.jpg">
+            <img src="~assets/images/work/von-02.jpg">
           </section>
           <section class="content_section half_first">
             <div class="text">

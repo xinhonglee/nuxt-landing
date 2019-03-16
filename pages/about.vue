@@ -294,7 +294,6 @@
 
 
 
-<!--
         <div class="split-content pull-right">
           <div class="content">
             <div class="title">
@@ -437,7 +436,7 @@
           <div class="media">
             <img src="~assets/images/photos/aaron-burson-242124-unsplash.jpg" alt="Precise">
           </div>
-        </div> -->
+        </div>
 
 
 

@@ -22,7 +22,7 @@
           </section>
           <section class="content_section half_first">
             <div class="text">
-              <h4>Our about</h4>
+              <h4>Our approach</h4>
               <p>We built a future-proof technology stack that included websites, microsites and a comprehensive media delivery platform to gather live feeds of exotic and endangered animals worldwide and stitch into useable web clips in real time.</p>
             </div>
           </section>
@@ -54,7 +54,7 @@
           </section>
           <section class="content_section content_quote">
             <blockquote cite="">
-              <p>""The engineers at Magnet provide outstanding design and development services to our non-profit foundation. Their contribution efficiently captures a range of web camera feeds of rare and exciting wildlife around the world in real time and streams it across our range of websites. We highly recommend their services."</p>
+              <p>"The engineers at Magnet provide outstanding design and development services to our non-profit foundation. Their contribution efficiently captures a range of web camera feeds of rare and exciting wildlife around the world in real time and streams it across our range of websites. We highly recommend their services."</p>
               <cite>
                 <img src="~assets/images/client-headshots/img-jonathan-silvio-small.jpg">
                 <span><strong>Jonathan Silvio</strong>, Technical Director</span>
