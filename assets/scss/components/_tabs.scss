@@ -1,10 +1,14 @@
 .tabs {
+  padding: 0 0 0rem 0;
+  border-bottom: 3px solid $color-base-2;
   ul {
     width: auto;
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
+    display: inline-flex;
+    flex-direction: row;
     li {
-      margin: 0 0 0 0;
+      margin: 0 1rem 0 0;
       a {
         display: flex;
         color: $color-grey;
@@ -68,6 +72,49 @@
   .tabs-content {}
 }
 
-// @include media('>=tablet', '<desktop') {}
-// @include media('>=phone', '<tablet') {}
-// @include media('>=phone', '<desktop') {}
+
+.tabs-wrap {}
+
+.tabs-content {}
+
+@include media('>=tablet', '<desktop') {}
+@include media('>=phone', '<tablet') {
+
+  .tabs {
+    ul {
+      display: flex;
+      // width: 100%;
+
+      li {
+        margin: 0;
+        a {
+          margin: 0 0 1rem;
+
+          font-size: 0.9rem;
+          padding: 0.6rem 1rem;
+          &:hover {
+            background-color: $color-green;
+            color: #fff;
+          }
+        }
+        &.is-active {
+          a {
+            background-color: $color-base-3;
+          }
+        }
+        &:first-child {
+          a {
+            border-radius: 0.3rem 0 0 0.3rem;
+          }
+        }
+        &:last-child {
+          a {
+            border-radius: 0 0.3rem 0.3rem 0;
+          }
+        }
+      }
+    }
+  }
+
+}
+@include media('>=phone', '<desktop') {}
