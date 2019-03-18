@@ -1,5 +1,6 @@
 <template>
   <main id="main">
+
     <section class="case lighter">
       <div class="wrap case_study">
         <div class="title">

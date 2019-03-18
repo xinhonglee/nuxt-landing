@@ -52,7 +52,9 @@
 .page_services {}
 .page_service_design {}
 .page_service_engineering {}
-.page_work_index {}
+.page_work_index {
+  background-color: $color-base-2;
+}
 .page_work {}
 .page_about {}
 .page_pricing {}

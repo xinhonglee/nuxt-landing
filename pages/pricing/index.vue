@@ -19,10 +19,9 @@
                 <h4>Creative Direction</h4>
                 <h2>What level of design assistance do you need?</h2>
               </div>
-              <a href="#help" class="meta">
+              <!-- <a href="#help" class="meta">
                 <img src="~assets/images/icons/help.svg">
-                <!-- <span class="text">Help?</span> -->
-              </a>
+              </a> -->
             </div>
             <div class="columns">
               <div class="column" v-for="(option, index) of creativeDirectionOptions" :key="index"
@@ -51,10 +50,9 @@
                 <h4>Content Management System</h4>
                 <h2>How editable do you need your website to be?</h2>
               </div>
-              <a href="#help" class="meta">
+              <!-- <a href="#help" class="meta">
                 <img src="~assets/images/icons/help.svg">
-                <!-- <span class="text">Help?</span> -->
-              </a>
+              </a> -->
             </div>
             <div class="columns">
               <div class="column" v-for="(option, index) of contentManagementSystemOptions" :key="index"
@@ -82,10 +80,9 @@
                 <h4>Discoverability</h4>
                 <h2>Improve your Google Search ranking?</h2>
               </div>
-              <a href="#help" class="meta">
+              <!-- <a href="#help" class="meta">
                 <img src="~assets/images/icons/help.svg">
-                <!-- <span class="text">Help?</span> -->
-              </a>
+              </a> -->
             </div>
             <div class="columns">
               <div class="column" v-for="(option, index) of discoverabilityOptions" :key="index"
@@ -113,10 +110,9 @@
                 <h4>Images, illustrating and copywriting</h4>
                 <h2>Need help adding or creating content?</h2>
               </div>
-              <a href="#help" class="meta">
+              <!-- <a href="#help" class="meta">
                 <img src="~assets/images/icons/help.svg">
-                <!-- <span class="text">Help?</span> -->
-              </a>
+              </a> -->
             </div>
             <div class="columns">
               <div class="column" v-for="(option, index) of illustrateOptions" :key="index"
@@ -144,10 +140,9 @@
                 <h4>Customer support</h4>
                 <h2>How long do you need support for?</h2>
               </div>
-              <a href="#help" class="meta">
+              <!-- <a href="#help" class="meta">
                 <img src="~assets/images/icons/help.svg">
-                <!-- <span class="text">Help?</span> -->
-              </a>
+              </a> -->
             </div>
             <div class="columns">
               <div class="column" v-for="(option, index) of customerSupportOptions" :key="index"
@@ -174,10 +169,9 @@
               <h4>Total</h4>
               <h2>Our ballpark estimate is ${{totalCost}}</h2>
             </div>
-            <a href="#help" class="meta">
+            <!-- <a href="#help" class="meta">
               <img src="~assets/images/icons/help.svg">
-              <!-- <span class="text">Help?</span> -->
-            </a>
+            </a> -->
           </div>
         </div>
       </section>
@@ -242,8 +236,6 @@
                 </div>
               </div>
             </fieldset>
-
-
 
           </div>
         </section>
@@ -418,13 +410,6 @@
     // padding: 0 0 0 5rem;
   }
   .total-estimate {
-    background: rgb(37, 100, 255);
-    position: sticky;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 0rem;
-    width: 100%;
-    position: -webkit-sticky;
+
   }
 </style>
