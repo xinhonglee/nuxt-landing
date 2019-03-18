@@ -37,13 +37,14 @@ header {
       grid-template-columns: 3rem 1fr 3rem;
       grid-template-rows: 3rem 3rem auto 3rem;
       grid-template-areas:
-        "logotype . meta"
-        ". navigation meta"
-        ". content ."
-        ". mouse .";
+        // "logotype . meta"
+        // ". navigation meta"
+        // ". content ."
+        // ". mouse .";
+        "logotype navigation navigation" ". . meta" ". content meta" "mouse . meta";
     }
     .navigation {
-      justify-content: flex-start;
+      // justify-content: flex-start;
     }
     .mouse {
       grid-area: mouse;
@@ -63,7 +64,7 @@ header {
       grid-area: meta;
       position: relative;
       display: flex;
-      // align-items: flex-end;
+      align-items: flex-end;
       .social-icons {
         width: 100%;
         margin: 0 auto;
@@ -86,9 +87,11 @@ header {
       }
       .text {
         position: absolute;
-        top: 15.75rem;
-        left: -8.55rem;
-        transform: rotateZ(90deg);
+        // bottom: 15.75rem;
+        // left: -8.55rem;
+        transform: rotate(90deg);
+        bottom: 9.5rem;
+        left: -8.6rem;
         width: 20rem;
         font-size: 0.9rem;
         opacity: 0.7;

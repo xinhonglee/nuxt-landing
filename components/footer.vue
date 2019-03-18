@@ -13,7 +13,7 @@
           <li><nuxt-link active-class="is-active" to="/" class="navbar-item is-tab" exact>Services</nuxt-link></li>
           <li><nuxt-link active-class="is-active" to="/about" class="navbar-item is-tab" exact>About</nuxt-link></li>
           <!-- <li><nuxt-link active-class="is-active" to="/pricing" class="navbar-item is-tab" exact>Pricing</nuxt-link></li> -->
-          <li>Pricing</li>
+          <!-- <li>Pricing</li> -->
           <li><nuxt-link active-class="is-active" to="/contact" class="navbar-item is-tab" exact>Contact us</nuxt-link></li>
           <!-- <li><nuxt-link active-class="is-active" to="/terms" class="navbar-item is-tab with-icon icon-buy" exact>Terms of service</nuxt-link></li> -->
         </ul>
@@ -24,7 +24,7 @@
           <li><nuxt-link active-class="is-active" to="/work" class="navbar-item is-tab" exact>Case studies</nuxt-link></li>
           <li><a href="https://www.behance.net/magnetco" target="_blank">Behance</a></li>
           <li><a href="https://dribbble.com/gavinhall" target="_blank">Dribbble</a></li>
-          <li><a href="https://github.com/magnetco" target="_blank">Github</a></li>
+          <!-- <li><a href="https://github.com/magnetco" target="_blank">Github</a></li> -->
         </ul>
       </div>
       <div class="links-products">
@@ -34,7 +34,7 @@
           <li>Cityzen</li>
           <li>Wordsmith</li>
           <li>Hunter</li>
-          <li>Concierge</li>
+          <!-- <li>Concierge</li> -->
         </ul>
       </div>
     </div>
