@@ -104,6 +104,38 @@
       </div>
     </section>
     <section>
+      <div class="wrap case_study">
+        <div class="title">
+          <h4>Work in progress</h4>
+          <h2>Cityzen</h2>
+        </div>
+        <a class="action">
+          <!-- <img src="~assets/images/icons/arrow-next.svg"> -->
+          <!-- <span class="text">View</span> -->
+        </a>
+        <a class="media">
+          <img src="~assets/images/work/cityzen-01.jpg" alt="Work in progress shot from the Cityzen project by Magnet Co">
+          <!-- <caption></caption> -->
+        </a>
+      </div>
+    </section>
+    <section>
+      <div class="wrap case_study">
+        <div class="title">
+          <h4>Work in progress</h4>
+          <h2>Hunter</h2>
+        </div>
+        <a class="action">
+          <!-- <img src="~assets/images/icons/arrow-next.svg"> -->
+          <!-- <span class="text">View</span> -->
+        </a>
+        <a class="media">
+          <img src="~assets/images/work/hunter-01.jpg" alt="Work in progress shot from the Hunter project by Magnet Co">
+          <!-- <caption></caption> -->
+        </a>
+      </div>
+    </section>
+    <section>
       <div class="wrap client_logos hide_active">
         <clientList/>
       </div>
