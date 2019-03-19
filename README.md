@@ -20,3 +20,7 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+
+## Hosting
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2db1d344-2eca-484d-8bc2-f4dc096e50ee/deploy-status)](https://app.netlify.com/sites/magnetco/deploys)

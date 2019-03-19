@@ -14,11 +14,11 @@
                 <ul>
                   <li :class="{'is-active' : activeTab === 'say-hello'}"
                       @click="activeTab = 'say-hello'">
-                    <a>Just say hi</a>
+                    <a>Say hello</a>
                   </li>
                   <li :class="{'is-active' : activeTab === 'request-estimate'}"
                       @click="activeTab = 'request-estimate'">
-                    <a>Request an estimate</a>
+                    <a>Get an estimate</a>
                   </li>
                 </ul>
               </div>

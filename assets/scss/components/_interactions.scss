@@ -287,5 +287,36 @@ label.checkbox {
   label.radio {
     padding: 1.5rem;
   }
+  .anim-button {
+    .text {
+      font-size: 0.9rem;
+    }
+  }
+  // Form mobile
+  form {
+    .fields {
+      grid-template-columns: 1fr;
+      grid-column-gap: 1rem;
+    }
+    .label {
+      font-size: 0.75rem;
+    }
+    label {
+      &.radio {
+        font-size: 0.9rem;
+        &.radio-slim {
+          // margin: 0 -1rem 0 -1rem;
+          padding: 0.5rem 0.75rem;
+        }
+      }
+    }
+    input, textarea {
+      font-size: 1rem;
+      padding: 0.5rem 0.75rem;
+    }
+  }
+  .tabs-content label.checkbox, .tabs-content label.radio {
+    margin: 0 -1rem 0.2rem;
+  }
 }
 @include media('>=phone', '<desktop') {}
