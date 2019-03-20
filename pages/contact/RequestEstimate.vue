@@ -104,7 +104,7 @@
           <label class="label">Services needed</label>
           <label class="checkbox"><input type="checkbox" v-model="designServices">Design Services</label>
           <label class="checkbox"><input type="checkbox" v-model="contentServices">Content Services</label>
-          <label class="checkbox"><input type="checkbox" v-model="deploymentServices">Deployment Services</label>
+          <label class="checkbox"><input type="checkbox" v-model="deploymentServices">Development Services</label>
         </div>
 
       </div>
