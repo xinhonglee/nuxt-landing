@@ -81,21 +81,11 @@ export function paintCommon(element) {
         opacity: 1,
         easing: 'easeOutElastic',
         translateY: [
-          { value: 40, duration: 1800 }
+          { value: 40, duration: 2000 }
         ],
-        duration: 1800,
+        duration: 2000,
         loop: false
       }, '-=1700')
-      .add({
-        targets: '.headline h1',
-        opacity: 1,
-        easing: 'easeOutElastic',
-        translateX: [
-          { value: 40, duration: 1800 }
-        ],
-        duration: 1800,
-        loop: false
-      }, '-=1500')
       .add({
         targets: 'footer',
         opacity: 1,
