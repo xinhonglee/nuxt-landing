@@ -81,21 +81,11 @@ export function paintCommon(element) {
         opacity: 1,
         easing: 'easeOutElastic',
         translateY: [
-          { value: 40, duration: 1800 }
+          { value: 40, duration: 2000 }
         ],
-        duration: 1800,
+        duration: 2000,
         loop: false
       }, '-=1700')
-      .add({
-        targets: '.headline h1',
-        opacity: 1,
-        easing: 'easeOutElastic',
-        translateX: [
-          { value: 40, duration: 1800 }
-        ],
-        duration: 1800,
-        loop: false
-      }, '-=1500')
       .add({
         targets: 'footer',
         opacity: 1,
@@ -111,6 +101,7 @@ export function paintCommon(element) {
   // })
 
 }
+
 
 export function paintHome(element) {
 
@@ -191,6 +182,84 @@ export function paintHome(element) {
 
 }
 
+
+
+
+export function paintError(element) {
+
+  // document.addEventListener('DOMContentLoaded', () => {
+
+    var initTimeline = anime.timeline();
+
+    initTimeline
+      .add({
+        targets: 'header .logotype',
+        opacity: 1,
+        easing: 'easeOutElastic',
+        rotateY: -360,
+        translateY: [
+          { value: 40, duration: 1800 }
+        ],
+        duration: 1800,
+        loop: true,
+        delay: 200
+      })
+      .add({
+        targets: 'header .navigation',
+        opacity: 1,
+        easing: 'easeOutElastic',
+        // rotateX: -360,
+        translateY: [
+          { value: 40, duration: 1800 }
+        ],
+        duration: 1800,
+        loop: false
+      }, '-=1400')
+      .add({
+        targets: 'header .content',
+        opacity: 1,
+        easing: 'easeOutElastic',
+        translateY: [
+          { value: 40, duration: 1800 }
+        ],
+        duration: 1800,
+        loop: false
+      }, '-=1400')
+      .add({
+        targets: 'main',
+        opacity: 1,
+        easing: 'easeOutElastic',
+        translateY: [
+          { value: 40, duration: 1800 }
+        ],
+        duration: 1800,
+        loop: false
+      }, '-=1700')
+      .add({
+        targets: '.headline h1',
+        opacity: 1,
+        easing: 'easeOutElastic',
+        translateX: [
+          { value: 40, duration: 1800 }
+        ],
+        duration: 1800,
+        loop: false
+      }, '-=1500')
+      .add({
+        targets: 'footer',
+        opacity: 1,
+        easing: 'easeOutElastic',
+        translateY: [
+          { value: 40, duration: 1800 }
+        ],
+        duration: 1800,
+        loop: false
+      }, '-=1400')
+    ;
+
+  // })
+
+}
 
 
 // TYPES OF DOM EVENTS FOR LISTENERS

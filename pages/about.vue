@@ -15,7 +15,7 @@
             <p>Magnet is a specialized production company founded in London in 2004 and now based in Cincinnati with a team of highly talented designers and engineers. </p>
           </div>
           <div class="area-2">
-            <p>Our more well-known client work includes UCLA, Ikea, Ford Asia, McGraw Hill, HGTV, DirecTV, Shangri-La Hotels, AOL and Expedia.&nbsp;&nbsp;<nuxt-link to="/work">See our work &rarr;</nuxt-link></p>
+            <p>Our more well-known client work includes UCLA, Ikea, Ford Asia, McGraw Hill, HGTV, DirecTV, Shangri-La Hotels, AOL and Expedia.&nbsp;&nbsp;<nuxt-link to="/case-studies">See our work &rarr;</nuxt-link></p>
           </div>
         </div>
 

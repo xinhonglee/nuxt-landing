@@ -21,7 +21,7 @@
       <div class="links-work">
         <h5>Portfolio</h5>
         <ul>
-          <li><nuxt-link active-class="is-active" to="/work" class="navbar-item is-tab" exact>Case studies</nuxt-link></li>
+          <li><nuxt-link active-class="is-active" to="/case-studies" class="navbar-item is-tab" exact>Case studies</nuxt-link></li>
           <li><a href="https://www.behance.net/magnetco" target="_blank">Behance</a></li>
           <li><a href="https://dribbble.com/gavinhall" target="_blank">Dribbble</a></li>
           <!-- <li><a href="https://github.com/magnetco" target="_blank">Github</a></li> -->
