@@ -1,6 +1,4 @@
-# magnet-co
-
-> Nuxt.js Magnet site
+> Nuxt.js Landing site
 
 ## Build Setup
 
