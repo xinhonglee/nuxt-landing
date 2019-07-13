@@ -1,8 +1,8 @@
 {
-  "name": "magnet-co",
+  "name": "nuxt-landing",
   "version": "1.0.0",
-  "description": "Nuxt.js Magnet site",
-  "author": "Gavin and Andres",
+  "description": "Nuxt.js Landing Example",
+  "author": "xinhonglee",
   "private": true,
   "scripts": {
     "dev": "nuxt",
